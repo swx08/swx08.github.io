@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>swxblog</title>
+  
+  
+  <link href="http://swx08.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://swx08.github.io/"/>
+  <updated>2023-04-03T09:13:26.403Z</updated>
+  <id>http://swx08.github.io/</id>
+  
+  <author>
+    <name>SWX</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/04/06/jwt-gong-ju-lei/"/>
+    <id>http://swx08.github.io/2023/04/06/jwt-gong-ju-lei/</id>
+    <published>2023-04-06T15:50:13.388Z</published>
+    <updated>2023-04-03T09:13:26.403Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-java&quot; data-language=&quot;java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;
+&lt;span class=&quot;token comment&quot;&gt;/**
+ * jwt工具类
+</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/04/06/hutool-zhi-excel-dao-ru-dao-chu/"/>
+    <id>http://swx08.github.io/2023/04/06/hutool-zhi-excel-dao-ru-dao-chu/</id>
+    <published>2023-04-06T15:50:13.388Z</published>
+    <updated>2023-01-30T10:38:04.327Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Hutool-之-Excel导入导出&quot;&gt;&lt;a href=&quot;#Hutool-之-Excel导入导出&quot; class=&quot;headerlink&quot; title=&quot;Hutool 之 Excel导入导出&quot;&gt;&lt;/a&gt;Hutool 之 Excel导入导出&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/04/06/jwt-kuai-su-ru-men/"/>
+    <id>http://swx08.github.io/2023/04/06/jwt-kuai-su-ru-men/</id>
+    <published>2023-04-06T15:50:13.388Z</published>
+    <updated>2023-04-03T09:35:35.590Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;JWT快速入门&quot;&gt;&lt;a href=&quot;#JWT快速入门&quot; class=&quot;headerlink&quot; title=&quot;JWT快速入门&quot;&gt;&lt;/a&gt;JWT快速入门&lt;/h1&gt;&lt;h2 id=&quot;JWT介绍&quot;&gt;&lt;a href=&quot;#JWT介绍&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/04/06/echarts-shu-ju-bao-biao-tu-shi-yong/"/>
+    <id>http://swx08.github.io/2023/04/06/echarts-shu-ju-bao-biao-tu-shi-yong/</id>
+    <published>2023-04-06T15:50:13.383Z</published>
+    <updated>2023-01-31T08:22:16.736Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Echarts数据报表图使用&quot;&gt;&lt;a href=&quot;#Echarts数据报表图使用&quot; class=&quot;headerlink&quot; title=&quot;Echarts数据报表图使用&quot;&gt;&lt;/a&gt;Echarts数据报表图使用&lt;/h1&gt;&lt;p&gt;安装：npm i echarts</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/04/06/dubbo-xue-xi-wen-dang/"/>
+    <id>http://swx08.github.io/2023/04/06/dubbo-xue-xi-wen-dang/</id>
+    <published>2023-04-06T15:50:13.367Z</published>
+    <updated>2023-02-04T10:52:51.390Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Dubbo学习文档&quot;&gt;&lt;a href=&quot;#Dubbo学习文档&quot; class=&quot;headerlink&quot; title=&quot;Dubbo学习文档&quot;&gt;&lt;/a&gt;Dubbo学习文档&lt;/h1&gt;&lt;h2 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/04/06/yun-shang-ban-gong-xi-tong-xue-xi-zong-jie/"/>
+    <id>http://swx08.github.io/2023/04/06/yun-shang-ban-gong-xi-tong-xue-xi-zong-jie/</id>
+    <published>2023-04-06T15:50:13.367Z</published>
+    <updated>2023-04-02T08:27:48.709Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;云尚办公系统项目总结&quot;&gt;&lt;a href=&quot;#云尚办公系统项目总结&quot; class=&quot;headerlink&quot; title=&quot;云尚办公系统项目总结&quot;&gt;&lt;/a&gt;云尚办公系统项目总结&lt;/h1&gt;&lt;h2 id=&quot;一、后端工程架构&quot;&gt;&lt;a href=&quot;#一、后端工程架构&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/04/06/wei-xin-xiao-cheng-xu/"/>
+    <id>http://swx08.github.io/2023/04/06/wei-xin-xiao-cheng-xu/</id>
+    <published>2023-04-06T15:50:13.367Z</published>
+    <updated>2023-03-11T09:05:28.571Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;微信小程序&quot;&gt;&lt;a href=&quot;#微信小程序&quot; class=&quot;headerlink&quot; title=&quot;微信小程序&quot;&gt;&lt;/a&gt;微信小程序&lt;/h1&gt;&lt;p&gt;AppID:</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/04/06/wen-jian-shang-chuan-xia-zai-shi-xian/"/>
+    <id>http://swx08.github.io/2023/04/06/wen-jian-shang-chuan-xia-zai-shi-xian/</id>
+    <published>2023-04-06T15:50:13.367Z</published>
+    <updated>2023-04-02T09:08:14.037Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;文件上传、下载介绍&quot;&gt;&lt;a href=&quot;#文件上传、下载介绍&quot; class=&quot;headerlink&quot; title=&quot;文件上传、下载介绍&quot;&gt;&lt;/a&gt;文件上传、下载介绍&lt;/h1&gt;&lt;p&gt;前端Form表单要求:&lt;/p&gt;
+&lt;pre class=&quot;line-numbers</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/04/06/rui-ji-wai-mai-xiang-mu-xue-xi-xin-de/"/>
+    <id>http://swx08.github.io/2023/04/06/rui-ji-wai-mai-xiang-mu-xue-xi-xin-de/</id>
+    <published>2023-04-06T15:50:13.351Z</published>
+    <updated>2023-04-02T09:08:22.434Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;瑞吉外卖项目学习心得&quot;&gt;&lt;a href=&quot;#瑞吉外卖项目学习心得&quot; class=&quot;headerlink&quot; title=&quot;瑞吉外卖项目学习心得&quot;&gt;&lt;/a&gt;瑞吉外卖项目学习心得&lt;/h1&gt;&lt;h2 id=&quot;一、登录功能&quot;&gt;&lt;a href=&quot;#一、登录功能&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/04/06/lun-wen-guan-li-xi-tong/"/>
+    <id>http://swx08.github.io/2023/04/06/lun-wen-guan-li-xi-tong/</id>
+    <published>2023-04-06T15:50:13.351Z</published>
+    <updated>2023-03-28T10:59:32.316Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;论文管理系统&quot;&gt;&lt;a href=&quot;#论文管理系统&quot; class=&quot;headerlink&quot; title=&quot;论文管理系统&quot;&gt;&lt;/a&gt;论文管理系统&lt;/h1&gt;&lt;h2 id=&quot;一、开发功能&quot;&gt;&lt;a href=&quot;#一、开发功能&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/04/06/jie-guo-ji-gong-ju/"/>
+    <id>http://swx08.github.io/2023/04/06/jie-guo-ji-gong-ju/</id>
+    <published>2023-04-06T15:50:13.351Z</published>
+    <updated>2023-04-03T09:13:04.490Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;两种方式&quot;&gt;&lt;a href=&quot;#两种方式&quot; class=&quot;headerlink&quot; title=&quot;两种方式&quot;&gt;&lt;/a&gt;两种方式&lt;/h1&gt;&lt;h2 id=&quot;第一种有三个类：&quot;&gt;&lt;a href=&quot;#第一种有三个类：&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/04/06/vue-xiang-mu-huan-jing-da-jian-shuo-ming/"/>
+    <id>http://swx08.github.io/2023/04/06/vue-xiang-mu-huan-jing-da-jian-shuo-ming/</id>
+    <published>2023-04-06T15:50:13.336Z</published>
+    <updated>2023-03-03T04:32:37.088Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h2&gt;&lt;p&gt;安装node.js，配置环境变量&lt;/p&gt;
+&lt;h2 id=&quot;起步&quot;&gt;&lt;a href=&quot;#起步&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/04/06/gong-gong-zi-duan-tian-chong-chu-li-qi/"/>
+    <id>http://swx08.github.io/2023/04/06/gong-gong-zi-duan-tian-chong-chu-li-qi/</id>
+    <published>2023-04-06T15:50:13.336Z</published>
+    <updated>2023-04-03T09:33:53.482Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;pre class=&quot;line-numbers language-java&quot; data-language=&quot;java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/04/06/vue-xiang-mu-jie-gou-shuo-ming-bi-ji/"/>
+    <id>http://swx08.github.io/2023/04/06/vue-xiang-mu-jie-gou-shuo-ming-bi-ji/</id>
+    <published>2023-04-06T15:50:13.336Z</published>
+    <updated>2023-03-19T14:30:00.920Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;笔记&quot;&gt;&lt;a href=&quot;#笔记&quot; class=&quot;headerlink&quot; title=&quot;笔记&quot;&gt;&lt;/a&gt;笔记&lt;/h1&gt;&lt;h2 id=&quot;脚手架文件结构&quot;&gt;&lt;a href=&quot;#脚手架文件结构&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/04/06/dui-xiang-ying-she-qi/"/>
+    <id>http://swx08.github.io/2023/04/06/dui-xiang-ying-she-qi/</id>
+    <published>2023-04-06T15:50:13.336Z</published>
+    <updated>2023-04-03T09:28:25.556Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;目的：&quot;&gt;&lt;a href=&quot;#目的：&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/04/06/springsecurity-kuai-su-ru-men/"/>
+    <id>http://swx08.github.io/2023/04/06/springsecurity-kuai-su-ru-men/</id>
+    <published>2023-04-06T15:50:13.320Z</published>
+    <updated>2023-04-03T09:31:33.812Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Spring-Security&quot;&gt;&lt;a href=&quot;#Spring-Security&quot; class=&quot;headerlink&quot; title=&quot;Spring Security&quot;&gt;&lt;/a&gt;Spring Security&lt;/h1&gt;&lt;h2 id=&quot;介绍&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/04/06/threadlocal-shi-yong/"/>
+    <id>http://swx08.github.io/2023/04/06/threadlocal-shi-yong/</id>
+    <published>2023-04-06T15:50:13.320Z</published>
+    <updated>2023-04-02T09:05:19.760Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;ThreadLocal使用&quot;&gt;&lt;a href=&quot;#ThreadLocal使用&quot; class=&quot;headerlink&quot; title=&quot;ThreadLocal使用&quot;&gt;&lt;/a&gt;ThreadLocal使用&lt;/h1&gt;&lt;h2 id=&quot;1、使用前景&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/04/06/vue-axios-pei-zhi/"/>
+    <id>http://swx08.github.io/2023/04/06/vue-axios-pei-zhi/</id>
+    <published>2023-04-06T15:50:13.320Z</published>
+    <updated>2023-04-02T09:23:08.789Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Vue配置文件，request-js和vue-config-js&quot;&gt;&lt;a href=&quot;#Vue配置文件，request-js和vue-config-js&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/04/06/springboot-jie-jue-kua-yu-wen-ti/"/>
+    <id>http://swx08.github.io/2023/04/06/springboot-jie-jue-kua-yu-wen-ti/</id>
+    <published>2023-04-06T15:50:13.304Z</published>
+    <updated>2023-04-02T08:56:49.349Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;SpringBoot解决跨域问题&quot;&gt;&lt;a href=&quot;#SpringBoot解决跨域问题&quot; class=&quot;headerlink&quot; title=&quot;SpringBoot解决跨域问题&quot;&gt;&lt;/a&gt;SpringBoot解决跨域问题&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/04/06/springboot-ji-cheng-jwt/"/>
+    <id>http://swx08.github.io/2023/04/06/springboot-ji-cheng-jwt/</id>
+    <published>2023-04-06T15:50:13.304Z</published>
+    <updated>2023-03-11T14:43:00.437Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;SpringBoot集成JWT&quot;&gt;&lt;a href=&quot;#SpringBoot集成JWT&quot; class=&quot;headerlink&quot; title=&quot;SpringBoot集成JWT&quot;&gt;&lt;/a&gt;SpringBoot集成JWT&lt;/h1&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
