@@ -514,15 +514,14 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="Dubbo学习文档"><a href="#Dubbo学习文档" class="headerlink" title="Dubbo学习文档"></a>Dubbo学习文档</h1><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Dubbo使用 需要在服务提供方和服务消费方配置各自的如下配置</p>
-<img src="C:\Users\石文学\OneDrive\图片\屏幕快照\屏幕截图 2023-02-04 185027.png" alt="屏幕截图 2023-02-04 185027" style="zoom:50%;">
-
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppH3nqx"><img src="https://s1.ax1x.com/2023/04/08/ppH3nqx.md.png" alt="ppH3nqx.md.png"></a></p>
 <h2 id="一、基础知识"><a href="#一、基础知识" class="headerlink" title="一、基础知识"></a>一、基础知识</h2><h3 id="1-1-分布式概念"><a href="#1-1-分布式概念" class="headerlink" title="1.1 分布式概念"></a>1.1 分布式概念</h3><p><strong>分布式系统是若干个独立计算机的集合。</strong></p>
 <p>了解序列化与反序列化：<strong>Java序列化是指把Java对象转换为字节序列的过程；而Java反序列化是指把字节序列恢复为Java对象的过程。 序列化是这个过程的第一部分，将数据分解成字节流，以便存储在文件中或在网络上传输。 … 反序列化就是打开字节流并重构对象</strong></p>
 <h3 id="1-2-RPC"><a href="#1-2-RPC" class="headerlink" title="1.2 RPC"></a>1.2 RPC</h3><p>RPC俩个核心模块：<strong>通讯(Socket)、序列化</strong></p>
 <p>RPC多个框架：<strong>dubbo、gRPC、Thirft、HSF</strong></p>
-<p>RPC原理：<img src="C:\Users\石文学\OneDrive\图片\屏幕快照\屏幕截图 2023-02-04 111403.png" alt="屏幕截图 2023-02-04 111403" style="zoom: 50%;"></p>
-<p>节点角色：<img src="C:\Users\石文学\OneDrive\图片\屏幕快照\屏幕截图 2023-02-04 111757.png" alt="屏幕截图 2023-02-04 111757" style="zoom:60%;"></p>
-<h3 id="1-3-Dubbo基本工作原理："><a href="#1-3-Dubbo基本工作原理：" class="headerlink" title="1.3 Dubbo基本工作原理："></a>1.3 Dubbo基本工作原理：<img src="C:\Users\石文学\OneDrive\图片\屏幕快照\屏幕截图 2023-02-04 111544.png" alt="屏幕截图 2023-02-04 111544" style="zoom:60%;"></h3><h3 id="1-4-调用关系"><a href="#1-4-调用关系" class="headerlink" title="1.4 调用关系"></a>1.4 调用关系</h3><p>(1) 服务容器(Container),主要负责启动、加载、运行服务、</p>
+<p>RPC原理：<a target="_blank" rel="noopener" href="https://imgse.com/i/ppHK0mT"><img src="https://s1.ax1x.com/2023/04/08/ppHK0mT.md.png" alt="ppHK0mT.md.png"></a></p>
+<p>节点角色：<a target="_blank" rel="noopener" href="https://imgse.com/i/ppHKB0U"><img src="https://s1.ax1x.com/2023/04/08/ppHKB0U.md.png" alt="ppHKB0U.md.png"></a></p>
+<h3 id="1-3-Dubbo基本工作原理："><a href="#1-3-Dubbo基本工作原理：" class="headerlink" title="1.3 Dubbo基本工作原理："></a>1.3 Dubbo基本工作原理：<a target="_blank" rel="noopener" href="https://imgse.com/i/ppHKdXV"><img src="https://s1.ax1x.com/2023/04/08/ppHKdXV.md.png" alt="ppHKdXV.md.png"></a></h3><h3 id="1-4-调用关系"><a href="#1-4-调用关系" class="headerlink" title="1.4 调用关系"></a>1.4 调用关系</h3><p>(1) 服务容器(Container),主要负责启动、加载、运行服务、</p>
 <p>(2) 服务提供者(Provider)在启动时，需要向注册中心注册自己提供的服务。</p>
 <p>(3) 服务消费者(Consumer)在启动时，向注册中心订阅自己所需要的服务。</p>
 <p>(4) 在注册中心返回服务列表给到服务消费者，如果有变更，注册中心将基于长连接推送变更的数据。</p>
@@ -533,37 +532,25 @@
 <h3 id="2-2-Zookeeper下载安装："><a href="#2-2-Zookeeper下载安装：" class="headerlink" title="2.2 Zookeeper下载安装："></a>2.2 Zookeeper下载安装：</h3><p><a target="_blank" rel="noopener" href="https://zookeeper.apache.org/releases.html#download">阿帕奇动物园管理员 (apache.org)</a></p>
 <p><strong>Zookeeper下载安装注意：需要在conf文件夹中的zoo_sample.cfg 复制一份 重命名为zoo.cfg,并进入bin级目录下通过cmd输入命令行zkServer.cmd启动，同时进入bin级目录下输入命令行zkCli.cmd</strong></p>
 <h3 id="2-3-小案例"><a href="#2-3-小案例" class="headerlink" title="2.3 小案例"></a>2.3 小案例</h3><p>特别提示：服务提供方是一个maven项目，服务消费方又是一个maven项目 没有整合springboot.</p>
-<h4 id="2-3-1-服务提供方配置spring-xml文件"><a href="#2-3-1-服务提供方配置spring-xml文件" class="headerlink" title="2.3.1 服务提供方配置spring.xml文件"></a>2.3.1 服务提供方配置spring.xml文件</h4><img src="C:\Users\石文学\OneDrive\图片\屏幕快照\屏幕截图 2023-02-04 125650.png" alt="屏幕截图 2023-02-04 125650" style="zoom: 50%;">
-
+<h4 id="2-3-1-服务提供方配置spring-xml文件"><a href="#2-3-1-服务提供方配置spring-xml文件" class="headerlink" title="2.3.1 服务提供方配置spring.xml文件"></a>2.3.1 服务提供方配置spring.xml文件</h4><p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppHKytJ"><img src="https://s1.ax1x.com/2023/04/08/ppHKytJ.md.png" alt="ppHKytJ.md.png"></a></p>
 <p>监听器配置在web.xml下：</p>
-<img src="C:\Users\石文学\OneDrive\图片\屏幕快照\屏幕截图 2023-02-04 125944.png" alt="屏幕截图 2023-02-04 125944" style="zoom:50%;">
-
-<h4 id="2-3-2-服务消费方配置spring-xml文件"><a href="#2-3-2-服务消费方配置spring-xml文件" class="headerlink" title="2.3.2 服务消费方配置spring.xml文件"></a>2.3.2 服务消费方配置spring.xml文件</h4><img src="C:\Users\石文学\OneDrive\图片\屏幕快照\屏幕截图 2023-02-04 133752.png" alt="屏幕截图 2023-02-04 133752" style="zoom:50%;">
-
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppHKD7F"><img src="https://s1.ax1x.com/2023/04/08/ppHKD7F.md.png" alt="ppHKD7F.md.png"></a></p>
+<h4 id="2-3-2-服务消费方配置spring-xml文件"><a href="#2-3-2-服务消费方配置spring-xml文件" class="headerlink" title="2.3.2 服务消费方配置spring.xml文件"></a>2.3.2 服务消费方配置spring.xml文件</h4><p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppH3Vz9"><img src="https://s1.ax1x.com/2023/04/08/ppH3Vz9.md.png" alt="ppH3Vz9.md.png"></a></p>
 <p>在web.xml文件下配置前端控制器</p>
-<img src="C:\Users\石文学\OneDrive\图片\屏幕快照\屏幕截图 2023-02-04 134022.png" alt="屏幕截图 2023-02-04 134022" style="zoom:50%;">
-
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppH3ERJ"><img src="https://s1.ax1x.com/2023/04/08/ppH3ERJ.md.png" alt="ppH3ERJ.md.png"></a></p>
 <p>案例总结：服务提供方需要写业务层接口和实现；服务消费方需要写跟服务提供方一样的接口但不需要实现接口，还需要写Controller层。</p>
-<p>注意：Controller层的依赖注入，不再使用@Autowired注解，使用dubbo提供的@Reference,原因如下：<img src="C:\Users\石文学\AppData\Roaming\Typora\typora-user-images\image-20230204133108400.png" alt="image-20230204133108400" style="zoom:50%;"></p>
-<h3 id="2-4配置"><a href="#2-4配置" class="headerlink" title="2.4配置"></a>2.4配置</h3><h4 id="2-4-1-启动检查"><a href="#2-4-1-启动检查" class="headerlink" title="2.4.1 启动检查"></a>2.4.1 <strong>启动检查</strong></h4><img src="C:\Users\石文学\OneDrive\图片\屏幕快照\屏幕截图 2023-02-04 141834.png" alt="屏幕截图 2023-02-04 141834" style="zoom:50%;">
-
-<h4 id="2-4-2-配置重试次数-amp-超时时间"><a href="#2-4-2-配置重试次数-amp-超时时间" class="headerlink" title="2.4.2 配置重试次数&amp;超时时间"></a>2.4.2 <strong>配置重试次数&amp;超时时间</strong></h4><img src="C:\Users\石文学\AppData\Roaming\Typora\typora-user-images\image-20230204153241266.png" alt="image-20230204153241266" style="zoom:50%;">
-
+<p>注意：Controller层的依赖注入，不再使用@Autowired注解，使用dubbo提供的@Reference,原因如下：<a target="_blank" rel="noopener" href="https://imgse.com/i/ppHKsk4"><img src="https://s1.ax1x.com/2023/04/08/ppHKsk4.md.png" alt="ppHKsk4.md.png"></a></p>
+<h3 id="2-4配置"><a href="#2-4配置" class="headerlink" title="2.4配置"></a>2.4配置</h3><h4 id="2-4-1-启动检查"><a href="#2-4-1-启动检查" class="headerlink" title="2.4.1 启动检查"></a>2.4.1 <strong>启动检查</strong></h4><p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppH3AG4"><img src="https://s1.ax1x.com/2023/04/08/ppH3AG4.md.png" alt="ppH3AG4.md.png"></a></p>
+<h4 id="2-4-2-配置重试次数-amp-超时时间"><a href="#2-4-2-配置重试次数-amp-超时时间" class="headerlink" title="2.4.2 配置重试次数&amp;超时时间"></a>2.4.2 <strong>配置重试次数&amp;超时时间</strong></h4><p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppH3kiF"><img src="https://s1.ax1x.com/2023/04/08/ppH3kiF.md.png" alt="ppH3kiF.md.png"></a></p>
 <p>服务端设置重试次数</p>
-<img src="C:\Users\石文学\OneDrive\图片\屏幕快照\屏幕截图 2023-02-04 153534.png" alt="屏幕截图 2023-02-04 153534" style="zoom:50%;">
-
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppH3iIU"><img src="https://s1.ax1x.com/2023/04/08/ppH3iIU.md.png" alt="ppH3iIU.md.png"></a></p>
 <h4 id="2-4-3-配置多版本"><a href="#2-4-3-配置多版本" class="headerlink" title="2.4.3 配置多版本"></a>2.4.3 <strong>配置多版本</strong></h4><p>服务提供方配置：</p>
-<img src="C:\Users\石文学\OneDrive\图片\屏幕快照\屏幕截图 2023-02-04 154944.png" alt="屏幕截图 2023-02-04 154944" style="zoom:50%;">
-
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppH3ms1"><img src="https://s1.ax1x.com/2023/04/08/ppH3ms1.md.png" alt="ppH3ms1.md.png"></a></p>
 <p>注意：</p>
 <p>如果服务消费方配置了<a href="dubbo:reference">dubbo:reference</a>,则Cotroller层的依赖注入注解就得使用@Autowired</p>
 <p>服务消费方配置：</p>
-<img src="C:\Users\石文学\OneDrive\图片\屏幕快照\屏幕截图 2023-02-04 155055.png" alt="屏幕截图 2023-02-04 155055" style="zoom:50%;">
-
-<h4 id="2-4-4-本地存根-就是充当中介的角色"><a href="#2-4-4-本地存根-就是充当中介的角色" class="headerlink" title="2.4.4 本地存根 (就是充当中介的角色)"></a>2.4.4 <strong>本地存根 (就是充当中介的角色)</strong></h4><img src="C:\Users\石文学\OneDrive\图片\屏幕快照\屏幕截图 2023-02-04 160703.png" alt="屏幕截图 2023-02-04 160703" style="zoom:50%;">
-
-
-
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppH3eMR"><img src="https://s1.ax1x.com/2023/04/08/ppH3eMR.md.png" alt="ppH3eMR.md.png"></a></p>
+<h4 id="2-4-4-本地存根-就是充当中介的角色"><a href="#2-4-4-本地存根-就是充当中介的角色" class="headerlink" title="2.4.4 本地存根 (就是充当中介的角色)"></a>2.4.4 <strong>本地存根 (就是充当中介的角色)</strong></h4><p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppH38RH"><img src="https://s1.ax1x.com/2023/04/08/ppH38RH.md.png" alt="ppH38RH.md.png"></a></p>
 <h2 id="三、高可用"><a href="#三、高可用" class="headerlink" title="三、高可用"></a>三、高可用</h2><h3 id="1、Zookeeper宕机与Dubbo直连"><a href="#1、Zookeeper宕机与Dubbo直连" class="headerlink" title="1、Zookeeper宕机与Dubbo直连"></a>1、Zookeeper宕机与Dubbo直连</h3><p>现象：zookeeper注册中心宕机，还可以消费dubbo暴露的服务。</p>
 <p>原因：</p>
 <pre class="line-numbers language-none"><code class="language-none">健壮性：
@@ -577,17 +564,12 @@
 
 <h3 id="2-负载均衡机制"><a href="#2-负载均衡机制" class="headerlink" title="2.负载均衡机制"></a>2.负载均衡机制</h3><p>默认调用随机均衡机制，可通过配置修改</p>
 <p>(1) 基于权重的随机负载均衡机制</p>
-<img src="C:\Users\石文学\OneDrive\图片\屏幕快照\屏幕截图 2023-02-03 160608.png" alt="屏幕截图 2023-02-03 160608" style="zoom:60%;">
-
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppHKJYj"><img src="https://s1.ax1x.com/2023/04/08/ppHKJYj.md.png" alt="ppHKJYj.md.png"></a></p>
 <p>(2) 基于权重的轮询负载均衡机制</p>
-<img src="C:\Users\石文学\OneDrive\图片\屏幕快照\屏幕截图 2023-02-03 160828.png" alt="屏幕截图 2023-02-03 160828" style="zoom:60%;">
-
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppHKNpn"><img src="https://s1.ax1x.com/2023/04/08/ppHKNpn.md.png" alt="ppHKNpn.md.png"></a></p>
 <p>(3) 最少活跃数-负载均衡机制</p>
-<img src="C:\Users\石文学\OneDrive\图片\屏幕快照\屏幕截图 2023-02-03 161000.png" alt="屏幕截图 2023-02-03 161000" style="zoom:60%;">
-
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppHKUlq"><img src="https://s1.ax1x.com/2023/04/08/ppHKUlq.md.png" alt="ppHKUlq.md.png"></a></p>
 <p>(4) 一致性hash-负载均衡机制</p>
-<img src="C:\Users\石文学\OneDrive\图片\屏幕快照\屏幕截图 2023-02-03 161106.png" alt="屏幕截图 2023-02-03 161106" style="zoom:60%;">
-
 <h3 id="3-服务降级"><a href="#3-服务降级" class="headerlink" title="3.服务降级"></a>3.服务降级</h3><p>什么是服务降级？</p>
 <p>当服务器压力剧增的情况下，根据实际业务情况及流量，对一些服务和也页面有策略的不处理或换种简单的方式处理，从而释放服务器资源以保证核心交易正常运作或高效运作。</p>
 <p>具体实现：可以在消费者一方屏蔽某些服务或容错某些服务</p>

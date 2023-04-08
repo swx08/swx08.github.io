@@ -539,9 +539,9 @@
 <p>相对于 Shiro，在 SSM 中整合 Spring Security 都是比较麻烦的操作，所以，Spring Security 虽然功能比 Shiro 强大，但是使用反而没有 Shiro 多（Shiro 虽然功能没有Spring Security 多，但是对于大部分项目而言，Shiro 也够用了）。自从有了 Spring Boot 之后，Spring Boot 对于 Spring Security 提供了自动化配置方案，可以使用更少的配置来使用 Spring Security。</p>
 <p>要对Web资源进行保护，最好的办法莫过于Filter<br>要想对方法调用进行保护，最好的办法莫过于<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=AOP&amp;spm=1001.2101.3001.7020">AOP</a>。</p>
 <p>Spring Security进行认证和鉴权的时候,就是利用的一系列的Filter来进行拦截的。</p>
-<p><img src="https://img-blog.csdnimg.cn/20201231155747261.png"></p>
+<p><img src="http://rsslo5plk.hn-bkt.clouddn.com/20201231155747261.png"></p>
 <p>如图所示，一个请求想要访问到API就会从左到右经过蓝线框里的过滤器，其中<strong>绿色部分是负责认证的过滤器，蓝色部分是负责异常处理，橙色部分则是负责授权</strong>。进过一系列拦截最终访问到我们的API。</p>
-<p><img src="C:\Users\石文学\OneDrive\图片\屏幕快照\image-20230206104938580.png"></p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppHKlm8"><img src="https://s1.ax1x.com/2023/04/08/ppHKlm8.md.png" alt="ppHKlm8.md.png"></a></p>
 <p>这里面我们只需要重点关注两个过滤器即可：<code>UsernamePasswordAuthenticationFilter</code>负责登录认证，<code>FilterSecurityInterceptor</code>负责权限授权。</p>
 <p>说明：<strong>Spring Security的核心逻辑全在这一套过滤器中，过滤器里会调用各种组件完成功能，掌握了这些过滤器和组件你就掌握了Spring Security</strong>！这个框架的使用方式就是对这些过滤器和组件进行扩展。</p>
 <h2 id="一、学习目标"><a href="#一、学习目标" class="headerlink" title="一、学习目标:"></a>一、学习目标:</h2><h3 id="1-1、简单了解"><a href="#1-1、简单了解" class="headerlink" title="1.1、简单了解"></a>1.1、简单了解</h3><ul>
