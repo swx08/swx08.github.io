@@ -337,7 +337,7 @@
                 <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
                 <script>
                     var typed = new Typed("#subtitle", {
-                        strings: ['怀着积极的态度对待每一件事情！','AApproach everything with a positive attitude'],
+                        strings: ['怀着积极的态度对待每一件事情！','Approach everything with a positive attitude'],
                         startDelay: 300,
                         typeSpeed: 100,
                         loop: true,
@@ -375,7 +375,7 @@
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2023/04/06/dui-xiang-ying-she-qi/">
+                    <a href="/2023/04/06/vue-xiang-mu-jie-gou-shuo-ming-bi-ji/">
                         <div class="card-image">
                             
                             
@@ -388,9 +388,13 @@
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                目的：将前端发送的数据过于长超过16位时，long的精度为16位，导致精度不准确，例如id为雪花算法的自动生成，导致前端发出的请求后端的接收的数据精度受到影响，转换为json格式，就解决了这个问题，包括日期型的相关转化
-
-package c
+                                笔记脚手架文件结构├── node_modules 
+├── public
+│   ├── favicon.ico: 页签图标
+│   └── index.html: 主页面
+├── src
+│   ├── assets: 存放静态资源
+│
                             
                         </div>
                         <div class="publish-info">
@@ -399,13 +403,25 @@ package c
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                文学
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%89%8D%E7%AB%AF-%E6%A1%86%E6%9E%B6/" class="post-category">
+                                    前端 框架
+                                </a>
+                                
                                 
                             </span>
                         </div>
                     </div>
 
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Vue/">
+                            <span class="chip bg-color">Vue</span>
+                        </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -437,20 +453,32 @@ import
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                文学
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%B7%A5%E5%85%B7-%E5%90%8E%E7%AB%AF/" class="post-category">
+                                    工具 后端
+                                </a>
+                                
                                 
                             </span>
                         </div>
                     </div>
 
                     
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%85%AC%E5%85%B1%E5%AD%97%E6%AE%B5/">
+                            <span class="chip bg-color">公共字段</span>
+                        </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2023/04/06/vue-xiang-mu-jie-gou-shuo-ming-bi-ji/">
+                    <a href="/2023/04/06/dui-xiang-ying-she-qi/">
                         <div class="card-image">
                             
                             
@@ -463,13 +491,9 @@ import
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                笔记脚手架文件结构├── node_modules 
-├── public
-│   ├── favicon.ico: 页签图标
-│   └── index.html: 主页面
-├── src
-│   ├── assets: 存放静态资源
-│
+                                目的：将前端发送的数据过于长超过16位时，long的精度为16位，导致精度不准确，例如id为雪花算法的自动生成，导致前端发出的请求后端的接收的数据精度受到影响，转换为json格式，就解决了这个问题，包括日期型的相关转化
+
+package c
                             
                         </div>
                         <div class="publish-info">
@@ -478,13 +502,73 @@ import
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                文学
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
+                                    后端
+                                </a>
+                                
                                 
                             </span>
                         </div>
                     </div>
 
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/%E5%AF%B9%E8%B1%A1%E6%98%A0%E5%B0%84%E5%99%A8/">
+                            <span class="chip bg-color">对象映射器</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/04/06/threadlocal-shi-yong/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                            
+                            <span class="card-title"></span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                ThreadLocal使用1、使用前景因为自动填充公共字段时需要获取当前登录用户的Id,所以引入了ThreadLocal。
+在学习ThreadLocal之前，我们需要确认一个事情，就是客户端发送的每次http请求,对应的在服务端都会分配一个
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-06
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%90%8E%E7%AB%AF/" class="post-category">
+                                    后端
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/ThreadLocal/">
+                            <span class="chip bg-color">ThreadLocal</span>
+                        </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -517,49 +601,25 @@ const request = a
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                文学
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%89%8D%E7%AB%AF-%E6%A1%86%E6%9E%B6-%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    前端 框架 工具
+                                </a>
+                                
                                 
                             </span>
                         </div>
                     </div>
 
                     
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2023/04/06/threadlocal-shi-yong/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                            
-                            <span class="card-title"></span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                ThreadLocal使用1、使用前景因为自动填充公共字段时需要获取当前登录用户的Id,所以引入了ThreadLocal。
-在学习ThreadLocal之前，我们需要确认一个事情，就是客户端发送的每次http请求,对应的在服务端都会分配一个
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-06
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                文学
-                                
-                            </span>
-                        </div>
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Vue/">
+                            <span class="chip bg-color">Vue</span>
+                        </a>
+                        
                     </div>
-
                     
                 </div>
             </div>
@@ -588,13 +648,25 @@ const request = a
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                文学
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%90%8E%E7%AB%AF-%E6%A1%86%E6%9E%B6/" class="post-category">
+                                    后端 框架
+                                </a>
+                                
                                 
                             </span>
                         </div>
                     </div>
 
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Spring-Security/">
+                            <span class="chip bg-color">Spring Security</span>
+                        </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -625,48 +697,25 @@ import
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                文学
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%B7%A5%E5%85%B7-%E5%90%8E%E7%AB%AF-%E6%A1%86%E6%9E%B6-%E8%B7%A8%E5%9F%9F/" class="post-category">
+                                    工具 后端 框架 跨域
+                                </a>
+                                
                                 
                             </span>
                         </div>
                     </div>
 
                     
-                </div>
-            </div>
-            
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2023/04/06/springboot-ji-cheng-swagger2-ui/">
-                        <div class="card-image">
-                            
-                            
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                            
-                            <span class="card-title"></span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                SpringBoot集成swagger-ui以及swagger分组显示1.swagger配置类第一步，需要在pom中引入相应的配置，这里使用2.7.0的版本。需要注意的是2.7.0和2.8.0的版本在界面风格上差异很大，如果感兴趣，可以试试
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-06
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-user fa-fw"></i>
-                                文学
-                                
-                            </span>
-                        </div>
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Spring-Boot-Cors/">
+                            <span class="chip bg-color">Spring Boot Cors</span>
+                        </a>
+                        
                     </div>
-
                     
                 </div>
             </div>
@@ -695,13 +744,72 @@ import
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                文学
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%B7%A5%E5%85%B7-%E5%90%8E%E7%AB%AF-%E6%A1%86%E6%9E%B6/" class="post-category">
+                                    工具 后端 框架
+                                </a>
+                                
                                 
                             </span>
                         </div>
                     </div>
 
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Spring-Boot-JWT/">
+                            <span class="chip bg-color">Spring Boot JWT</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2023/04/06/springboot-ji-cheng-swagger2-ui/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                            
+                            <span class="card-title"></span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                SpringBoot集成swagger-ui以及swagger分组显示1.swagger配置类第一步，需要在pom中引入相应的配置，这里使用2.7.0的版本。需要注意的是2.7.0和2.8.0的版本在界面风格上差异很大，如果感兴趣，可以试试
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-06
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%B7%A5%E5%85%B7-%E5%90%8E%E7%AB%AF-%E6%A1%86%E6%9E%B6/" class="post-category">
+                                    工具 后端 框架
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Spring-Boot-swagger-ui/">
+                            <span class="chip bg-color">Spring Boot swagger-ui</span>
+                        </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -733,13 +841,25 @@ import
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                文学
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%90%8E%E7%AB%AF-%E6%A1%86%E6%9E%B6-%E5%BE%AE%E6%9C%8D%E5%8A%A1/" class="post-category">
+                                    后端 框架 微服务
+                                </a>
+                                
                                 
                             </span>
                         </div>
                     </div>
 
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Spring-Cloud/">
+                            <span class="chip bg-color">Spring Cloud</span>
+                        </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -770,13 +890,25 @@ import
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                文学
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E5%B7%A5%E5%85%B7-%E5%90%8E%E7%AB%AF/" class="post-category">
+                                    工具 后端
+                                </a>
+                                
                                 
                             </span>
                         </div>
                     </div>
 
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/MybatisPlus/">
+                            <span class="chip bg-color">MybatisPlus</span>
+                        </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -807,13 +939,25 @@ import
                             </span>
                             <span class="publish-author">
                                 
-                                <i class="fas fa-user fa-fw"></i>
-                                文学
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/%E9%83%A8%E7%BD%B2-%E5%90%8E%E7%AB%AF/" class="post-category">
+                                    部署 后端
+                                </a>
+                                
                                 
                             </span>
                         </div>
                     </div>
 
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/linux/">
+                            <span class="chip bg-color">linux</span>
+                        </a>
+                        
+                    </div>
                     
                 </div>
             </div>
