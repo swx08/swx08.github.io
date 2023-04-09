@@ -13,14 +13,14 @@
       
       <categories>
           
-          <category> 工具 后端 </category>
+          <category> 工具 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Hutool </tag>
+            <tag> 后端 </tag>
             
         </tags>
       
@@ -38,14 +38,14 @@
       
       <categories>
           
-          <category> 工具 后端 </category>
+          <category> 工具 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> jwt </tag>
+            <tag> 后端 </tag>
             
         </tags>
       
@@ -63,14 +63,14 @@
       
       <categories>
           
-          <category> 工具 后端 </category>
+          <category> JWT </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> jwt </tag>
+            <tag> 后端 </tag>
             
         </tags>
       
@@ -88,14 +88,14 @@
       
       <categories>
           
-          <category> 工具 后端 </category>
+          <category> 工具 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Echarts </tag>
+            <tag> 后端 </tag>
             
         </tags>
       
@@ -113,14 +113,14 @@
       
       <categories>
           
-          <category> 后端 </category>
+          <category> Dubbo </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Dubbo </tag>
+            <tag> 后端 </tag>
             
         </tags>
       
@@ -138,14 +138,14 @@
       
       <categories>
           
-          <category> 项目 后端 </category>
+          <category> 项目 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 后台管理系统 </tag>
+            <tag> 后端 </tag>
             
         </tags>
       
@@ -163,7 +163,7 @@
       
       <categories>
           
-          <category> 项目 后端 前端 </category>
+          <category> 后端 前端 </category>
           
       </categories>
       
@@ -188,14 +188,14 @@
       
       <categories>
           
-          <category> 工具 后端 </category>
+          <category> 工具 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 文件功能 </tag>
+            <tag> 后端 </tag>
             
         </tags>
       
@@ -213,14 +213,14 @@
       
       <categories>
           
-          <category> 工具 后端 </category>
+          <category> 工具 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 结果集 </tag>
+            <tag> 后端 </tag>
             
         </tags>
       
@@ -238,14 +238,14 @@
       
       <categories>
           
-          <category> 项目 后端 </category>
+          <category> 项目 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 后台管理系统 </tag>
+            <tag> 后端 </tag>
             
         </tags>
       
@@ -263,14 +263,14 @@
       
       <categories>
           
-          <category> 项目 后端 </category>
+          <category> 项目 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 后台管理系统 </tag>
+            <tag> 后端 </tag>
             
         </tags>
       
@@ -288,14 +288,14 @@
       
       <categories>
           
-          <category> 前端 框架 工具 </category>
+          <category> 工具 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Vue </tag>
+            <tag> Vue 前端 </tag>
             
         </tags>
       
@@ -313,14 +313,14 @@
       
       <categories>
           
-          <category> 前端 框架 </category>
+          <category> Vue </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Vue </tag>
+            <tag> Vue 前端 框架 </tag>
             
         </tags>
       
@@ -338,14 +338,14 @@
       
       <categories>
           
-          <category> 工具 后端 </category>
+          <category> 工具 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 公共字段 </tag>
+            <tag> 后端 </tag>
             
         </tags>
       
@@ -363,14 +363,14 @@
       
       <categories>
           
-          <category> 后端 </category>
+          <category> 工具 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> 对象映射器 </tag>
+            <tag> 后端 </tag>
             
         </tags>
       
@@ -388,14 +388,14 @@
       
       <categories>
           
-          <category> 后端 </category>
+          <category> 工具 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> ThreadLocal </tag>
+            <tag> 后端 ThreadLocal </tag>
             
         </tags>
       
@@ -413,14 +413,14 @@
       
       <categories>
           
-          <category> 前端 框架 工具 </category>
+          <category> Axios 工具 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Vue </tag>
+            <tag> Vue 前端 </tag>
             
         </tags>
       
@@ -438,14 +438,14 @@
       
       <categories>
           
-          <category> 后端 框架 </category>
+          <category> Spring Security </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Spring Security </tag>
+            <tag> Spring Security 后端 </tag>
             
         </tags>
       
@@ -463,14 +463,14 @@
       
       <categories>
           
-          <category> 工具 后端 框架 跨域 </category>
+          <category> Cros </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Spring Boot Cors </tag>
+            <tag> 后端 跨域 </tag>
             
         </tags>
       
@@ -488,14 +488,14 @@
       
       <categories>
           
-          <category> 工具 后端 框架 </category>
+          <category> Spring Boot </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Spring Boot JWT </tag>
+            <tag> Spring Boot JWT 后端 </tag>
             
         </tags>
       
@@ -513,14 +513,14 @@
       
       <categories>
           
-          <category> 工具 后端 框架 </category>
+          <category> SpringBoot swagger-ui </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Spring Boot swagger-ui </tag>
+            <tag> Spring Boot swagger-ui 后端 </tag>
             
         </tags>
       
@@ -538,14 +538,14 @@
       
       <categories>
           
-          <category> 后端 框架 微服务 </category>
+          <category> SpringCloud </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Spring Cloud </tag>
+            <tag> Spring Cloud 微服务 后端 </tag>
             
         </tags>
       
@@ -563,14 +563,14 @@
       
       <categories>
           
-          <category> 工具 后端 </category>
+          <category> 工具 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> MybatisPlus </tag>
+            <tag> 后端 MybatisPlus </tag>
             
         </tags>
       
@@ -588,14 +588,14 @@
       
       <categories>
           
-          <category> 部署 后端 </category>
+          <category> Linux </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> linux </tag>
+            <tag> 后端 部署 </tag>
             
         </tags>
       
@@ -613,14 +613,14 @@
       
       <categories>
           
-          <category> 工具 后端 </category>
+          <category> 工具 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> knife4j </tag>
+            <tag> 后端 </tag>
             
         </tags>
       

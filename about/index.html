@@ -395,14 +395,14 @@
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">11</a></span>
+    <span class="count"><a href="/categories">13</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">20</a></span>
+    <span class="count"><a href="/tags">12</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -425,14 +425,14 @@
 
 
 <div class="statis">
-    <span class="count"><a href="/categories">11</a></span>
+    <span class="count"><a href="/categories">13</a></span>
     <span class="name">分类</span>
 </div>
 
 
 
 <div class="statis">
-    <span class="count"><a href="/tags">20</a></span>
+    <span class="count"><a href="/tags">12</a></span>
     <span class="name">标签</span>
 </div>
 
@@ -618,7 +618,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"后端","value":3},{"name":"工具 后端","value":9},{"name":"工具 后端 框架 跨域","value":1},{"name":"工具 后端 框架","value":2},{"name":"后端 框架 微服务","value":1},{"name":"前端 框架 工具","value":2},{"name":"后端 框架","value":1},{"name":"部署 后端","value":1},{"name":"前端 框架","value":1},{"name":"项目 后端","value":3},{"name":"项目 后端 前端","value":1}],
+                data: [{"name":"工具","value":11},{"name":"项目","value":3},{"name":"后端 前端","value":1},{"name":"Dubbo","value":1},{"name":"JWT","value":1},{"name":"Linux","value":1},{"name":"Spring Boot","value":1},{"name":"SpringBoot swagger-ui","value":1},{"name":"Cros","value":1},{"name":"SpringCloud","value":1},{"name":"Spring Security","value":1},{"name":"Axios 工具","value":1},{"name":"Vue","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -642,7 +642,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Vue","后台管理系统","jwt","Dubbo","Echarts","Hutool","MybatisPlus","Spring Boot Cors","Spring Boot JWT","Spring Boot swagger-ui"]
+                data: ["后端","Vue 前端","微信小程序","后端 部署","后端 MybatisPlus","Spring Boot JWT 后端","Spring Boot swagger-ui 后端","后端 跨域","Spring Cloud 微服务 后端","Spring Security 后端"]
             }
         ],
         yAxis: [
@@ -655,7 +655,7 @@
                 type: 'bar',
                 color: ['#82d3f4'],
                 barWidth : 18,
-                data: [3,3,2,1,1,1,1,1,1,1],
+                data: [13,2,1,1,1,1,1,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [{
@@ -825,122 +825,74 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/Dubbo/">
-                <span class="chip center-align waves-effect waves-light chip-default">Dubbo</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Echarts/">
-                <span class="chip center-align waves-effect waves-light chip-default">Echarts</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Hutool/">
-                <span class="chip center-align waves-effect waves-light chip-default">Hutool</span>
-            </a>
-            
-            
-            
-            <a href="/tags/jwt/">
-                <span class="chip center-align waves-effect waves-light chip-default">jwt</span>
-            </a>
-            
-            
-            
-            <a href="/tags/MybatisPlus/">
-                <span class="chip center-align waves-effect waves-light chip-default">MybatisPlus</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Spring-Boot-Cors/">
-                <span class="chip center-align waves-effect waves-light chip-default">Spring Boot Cors</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Spring-Boot-JWT/">
-                <span class="chip center-align waves-effect waves-light chip-default">Spring Boot JWT</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Spring-Boot-swagger-ui/">
-                <span class="chip center-align waves-effect waves-light chip-default">Spring Boot swagger-ui</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Spring-Cloud/">
-                <span class="chip center-align waves-effect waves-light chip-default">Spring Cloud</span>
-            </a>
-            
-            
-            
-            <a href="/tags/ThreadLocal/">
-                <span class="chip center-align waves-effect waves-light chip-default">ThreadLocal</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Vue/">
-                <span class="chip center-align waves-effect waves-light chip-default">Vue</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Spring-Security/">
-                <span class="chip center-align waves-effect waves-light chip-default">Spring Security</span>
-            </a>
-            
-            
-            
-            <a href="/tags/knife4j/">
-                <span class="chip center-align waves-effect waves-light chip-default">knife4j</span>
-            </a>
-            
-            
-            
-            <a href="/tags/linux/">
-                <span class="chip center-align waves-effect waves-light chip-default">linux</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">
-                <span class="chip center-align waves-effect waves-light chip-default">后台管理系统</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E5%85%AC%E5%85%B1%E5%AD%97%E6%AE%B5/">
-                <span class="chip center-align waves-effect waves-light chip-default">公共字段</span>
-            </a>
-            
-            
-            
-            <a href="/tags/%E5%AF%B9%E8%B1%A1%E6%98%A0%E5%B0%84%E5%99%A8/">
-                <span class="chip center-align waves-effect waves-light chip-default">对象映射器</span>
-            </a>
-            
-            
-            
             <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
                 <span class="chip center-align waves-effect waves-light chip-default">微信小程序</span>
             </a>
             
             
             
-            <a href="/tags/%E6%96%87%E4%BB%B6%E5%8A%9F%E8%83%BD/">
-                <span class="chip center-align waves-effect waves-light chip-default">文件功能</span>
+            <a href="/tags/%E5%90%8E%E7%AB%AF/">
+                <span class="chip center-align waves-effect waves-light chip-default">后端</span>
             </a>
             
             
             
-            <a href="/tags/%E7%BB%93%E6%9E%9C%E9%9B%86/">
-                <span class="chip center-align waves-effect waves-light chip-default">结果集</span>
+            <a href="/tags/%E5%90%8E%E7%AB%AF-%E9%83%A8%E7%BD%B2/">
+                <span class="chip center-align waves-effect waves-light chip-default">后端 部署</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E5%90%8E%E7%AB%AF-MybatisPlus/">
+                <span class="chip center-align waves-effect waves-light chip-default">后端 MybatisPlus</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Spring-Boot-JWT-%E5%90%8E%E7%AB%AF/">
+                <span class="chip center-align waves-effect waves-light chip-default">Spring Boot JWT 后端</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Spring-Boot-swagger-ui-%E5%90%8E%E7%AB%AF/">
+                <span class="chip center-align waves-effect waves-light chip-default">Spring Boot swagger-ui 后端</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E5%90%8E%E7%AB%AF-%E8%B7%A8%E5%9F%9F/">
+                <span class="chip center-align waves-effect waves-light chip-default">后端 跨域</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Spring-Cloud-%E5%BE%AE%E6%9C%8D%E5%8A%A1-%E5%90%8E%E7%AB%AF/">
+                <span class="chip center-align waves-effect waves-light chip-default">Spring Cloud 微服务 后端</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Spring-Security-%E5%90%8E%E7%AB%AF/">
+                <span class="chip center-align waves-effect waves-light chip-default">Spring Security 后端</span>
+            </a>
+            
+            
+            
+            <a href="/tags/%E5%90%8E%E7%AB%AF-ThreadLocal/">
+                <span class="chip center-align waves-effect waves-light chip-default">后端 ThreadLocal</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Vue-%E5%89%8D%E7%AB%AF/">
+                <span class="chip center-align waves-effect waves-light chip-default">Vue 前端</span>
+            </a>
+            
+            
+            
+            <a href="/tags/Vue-%E5%89%8D%E7%AB%AF-%E6%A1%86%E6%9E%B6/">
+                <span class="chip center-align waves-effect waves-light chip-default">Vue 前端 框架</span>
             </a>
             
             
