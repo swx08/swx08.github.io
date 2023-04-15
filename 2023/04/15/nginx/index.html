@@ -494,14 +494,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    234
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    8 分
                 </div>
                 
 
@@ -524,7 +524,225 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <blockquote>
+                <h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p>源码：<a target="_blank" rel="noopener" href="https://trac.nginx.org/nginx/browser">https://trac.nginx.org/nginx/browser</a></p>
+<p>官网：<a target="_blank" rel="noopener" href="http://www.nginx.org/">http://www.nginx.org/</a></p>
+<p>Nginx是lgor Sysoev为俄罗斯访问量第二的 rambler.ru 站点设计开发的。从2004年发布至今，凭借开源的力量，已经接近成熟与完善。</p>
+<p>Nginx功能丰富，可作为HTTP服务器，也可作为反向代理服务器，邮件服务器。支持FastCGI、SSL、Virtual Host、URL Rewrite、Gzip等功能。并且支持很多第三方的模块扩展。</p>
+<p>Nginx的稳定性、功能集、示例配置文件和低系统资源的消耗让他后来居上，在全球活跃的网站中有12.18%的使用比率，大约为2220万个网站。</p>
+<h2 id="1、Nginx常用功能"><a href="#1、Nginx常用功能" class="headerlink" title="1、Nginx常用功能"></a>1、Nginx常用功能</h2><p>1、Http代理，反向代理：作为web服务器最常用的功能之一，尤其是反向代理。</p>
+<p>这里我给来2张图，对正向代理与反向代理做个诠释，具体细节，大家可以翻阅下资料。</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p99Z5z8"><img src="https://s1.ax1x.com/2023/04/15/p99Z5z8.md.jpg" alt="反向代理" style="zoom:150%;"></a></p>
+<p>Nginx在做反向代理时，提供性能稳定，并且能够提供配置灵活的转发功能。Nginx可以根据不同的正则匹配，采取不同的转发策略，比如图片文件结尾的走文件服务器，动态页面走web服务器，只要你正则写的没问题，又有相对应的服务器解决方案，你就可以随心所欲的玩。并且Nginx对返回结果进行错误页跳转，异常判断等。如果被分发的服务器存在异常，他可以将请求重新转发给另外一台服务器，然后自动去除异常服务器。</p>
+<h2 id="2、负载均衡"><a href="#2、负载均衡" class="headerlink" title="2、负载均衡"></a>2、负载均衡</h2><p>Nginx提供的负载均衡策略有2种：内置策略和扩展策略。内置策略为轮询，加权轮询，Ip hash。扩展策略，就天马行空，只有你想不到的没有他做不到的啦，你可以参照所有的负载均衡算法，给他一一找出来做下实现。</p>
+<p>上3个图，理解这三种负载均衡算法的实现</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p99ZhJP"><img src="https://s1.ax1x.com/2023/04/15/p99ZhJP.md.jpg" alt="负载均衡" style="zoom: 200%;"></a></p>
+<p>Ip hash算法，对客户端请求的ip进行hash操作，然后根据hash结果将同一个客户端ip的请求分发给同一台服务器进行处理，可以解决session不共享的问题。</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p99Z4Rf"><img src="https://s1.ax1x.com/2023/04/15/p99Z4Rf.md.jpg" alt="p99Z4Rf.md.jpg" style="zoom:150%;"></a></p>
+<h2 id="3、web缓存"><a href="#3、web缓存" class="headerlink" title="3、web缓存"></a>3、web缓存</h2><p>Nginx可以对不同的文件做不同的缓存处理，配置灵活，并且支持FastCGI_Cache，主要用于对FastCGI的动态程序进行缓存。配合着第三方的ngx_cache_purge，对制定的URL缓存内容可以的进行增删管理。</p>
+<h2 id="4、Nginx配置文件结构"><a href="#4、Nginx配置文件结构" class="headerlink" title="4、Nginx配置文件结构"></a>4、Nginx配置文件结构</h2><p>如果你下载好啦，你的安装文件，不妨打开conf文件夹的nginx.conf文件，Nginx服务器的基础配置，默认的配置也存放在此。</p>
+<p>在 nginx.conf 的注释符号为： <strong>#</strong></p>
+<p>默认的 nginx 配置文件 nginx.conf 内容如下</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">#user  nobody<span class="token punctuation">;</span>
+worker_processes  <span class="token number">1</span><span class="token punctuation">;</span>
+
+#error_log  logs<span class="token operator">/</span>error<span class="token punctuation">.</span>log<span class="token punctuation">;</span>
+#error_log  logs<span class="token operator">/</span>error<span class="token punctuation">.</span>log  notice<span class="token punctuation">;</span>
+#error_log  logs<span class="token operator">/</span>error<span class="token punctuation">.</span>log  info<span class="token punctuation">;</span>
+
+#pid        logs<span class="token operator">/</span>nginx<span class="token punctuation">.</span>pid<span class="token punctuation">;</span>
+
+
+events <span class="token punctuation">{</span>
+worker_connections  <span class="token number">1024</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+http <span class="token punctuation">{</span>
+include       mime<span class="token punctuation">.</span>types<span class="token punctuation">;</span>
+default_type  application<span class="token operator">/</span>octet<span class="token operator">-</span>stream<span class="token punctuation">;</span>
+
+#log_format  main  '$remote_addr <span class="token operator">-</span> $remote_user <span class="token punctuation">[</span>$time_local<span class="token punctuation">]</span> <span class="token string">"$request"</span> '
+#                  '$status $body_bytes_sent <span class="token string">"$http_referer"</span> '
+#                  '<span class="token string">"$http_user_agent"</span> <span class="token string">"$http_x_forwarded_for"</span>'<span class="token punctuation">;</span>
+
+#access_log  logs<span class="token operator">/</span>access<span class="token punctuation">.</span>log  main<span class="token punctuation">;</span>
+
+sendfile        on<span class="token punctuation">;</span>
+#tcp_nopush     on<span class="token punctuation">;</span>
+
+#keepalive_timeout  <span class="token number">0</span><span class="token punctuation">;</span>
+keepalive_timeout  <span class="token number">65</span><span class="token punctuation">;</span>
+
+#gzip  on<span class="token punctuation">;</span>
+
+server <span class="token punctuation">{</span>
+   listen       <span class="token number">80</span><span class="token punctuation">;</span>
+   server_name  localhost<span class="token punctuation">;</span>
+
+   #charset koi8<span class="token operator">-</span>r<span class="token punctuation">;</span>
+
+   #access_log  logs<span class="token operator">/</span>host<span class="token punctuation">.</span>access<span class="token punctuation">.</span>log  main<span class="token punctuation">;</span>
+
+   location <span class="token operator">/</span> <span class="token punctuation">{</span>
+       root   html<span class="token punctuation">;</span>
+       index  index<span class="token punctuation">.</span>html index<span class="token punctuation">.</span>htm<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+
+   #error_page  <span class="token number">404</span>              <span class="token operator">/</span><span class="token number">404.</span>html<span class="token punctuation">;</span>
+
+   # redirect server error pages <span class="token keyword">to</span> <span class="token namespace">the</span> <span class="token keyword">static</span> page <span class="token operator">/</span><span class="token number">50</span>x<span class="token punctuation">.</span>html
+   #
+   error_page   <span class="token number">500</span> <span class="token number">502</span> <span class="token number">503</span> <span class="token number">504</span>  <span class="token operator">/</span><span class="token number">50</span>x<span class="token punctuation">.</span>html<span class="token punctuation">;</span>
+   location <span class="token operator">=</span> <span class="token operator">/</span><span class="token number">50</span>x<span class="token punctuation">.</span>html <span class="token punctuation">{</span>
+       root   html<span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+
+   # proxy the <span class="token constant">PHP</span> scripts <span class="token keyword">to</span> <span class="token class-name">Apache</span> listening on <span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token operator">:</span><span class="token number">80</span>
+   #
+   #location <span class="token operator">~</span> \<span class="token punctuation">.</span>php$ <span class="token punctuation">{</span>
+   #    proxy_pass   http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span><span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token punctuation">;</span>
+   #<span class="token punctuation">}</span>
+
+   # pass the <span class="token constant">PHP</span> scripts <span class="token keyword">to</span> <span class="token class-name">FastCGI</span> server listening on <span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token operator">:</span><span class="token number">9000</span>
+   #
+   #location <span class="token operator">~</span> \<span class="token punctuation">.</span>php$ <span class="token punctuation">{</span>
+   #    root           html<span class="token punctuation">;</span>
+   #    fastcgi_pass   <span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token operator">:</span><span class="token number">9000</span><span class="token punctuation">;</span>
+   #    fastcgi_index  index<span class="token punctuation">.</span>php<span class="token punctuation">;</span>
+   #    fastcgi_param  <span class="token constant">SCRIPT_FILENAME</span>  <span class="token operator">/</span>scripts$fastcgi_script_name<span class="token punctuation">;</span>
+   #    include        fastcgi_params<span class="token punctuation">;</span>
+   #<span class="token punctuation">}</span>
+
+   # deny access <span class="token keyword">to</span> <span class="token punctuation">.</span>htaccess files<span class="token punctuation">,</span> <span class="token keyword">if</span> <span class="token class-name">Apache</span>'s document root
+   # concurs <span class="token keyword">with</span> <span class="token namespace">nginx</span>'s one
+   #
+   #location <span class="token operator">~</span> <span class="token operator">/</span>\<span class="token punctuation">.</span>ht <span class="token punctuation">{</span>
+   #    deny  all<span class="token punctuation">;</span>
+   #<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+# another virtual host using mix of <span class="token constant">IP</span><span class="token operator">-</span><span class="token punctuation">,</span> name<span class="token operator">-</span><span class="token punctuation">,</span> and port<span class="token operator">-</span>based configuration
+#
+#server <span class="token punctuation">{</span>
+#    listen       <span class="token number">8000</span><span class="token punctuation">;</span>
+#    listen       somename<span class="token operator">:</span><span class="token number">8080</span><span class="token punctuation">;</span>
+#    server_name  somename  alias  another<span class="token punctuation">.</span>alias<span class="token punctuation">;</span>
+
+#    location <span class="token operator">/</span> <span class="token punctuation">{</span>
+#        root   html<span class="token punctuation">;</span>
+#        index  index<span class="token punctuation">.</span>html index<span class="token punctuation">.</span>htm<span class="token punctuation">;</span>
+#    <span class="token punctuation">}</span>
+#<span class="token punctuation">}</span>
+
+
+# <span class="token constant">HTTPS</span> server
+#
+#server <span class="token punctuation">{</span>
+#    listen       <span class="token number">443</span> ssl<span class="token punctuation">;</span>
+#    server_name  localhost<span class="token punctuation">;</span>
+
+#    ssl_certificate      cert<span class="token punctuation">.</span>pem<span class="token punctuation">;</span>
+#    ssl_certificate_key  cert<span class="token punctuation">.</span>key<span class="token punctuation">;</span>
+
+#    ssl_session_cache    shared<span class="token operator">:</span><span class="token constant">SSL</span><span class="token operator">:</span><span class="token number">1</span>m<span class="token punctuation">;</span>
+#    ssl_session_timeout  <span class="token number">5</span>m<span class="token punctuation">;</span>
+
+#    ssl_ciphers  <span class="token constant">HIGH</span><span class="token operator">:</span><span class="token operator">!</span>aNULL<span class="token operator">:</span><span class="token operator">!</span><span class="token constant">MD5</span><span class="token punctuation">;</span>
+#    ssl_prefer_server_ciphers  on<span class="token punctuation">;</span>
+
+#    location <span class="token operator">/</span> <span class="token punctuation">{</span>
+#        root   html<span class="token punctuation">;</span>
+#        index  index<span class="token punctuation">.</span>html index<span class="token punctuation">.</span>htm<span class="token punctuation">;</span>
+#    <span class="token punctuation">}</span>
+#<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<p><strong>nginx 基础文件结构</strong></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>              #全局块
+
+events <span class="token punctuation">{</span>         #events块
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+
+http      #http块
+<span class="token punctuation">{</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>   #http全局块
+server        #server块
+<span class="token punctuation">{</span> 
+   <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>       #server全局块
+   location <span class="token punctuation">[</span><span class="token constant">PATTERN</span><span class="token punctuation">]</span>   #location块
+   <span class="token punctuation">{</span>
+       <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+   <span class="token punctuation">}</span>
+   location <span class="token punctuation">[</span><span class="token constant">PATTERN</span><span class="token punctuation">]</span> 
+   <span class="token punctuation">{</span>
+       <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+   <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+server
+<span class="token punctuation">{</span>
+ <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>     #http全局块
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>1、<strong>全局块</strong>：配置影响nginx全局的指令。一般有运行nginx服务器的用户组，nginx进程pid存放路径，日志存放路径，配置文件引入，允许生成worker process数等。</li>
+<li>2、<strong>events块</strong>：配置影响nginx服务器或与用户的网络连接。有每个进程的最大连接数，选取哪种事件驱动模型处理连接请求，是否允许同时接受多个网路连接，开启多个网络连接序列化等。</li>
+<li>3、<strong>http块</strong>：可以嵌套多个server，配置代理，缓存，日志定义等绝大多数功能和第三方模块的配置。如文件引入，mime-type定义，日志自定义，是否使用sendfile传输文件，连接超时时间，单连接请求数等。</li>
+<li>4、<strong>server块</strong>：配置虚拟主机的相关参数，一个http中可以有多个server。</li>
+<li>5、<strong>location块</strong>：配置请求的路由，以及各种页面的处理情况。</li>
+</ul>
+<h2 id="5、实例"><a href="#5、实例" class="headerlink" title="5、实例"></a>5、实例</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">########### 每个指令必须有分号结束。#################
+#user administrator administrators<span class="token punctuation">;</span>  #配置用户或者组，默认为nobody nobody。
+#worker_processes <span class="token number">2</span><span class="token punctuation">;</span>  #允许生成的进程数，默认为<span class="token number">1</span>
+#pid <span class="token operator">/</span>nginx<span class="token operator">/</span>pid<span class="token operator">/</span>nginx<span class="token punctuation">.</span>pid<span class="token punctuation">;</span>   #指定nginx进程运行文件存放地址
+error_log log<span class="token operator">/</span>error<span class="token punctuation">.</span>log debug<span class="token punctuation">;</span>  #制定日志路径，级别。这个设置可以放入全局块，http块，server块，级别以此为：debug<span class="token operator">|</span>info<span class="token operator">|</span>notice<span class="token operator">|</span>warn<span class="token operator">|</span>error<span class="token operator">|</span>crit<span class="token operator">|</span>alert<span class="token operator">|</span>emerg
+events <span class="token punctuation">{</span>
+accept_mutex on<span class="token punctuation">;</span>   #设置网路连接序列化，防止惊群现象发生，默认为on
+multi_accept on<span class="token punctuation">;</span>  #设置一个进程是否同时接受多个网络连接，默认为off
+#use epoll<span class="token punctuation">;</span>      #事件驱动模型，select<span class="token operator">|</span>poll<span class="token operator">|</span>kqueue<span class="token operator">|</span>epoll<span class="token operator">|</span>resig<span class="token operator">|</span><span class="token operator">/</span>dev<span class="token operator">/</span>poll<span class="token operator">|</span>eventport
+worker_connections  <span class="token number">1024</span><span class="token punctuation">;</span>    #最大连接数，默认为<span class="token number">512</span>
+<span class="token punctuation">}</span>
+http <span class="token punctuation">{</span>
+include       mime<span class="token punctuation">.</span>types<span class="token punctuation">;</span>   #文件扩展名与文件类型映射表
+default_type  application<span class="token operator">/</span>octet<span class="token operator">-</span>stream<span class="token punctuation">;</span> #默认文件类型，默认为text<span class="token operator">/</span>plain
+#access_log off<span class="token punctuation">;</span> #取消服务日志    
+log_format myFormat '$remote_addr–$remote_user <span class="token punctuation">[</span>$time_local<span class="token punctuation">]</span> $request $status $body_bytes_sent $http_referer $http_user_agent $http_x_forwarded_for'<span class="token punctuation">;</span> #自定义格式
+access_log log<span class="token operator">/</span>access<span class="token punctuation">.</span>log myFormat<span class="token punctuation">;</span>  #combined为日志格式的默认值
+sendfile on<span class="token punctuation">;</span>   #允许sendfile方式传输文件，默认为off，可以在http块，server块，location块。
+sendfile_max_chunk <span class="token number">100</span>k<span class="token punctuation">;</span>  #每个进程每次调用传输数量不能大于设定的值，默认为<span class="token number">0</span>，即不设上限。
+keepalive_timeout <span class="token number">65</span><span class="token punctuation">;</span>  #连接超时时间，默认为<span class="token number">75</span>s，可以在http，server，location块。
+
+upstream mysvr <span class="token punctuation">{</span>   
+ server <span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token operator">:</span><span class="token number">7878</span><span class="token punctuation">;</span>
+ server <span class="token number">192.168</span><span class="token number">.10</span><span class="token number">.121</span><span class="token operator">:</span><span class="token number">3333</span> backup<span class="token punctuation">;</span>  #热备
+<span class="token punctuation">}</span>
+error_page <span class="token number">404</span> https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>baidu<span class="token punctuation">.</span>com<span class="token punctuation">;</span> #错误页
+server <span class="token punctuation">{</span>
+   keepalive_requests <span class="token number">120</span><span class="token punctuation">;</span> #单连接请求上限次数。
+   listen       <span class="token number">4545</span><span class="token punctuation">;</span>   #监听端口
+   server_name  <span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token punctuation">;</span>   #监听地址       
+   location  <span class="token operator">~</span><span class="token operator">*</span><span class="token operator">^</span><span class="token punctuation">.</span>+$ <span class="token punctuation">{</span>       #请求的url过滤，正则匹配，<span class="token operator">~</span>为区分大小写，<span class="token operator">~</span><span class="token operator">*</span>为不区分大小写。
+      #root path<span class="token punctuation">;</span>  #根目录
+      #index vv<span class="token punctuation">.</span>txt<span class="token punctuation">;</span>  #设置默认页
+      proxy_pass  http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>mysvr<span class="token punctuation">;</span>  #请求转向mysvr 定义的服务器列表
+      deny <span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token punctuation">;</span>  #拒绝的ip
+      allow <span class="token number">172.18</span><span class="token number">.5</span><span class="token number">.54</span><span class="token punctuation">;</span> #允许的ip           
+   <span class="token punctuation">}</span> 
+<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<blockquote>
 <p>Linux防火墙及端口开放</p>
 </blockquote>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"> <span class="token number">1.</span> # 开启
@@ -559,10 +777,6 @@
 <span class="token number">5.</span> <span class="token punctuation">.</span>/nginx <span class="token operator">-</span>s reload 重新加载配置文件
 <span class="token number">6.</span> ps <span class="token operator">-</span>ef <span class="token operator">|</span> grep nginx 查看nginx进程
 <span class="token number">7.</span> kill <span class="token operator">-</span><span class="token number">9</span> 进程号 杀死某进程<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>Nginx学习：<a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/nginx-setup-intro.html">https://www.runoob.com/w3cnote/nginx-setup-intro.html</a></p>
-<p>源码：<a target="_blank" rel="noopener" href="https://trac.nginx.org/nginx/browser">https://trac.nginx.org/nginx/browser</a></p>
-<p>官网：<a target="_blank" rel="noopener" href="http://www.nginx.org/">http://www.nginx.org/</a></p>
 
                 
             </div>
@@ -1075,7 +1289,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">58.6k</span>&nbsp;字
+                class="white-color">60.2k</span>&nbsp;字
             
             
             
