@@ -5,6 +5,31 @@
     
     <entry>
       <title></title>
+      <link href="/2023/04/15/nginx/"/>
+      <url>/2023/04/15/nginx/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>Linux防火墙及端口开放</p></blockquote><pre class="line-numbers language-java" data-language="java"><code class="language-java"> <span class="token number">1.</span> # 开启 <span class="token number">2.</span> service firewalld start <span class="token number">3.</span> # 重启 <span class="token number">4.</span> service firewalld restart <span class="token number">5.</span> # 关闭 <span class="token number">6.</span> service firewalld stop <span class="token number">7.</span> # 查看防火墙规则 <span class="token number">8.</span> firewall<span class="token operator">-</span>cmd <span class="token operator">--</span>list<span class="token operator">-</span>all <span class="token number">9.</span> # 查询端口是否开放<span class="token number">10.</span> firewall<span class="token operator">-</span>cmd <span class="token operator">--</span>query<span class="token operator">-</span>port<span class="token operator">=</span><span class="token number">8080</span><span class="token operator">/</span>tcp<span class="token number">11.</span> # 开放<span class="token number">80</span>端口<span class="token number">12.</span> firewall<span class="token operator">-</span>cmd <span class="token operator">--</span>permanent <span class="token operator">--</span>add<span class="token operator">-</span>port<span class="token operator">=</span><span class="token number">80</span><span class="token operator">/</span>tcp<span class="token number">13.</span> #移除端口<span class="token number">14.</span> firewall<span class="token operator">-</span>cmd <span class="token operator">--</span>permanent <span class="token operator">--</span>remove<span class="token operator">-</span>port<span class="token operator">=</span><span class="token number">8080</span><span class="token operator">/</span>tcp<span class="token number">15.</span> # 重启防火墙<span class="token punctuation">(</span>修改配置后要重启防火墙<span class="token punctuation">)</span><span class="token number">16.</span> firewall<span class="token operator">-</span>cmd <span class="token operator">--</span>reload<span class="token number">17.</span> # 参数详解 <span class="token number">1.</span> firewall<span class="token operator">-</span>cmd <span class="token operator">:</span>是<span class="token class-name">Linux</span>提供的操作firewall的一个工具<span class="token punctuation">;</span> <span class="token number">2.</span> <span class="token operator">--</span>permanent <span class="token operator">:</span> 表示设置为持久 <span class="token punctuation">;</span> <span class="token number">3.</span> <span class="token operator">--</span>add<span class="token operator">-</span>port <span class="token operator">:</span> 标识添加的端口 <span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><blockquote><p>Nginx常用命令</p></blockquote><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token number">1.</span> cd <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>nginx<span class="token operator">/</span>sbin<span class="token number">2.</span> <span class="token punctuation">.</span>/nginx 启动<span class="token number">3.</span> <span class="token punctuation">.</span>/nginx <span class="token operator">-</span>s stop 停止<span class="token number">4.</span> <span class="token punctuation">.</span>/nginx <span class="token operator">-</span>s quit 安全退出<span class="token number">5.</span> <span class="token punctuation">.</span>/nginx <span class="token operator">-</span>s reload 重新加载配置文件<span class="token number">6.</span> ps <span class="token operator">-</span>ef <span class="token operator">|</span> grep nginx 查看nginx进程<span class="token number">7.</span> kill <span class="token operator">-</span><span class="token number">9</span> 进程号 杀死某进程<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Nginx学习：<a href="https://www.runoob.com/w3cnote/nginx-setup-intro.html">https://www.runoob.com/w3cnote/nginx-setup-intro.html</a></p><p>源码：<a href="https://trac.nginx.org/nginx/browser">https://trac.nginx.org/nginx/browser</a></p><p>官网：<a href="http://www.nginx.org/">http://www.nginx.org/</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Nginx </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Nginx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
       <link href="/2023/04/13/shi-da-jing-dian-pai-xu-suan-fa/"/>
       <url>/2023/04/13/shi-da-jing-dian-pai-xu-suan-fa/</url>
       
