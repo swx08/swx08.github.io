@@ -487,7 +487,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-15
+                    2023-04-16
                 </div>
                 
 
@@ -531,11 +531,17 @@
 <p>Nginx的稳定性、功能集、示例配置文件和低系统资源的消耗让他后来居上，在全球活跃的网站中有12.18%的使用比率，大约为2220万个网站。</p>
 <h2 id="1、Nginx常用功能"><a href="#1、Nginx常用功能" class="headerlink" title="1、Nginx常用功能"></a>1、Nginx常用功能</h2><p>1、Http代理，反向代理：作为web服务器最常用的功能之一，尤其是反向代理。</p>
 <p>这里我给来2张图，对正向代理与反向代理做个诠释，具体细节，大家可以翻阅下资料。</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p99Z5z8"><img src="https://s1.ax1x.com/2023/04/15/p99Z5z8.md.jpg" alt="反向代理" style="zoom:150%;"></a></p>
+<p>正向代理：</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p99d2jg"><img src="https://s1.ax1x.com/2023/04/16/p99d2jg.md.jpg" alt="正向代理" style="zoom: 80%;"></a></p>
+<p>反向代理：</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p99dc38"><img src="https://s1.ax1x.com/2023/04/16/p99dc38.md.jpg" alt="反向代理"></a></p>
 <p>Nginx在做反向代理时，提供性能稳定，并且能够提供配置灵活的转发功能。Nginx可以根据不同的正则匹配，采取不同的转发策略，比如图片文件结尾的走文件服务器，动态页面走web服务器，只要你正则写的没问题，又有相对应的服务器解决方案，你就可以随心所欲的玩。并且Nginx对返回结果进行错误页跳转，异常判断等。如果被分发的服务器存在异常，他可以将请求重新转发给另外一台服务器，然后自动去除异常服务器。</p>
 <h2 id="2、负载均衡"><a href="#2、负载均衡" class="headerlink" title="2、负载均衡"></a>2、负载均衡</h2><p>Nginx提供的负载均衡策略有2种：内置策略和扩展策略。内置策略为轮询，加权轮询，Ip hash。扩展策略，就天马行空，只有你想不到的没有他做不到的啦，你可以参照所有的负载均衡算法，给他一一找出来做下实现。</p>
 <p>上3个图，理解这三种负载均衡算法的实现</p>
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p99ZhJP"><img src="https://s1.ax1x.com/2023/04/15/p99ZhJP.md.jpg" alt="负载均衡" style="zoom: 200%;"></a></p>
+<p>无负载均衡：</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p99dggS"><img src="https://s1.ax1x.com/2023/04/16/p99dggS.md.jpg" alt="无负载均衡" style="zoom:200%;"></a></p>
+<p>负载均衡：</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p99d69f"><img src="https://s1.ax1x.com/2023/04/16/p99d69f.md.jpg" alt="负载均衡" style="zoom:150%;"></a></p>
 <p>Ip hash算法，对客户端请求的ip进行hash操作，然后根据hash结果将同一个客户端ip的请求分发给同一台服务器进行处理，可以解决session不共享的问题。</p>
 <p><a target="_blank" rel="noopener" href="https://imgse.com/i/p99Z4Rf"><img src="https://s1.ax1x.com/2023/04/15/p99Z4Rf.md.jpg" alt="p99Z4Rf.md.jpg" style="zoom:150%;"></a></p>
 <h2 id="3、web缓存"><a href="#3、web缓存" class="headerlink" title="3、web缓存"></a>3、web缓存</h2><p>Nginx可以对不同的文件做不同的缓存处理，配置灵活，并且支持FastCGI_Cache，主要用于对FastCGI的动态程序进行缓存。配合着第三方的ngx_cache_purge，对制定的URL缓存内容可以的进行增删管理。</p>
@@ -1289,7 +1295,7 @@ server <span class="token punctuation">{</span>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">60.2k</span>&nbsp;字
+                class="white-color">60.3k</span>&nbsp;字
             
             
             
