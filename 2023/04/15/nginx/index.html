@@ -494,7 +494,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    2.1k
                 </div>
                 
 
@@ -704,7 +704,15 @@ server
 <li>4、<strong>server块</strong>：配置虚拟主机的相关参数，一个http中可以有多个server。</li>
 <li>5、<strong>location块</strong>：配置请求的路由，以及各种页面的处理情况。</li>
 </ul>
-<h2 id="5、实例"><a href="#5、实例" class="headerlink" title="5、实例"></a>5、实例</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">########### 每个指令必须有分号结束。#################
+<h2 id="5、动静分离"><a href="#5、动静分离" class="headerlink" title="5、动静分离"></a>5、动静分离</h2><blockquote>
+<p>什么是动静分离?</p>
+</blockquote>
+<p>在Web开发中，通常来说，动态资源其实就是指那些后台资源，而静态资源就是指HTML，JavaScript，CSS，img等文件。</p>
+<p>动静分离，说白了，就是将网站静态资源（HTML，JavaScript，CSS，img等文件）与后台应用分开部署，提高用户访问静态代码的速度，降低对后台应用服务器的请求。后台应用服务器只负责动态数据请求。</p>
+<p><strong>优势</strong>：分担负载，减轻web服务器的压力，适用于大负载。静态资源放置cdn，同时还可以通过配置缓存到客户浏览器中，这样极大减轻web服务器的压力。</p>
+<p><strong>劣势</strong>：网络环境不佳时，ajax回应很慢，导致页面出现空白，出错处理会不好看。不利于网站SEO（搜索引擎优化），增加了开发复杂度。</p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p996L7D"><img src="https://s1.ax1x.com/2023/04/16/p996L7D.md.jpg" alt="p996L7D.md.jpg" style="zoom:200%;"></a></p>
+<h2 id="6、实例"><a href="#6、实例" class="headerlink" title="6、实例"></a>6、实例</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">########### 每个指令必须有分号结束。#################
 #user administrator administrators<span class="token punctuation">;</span>  #配置用户或者组，默认为nobody nobody。
 #worker_processes <span class="token number">2</span><span class="token punctuation">;</span>  #允许生成的进程数，默认为<span class="token number">1</span>
 #pid <span class="token operator">/</span>nginx<span class="token operator">/</span>pid<span class="token operator">/</span>nginx<span class="token punctuation">.</span>pid<span class="token punctuation">;</span>   #指定nginx进程运行文件存放地址
@@ -743,8 +751,6 @@ server <span class="token punctuation">{</span>
    <span class="token punctuation">}</span> 
 <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
 
 
 
@@ -1295,7 +1301,7 @@ server <span class="token punctuation">{</span>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">60.3k</span>&nbsp;字
+                class="white-color">60.5k</span>&nbsp;字
             
             
             
