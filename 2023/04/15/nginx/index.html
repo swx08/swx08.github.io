@@ -494,14 +494,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.1k
+                    3.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    12 分
+                    13 分
                 </div>
                 
 
@@ -880,7 +880,7 @@ server <span class="token punctuation">{</span>
 <p>②、安装后在etc目录中生成keepalived,有keepalived.conf配置文件</p>
 </blockquote>
 <p><strong>高可用学习后续补充完成…….</strong></p>
-<blockquote>
+<h2 id="8、Nginx常用命令"><a href="#8、Nginx常用命令" class="headerlink" title="8、Nginx常用命令"></a>8、Nginx常用命令</h2><h3 id="①、Linux命令"><a href="#①、Linux命令" class="headerlink" title="①、Linux命令"></a>①、Linux命令</h3><blockquote>
 <p>Linux防火墙及端口开放</p>
 </blockquote>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"> <span class="token number">1.</span> # 开启
@@ -905,7 +905,9 @@ server <span class="token punctuation">{</span>
  <span class="token number">2.</span> <span class="token operator">--</span>permanent <span class="token operator">:</span> 表示设置为持久 <span class="token punctuation">;</span>
  <span class="token number">3.</span> <span class="token operator">--</span>add<span class="token operator">-</span>port <span class="token operator">:</span> 标识添加的端口 <span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<blockquote>
+
+
+<h3 id="②、Nginx命令"><a href="#②、Nginx命令" class="headerlink" title="②、Nginx命令"></a>②、Nginx命令</h3><blockquote>
 <p>Nginx常用命令</p>
 </blockquote>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token number">1.</span> cd <span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>nginx<span class="token operator">/</span>sbin
@@ -915,6 +917,24 @@ server <span class="token punctuation">{</span>
 <span class="token number">5.</span> <span class="token punctuation">.</span>/nginx <span class="token operator">-</span>s reload 重新加载配置文件
 <span class="token number">6.</span> ps <span class="token operator">-</span>ef <span class="token operator">|</span> grep nginx 查看nginx进程
 <span class="token number">7.</span> kill <span class="token operator">-</span><span class="token number">9</span> 进程号 杀死某进程<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="9、前后端分离部署Nginx实战"><a href="#9、前后端分离部署Nginx实战" class="headerlink" title="9、前后端分离部署Nginx实战"></a>9、前后端分离部署Nginx实战</h2><p>前端vue项目和后端spring boot项目都是部署在了服务器8.130.108.52。</p>
+<h3 id="①、前端部署准备工作"><a href="#①、前端部署准备工作" class="headerlink" title="①、前端部署准备工作"></a>①、前端部署准备工作</h3><p>vue项目结构：</p>
+<blockquote>
+<p>request前端请求路径</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p9CYXcQ"><img src="https://s1.ax1x.com/2023/04/17/p9CYXcQ.md.png" alt="p9CYXcQ.md.png" style="zoom:200%;"></a></p>
+<blockquote>
+<p>vue.config.js代理配置</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p9CYjXj"><img src="https://s1.ax1x.com/2023/04/17/p9CYjXj.md.png" alt="p9CYjXj.md.png" style="zoom:200%;"></a></p>
+<h3 id="②、步骤"><a href="#②、步骤" class="headerlink" title="②、步骤"></a>②、步骤</h3><p>将vue项目打包后，生成一个dist目录。</p>
+<p>将dist目录下的文件拷贝放到nginx目录下的html下。</p>
+<blockquote>
+<p>nginx配置文件</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p9CYO1g"><img src="https://s1.ax1x.com/2023/04/17/p9CYO1g.md.png" alt="p9CYO1g.md.png" style="zoom:200%;"></a></p>
+<h3 id="③、后端部署"><a href="#③、后端部署" class="headerlink" title="③、后端部署"></a>③、后端部署</h3><p>通过命令 java -jar 直接部署在8.130.108.52的后台即可。</p>
 
                 
             </div>
@@ -1427,7 +1447,7 @@ server <span class="token punctuation">{</span>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">61.5k</span>&nbsp;字
+                class="white-color">61.6k</span>&nbsp;字
             
             
             
