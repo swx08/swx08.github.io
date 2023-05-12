@@ -487,21 +487,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-05-03
+                    2023-05-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.1k
+                    3.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    14 分
+                    15 分
                 </div>
                 
 
@@ -809,6 +809,44 @@ hidden：是否隐藏<span aria-hidden="true" class="line-numbers-rows"><span></
 <p>增删改查</p>
 <h3 id="分类管理"><a href="#分类管理" class="headerlink" title="分类管理"></a>分类管理</h3><p><strong>功能</strong></p>
 <p>增删改查</p>
+<p>新增分类时代码报此分类已存在，实际不存在。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+     * 添加分类
+     * @param category 分类对象
+     * @return
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token annotation punctuation">@Transactional</span><span class="token punctuation">(</span>rollbackFor <span class="token operator">=</span> <span class="token class-name">Exception</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">ResponseResult</span> <span class="token function">insertCategory</span><span class="token punctuation">(</span><span class="token class-name">Category</span> category<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Category</span> vo <span class="token operator">=</span> baseMapper<span class="token punctuation">.</span><span class="token function">selectOne</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">QueryWrapper</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Category</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">eq</span><span class="token punctuation">(</span><span class="token class-name">FieldConstants</span><span class="token punctuation">.</span><span class="token constant">NAME</span><span class="token punctuation">,</span> category<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//若查到vo为null，不应该抛分类已存在的异常。</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">ObjectUtil</span><span class="token punctuation">.</span><span class="token function">isNull</span><span class="token punctuation">(</span>vo<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">BusinessException</span><span class="token punctuation">(</span><span class="token string">"该分类名称已存在!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">int</span> rows <span class="token operator">=</span> baseMapper<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>category<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> rows <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">?</span> <span class="token class-name">ResponseResult</span><span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token class-name">ResponseResult</span><span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">"添加分类失败"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>解决</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+     * 添加分类
+     * @param category 分类对象
+     * @return
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token annotation punctuation">@Transactional</span><span class="token punctuation">(</span>rollbackFor <span class="token operator">=</span> <span class="token class-name">Exception</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">ResponseResult</span> <span class="token function">insertCategory</span><span class="token punctuation">(</span><span class="token class-name">Category</span> category<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Category</span> vo <span class="token operator">=</span> baseMapper<span class="token punctuation">.</span><span class="token function">selectOne</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">QueryWrapper</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Category</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">eq</span><span class="token punctuation">(</span><span class="token class-name">FieldConstants</span><span class="token punctuation">.</span><span class="token constant">NAME</span><span class="token punctuation">,</span> category<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//当通过分类名查询到vo值时，抛分类已存在的异常。</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token class-name">ObjectUtil</span><span class="token punctuation">.</span><span class="token function">isNull</span><span class="token punctuation">(</span>vo<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">BusinessException</span><span class="token punctuation">(</span><span class="token string">"该分类名称已存在!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">int</span> rows <span class="token operator">=</span> baseMapper<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>category<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> rows <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">?</span> <span class="token class-name">ResponseResult</span><span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token class-name">ResponseResult</span><span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">"添加分类失败"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
 <h2 id="相册管理"><a href="#相册管理" class="headerlink" title="相册管理"></a>相册管理</h2><h3 id="七牛云对象存储"><a href="#七牛云对象存储" class="headerlink" title="七牛云对象存储"></a>七牛云对象存储</h3><h4 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h4><p><a target="_blank" rel="noopener" href="https://www.qiniu.com/">七牛云 | 一站式场景化智能视频云 (qiniu.com)</a></p>
 <p>注册、登录、实名认证、对象存储、创建空间、创建后会自动分配一个限期30天的域名使用。</p>
 <p>密钥管理有 AccessKey/SecretKey</p>
@@ -1961,7 +1999,7 @@ hidden：是否隐藏<span aria-hidden="true" class="line-numbers-rows"><span></
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">72.4k</span>&nbsp;字
+                class="white-color">76.7k</span>&nbsp;字
             
             
             

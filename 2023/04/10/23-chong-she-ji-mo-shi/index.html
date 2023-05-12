@@ -487,21 +487,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-04-28
+                    2023-05-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    14.2k
+                    16.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    55 分
+                    63 分
                 </div>
                 
 
@@ -2340,7 +2340,7 @@
 <h3 id="装饰器模式"><a href="#装饰器模式" class="headerlink" title="装饰器模式"></a>装饰器模式</h3><p>装饰器模式（Decorator Pattern）允许向一个现有的对象添加新的功能，同时又不改变其结构。这种类型的设计模式属于结构型模式，它是作为现有的类的一个包装。</p>
 <p>这种模式创建了一个装饰类，用来包装原有的类，并在保持类方法签名完整性的前提下，提供了额外的功能。</p>
 <p>我们通过下面的实例来演示装饰器模式的用法。其中，我们将把一个形状装饰上不同的颜色，同时又不改变形状类。</p>
-<h4 id="介绍-1"><a href="#介绍-1" class="headerlink" title="介绍"></a>介绍</h4><p><strong>意图：</strong>动态地给一个对象添加一些额外的职责。就增加功能来说，装饰器模式相比生成子类更为灵活。</p>
+<h4 id="1、介绍-8"><a href="#1、介绍-8" class="headerlink" title="1、介绍"></a>1、介绍</h4><p><strong>意图：</strong>动态地给一个对象添加一些额外的职责。就增加功能来说，装饰器模式相比生成子类更为灵活。</p>
 <p><strong>主要解决：</strong>一般的，我们为了扩展一个类经常使用继承方式实现，由于继承为类引入静态特征，并且随着扩展功能的增多，子类会很膨胀。</p>
 <p><strong>何时使用：</strong>在不想增加很多子类的情况下扩展类。</p>
 <p><strong>如何解决：</strong>将具体功能职责划分，同时继承装饰者模式。</p>
@@ -2350,6 +2350,413 @@
 <p><strong>缺点：</strong>多层装饰比较复杂。</p>
 <p><strong>使用场景：</strong> 1、扩展一个类的功能。 2、动态增加功能，动态撤销。</p>
 <p><strong>注意事项：</strong>可代替继承。</p>
+<blockquote>
+<p>引出问题</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p9yR2wQ"><img src="https://s1.ax1x.com/2023/05/12/p9yR2wQ.jpg" alt="p9yR2wQ.jpg"></a></p>
+<blockquote>
+<p>问题解决</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p9yRgeg"><img src="https://s1.ax1x.com/2023/05/12/p9yRgeg.md.jpg" alt="p9yRgeg.md.jpg"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p9yRyy8"><img src="https://s1.ax1x.com/2023/05/12/p9yRyy8.md.jpg" alt="p9yRyy8.md.jpg"></a></p>
+<p><strong>解决了当我们新增一种单品咖啡时继承带来的类爆炸问题</strong></p>
+<blockquote>
+<p>UML图</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p9yR6OS"><img src="https://s1.ax1x.com/2023/05/12/p9yR6OS.png" alt="p9yR6OS.png"></a></p>
+<p><strong>主要分为两类：装饰者和被装饰者；装饰者就是被附加的职责。</strong></p>
+<p><strong>被装饰者</strong>：具体的饮料——咖啡</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 被装饰者：抽象类：饮料
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Drink</span> <span class="token punctuation">{</span>
+    <span class="token comment">//描述</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> description<span class="token punctuation">;</span>
+    <span class="token comment">//价格</span>
+    <span class="token keyword">private</span> <span class="token keyword">float</span> price <span class="token operator">=</span> <span class="token number">0.0f</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//计算费用抽象方法，有子类来实现</span>
+    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">float</span> <span class="token function">cost</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> description<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setDescription</span><span class="token punctuation">(</span><span class="token class-name">String</span> description<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>description <span class="token operator">=</span> description<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">float</span> <span class="token function">getPrice</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> price<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setPrice</span><span class="token punctuation">(</span><span class="token keyword">float</span> price<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>price <span class="token operator">=</span> price<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 饮料的具体子类：单品咖啡
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Coffee</span> <span class="token keyword">extends</span> <span class="token class-name">Drink</span><span class="token punctuation">{</span>
+    <span class="token comment">/**
+     * 因为是单品咖啡，所以直接返回父类的价格即可。
+     * @return
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">float</span> <span class="token function">cost</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getPrice</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 咖啡的具体子类：美式咖啡
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LongBlack</span> <span class="token keyword">extends</span> <span class="token class-name">Coffee</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">LongBlack</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">setDescription</span><span class="token punctuation">(</span><span class="token string">"美式咖啡--LongBlack"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setPrice</span><span class="token punctuation">(</span><span class="token number">5.0f</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<p><strong>装饰者</strong>：具体的调料品—–牛奶、豆浆…</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 装饰者 ： 调料
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Decorator</span> <span class="token keyword">extends</span> <span class="token class-name">Drink</span><span class="token punctuation">{</span>
+    <span class="token comment">//装饰者模式的核心就是继承了被装饰者的同时组合了被装饰者</span>
+    <span class="token keyword">private</span> <span class="token class-name">Drink</span> drink<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Decorator</span><span class="token punctuation">(</span><span class="token class-name">Drink</span> drink<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>drink <span class="token operator">=</span> drink<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//费用 = 具体调料  + 具体饮料</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">float</span> <span class="token function">cost</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//调料品 + 饮料 的费用</span>
+        <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getPrice</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> drink<span class="token punctuation">.</span><span class="token function">cost</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">getDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">" "</span> <span class="token operator">+</span> <span class="token function">getPrice</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"&amp;&amp;"</span> <span class="token operator">+</span> drink<span class="token punctuation">.</span><span class="token function">getDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 装饰者的具体子类：牛奶调料品
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Milk</span> <span class="token keyword">extends</span> <span class="token class-name">Decorator</span><span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Milk</span><span class="token punctuation">(</span><span class="token class-name">Drink</span> drink<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span>drink<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setDescription</span><span class="token punctuation">(</span><span class="token string">"牛奶调料品"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setPrice</span><span class="token punctuation">(</span><span class="token number">3.5f</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p><strong>测试</strong></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 下单者：客户
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Client</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//装饰者模式下的订单：2份巧克力 + 1份牛奶的美式咖啡。</span>
+        <span class="token class-name">Drink</span> longBlack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LongBlack</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"单品美式咖啡费用："</span> <span class="token operator">+</span> longBlack<span class="token punctuation">.</span><span class="token function">cost</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//加入一份牛奶</span>
+        longBlack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Milk</span><span class="token punctuation">(</span>longBlack<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"加入一份牛奶后的美式咖啡费用："</span> <span class="token operator">+</span> longBlack<span class="token punctuation">.</span><span class="token function">cost</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//加入1份巧克力</span>
+        longBlack <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Chocolate</span><span class="token punctuation">(</span>longBlack<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"加入1份巧克力和一份牛奶后的美式咖啡费用："</span> <span class="token operator">+</span> longBlack<span class="token punctuation">.</span><span class="token function">cost</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//输出结果</span>
+单品美式咖啡费用：<span class="token number">5.0</span>
+加入一份牛奶后的美式咖啡费用：<span class="token number">8.5</span>
+加入<span class="token number">1</span>份巧克力和一份牛奶后的美式咖啡费用：<span class="token number">11.5</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p>方便之处就在：当商家需要添加一个中式咖啡品种时，只需直接继承被装饰者抽象类Drink即可与装饰者调料品有联系。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 中式咖啡
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Descf</span> <span class="token keyword">extends</span> <span class="token class-name">Coffee</span><span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">Descf</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">setDescription</span><span class="token punctuation">(</span><span class="token string">"中式咖啡"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">setPrice</span><span class="token punctuation">(</span><span class="token number">6.0f</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>测试</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 下单者：客户
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Client</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//中式咖啡加豆浆再加牛奶</span>
+        <span class="token class-name">Drink</span> descf <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Descf</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//加入一份豆浆</span>
+        descf <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Soy</span><span class="token punctuation">(</span>descf<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//加入一份牛奶</span>
+        descf <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Milk</span><span class="token punctuation">(</span>descf<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"加入一份豆浆、一份牛奶的中式咖啡价格为："</span> <span class="token operator">+</span> descf<span class="token punctuation">.</span><span class="token function">cost</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token comment">//输出结果</span>
+加入一份豆浆、一份牛奶的中式咖啡价格为：<span class="token number">12.0</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="2、装饰者模式JDK应用"><a href="#2、装饰者模式JDK应用" class="headerlink" title="2、装饰者模式JDK应用"></a>2、装饰者模式JDK应用</h4><p><a target="_blank" rel="noopener" href="https://imgse.com/i/p9yXQFx"><img src="https://s1.ax1x.com/2023/05/12/p9yXQFx.md.jpg" alt="装饰者模式"></a></p>
+<h3 id="组合模式"><a href="#组合模式" class="headerlink" title="组合模式"></a>组合模式</h3><p>组合模式（Composite Pattern），又叫<strong>部分-整体模式</strong>，是用于把一组相似的对象当作一个单一的对象。组合模式依据树形结构来组合对象，用来表示<strong>部分以及整体层次</strong>。这种类型的设计模式属于结构型模式，它创建了对象组的树形结构。</p>
+<p>这种模式创建了一个包含自己对象组的类。该类提供了修改相同对象组的方式。</p>
+<h4 id="1、介绍-9"><a href="#1、介绍-9" class="headerlink" title="1、介绍"></a>1、介绍</h4><p><strong>意图：</strong>将对象组合成树形结构以表示”部分-整体”的层次结构。组合模式使得用户对单个对象和组合对象的使用具有一致性。</p>
+<p><strong>主要解决：</strong>它在我们树型结构的问题中，模糊了简单元素和复杂元素的概念，客户程序可以像处理简单元素一样来处理复杂元素，从而使得客户程序与复杂元素的内部结构解耦。</p>
+<p><strong>何时使用：</strong> 1、您想表示对象的部分-整体层次结构（树形结构）。 2、您希望用户忽略组合对象与单个对象的不同，用户将统一地使用组合结构中的所有对象。</p>
+<p><strong>如何解决：</strong>树枝和叶子实现统一接口，树枝内部组合该接口。</p>
+<p><strong>关键代码：</strong>树枝内部组合该接口，并且含有内部属性 List，里面放 Component。</p>
+<p><strong>优点：</strong> 1、高层模块调用简单。 2、节点自由增加。</p>
+<p><strong>缺点：</strong>在使用组合模式时，其叶子和树枝的声明都是实现类，而不是接口，违反了依赖倒置原则。</p>
+<p><strong>使用场景：</strong>部分、整体场景，如树形菜单，文件、文件夹的管理。</p>
+<p><strong>注意事项：</strong>定义时为具体类。</p>
+<blockquote>
+<p>问题引出</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p96SdRx"><img src="https://s1.ax1x.com/2023/05/12/p96SdRx.md.jpg" alt="p96SdRx.md.jpg"></a></p>
+<blockquote>
+<p>问题解决</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p96SaJ1"><img src="https://s1.ax1x.com/2023/05/12/p96SaJ1.md.jpg" alt="p96SaJ1.md.jpg"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p96Swz6"><img src="https://s1.ax1x.com/2023/05/12/p96Swz6.md.jpg" alt="p96Swz6.md.jpg"></a></p>
+<p><strong>UML图</strong></p>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p96pESx"><img src="https://s1.ax1x.com/2023/05/13/p96pESx.md.jpg" alt="p96pESx.md.jpg"></a></p>
+<p><strong>核心代码实现</strong></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 组合模式
+ * 组织机构可以是抽象类或者接口
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">OrganziationComponent</span> <span class="token punctuation">{</span>
+    <span class="token comment">//名称</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+    <span class="token comment">//描述</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> description<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">OrganziationComponent</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">String</span> description<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>description <span class="token operator">=</span> description<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//添加方法，叶子结点子类不用实现</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">OrganziationComponent</span> organziationComponent<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//默认实现</span>
+        <span class="token keyword">throw</span>  <span class="token keyword">new</span> <span class="token class-name">UnsupportedOperationException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//删除方法，叶子结点子类不用实现</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">remove</span><span class="token punctuation">(</span><span class="token class-name">OrganziationComponent</span> organziationComponent<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//默认实现</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">UnsupportedOperationException</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//打印方法,所有子类都需实现</span>
+    <span class="token keyword">protected</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> description<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setDescription</span><span class="token punctuation">(</span><span class="token class-name">String</span> description<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>description <span class="token operator">=</span> description<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * University是学校，这是管理者,可以管理学院college
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">University</span> <span class="token keyword">extends</span> <span class="token class-name">OrganziationComponent</span><span class="token punctuation">{</span>
+    <span class="token comment">//组合模式核心：聚合OrganziationComponent</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">OrganziationComponent</span><span class="token punctuation">&gt;</span></span> organziationComponents <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">University</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">String</span> description<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>description<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//重写add方法</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">OrganziationComponent</span> organziationComponent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        organziationComponents<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>organziationComponent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//重写remove方法</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">remove</span><span class="token punctuation">(</span><span class="token class-name">OrganziationComponent</span> organziationComponent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        organziationComponents<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>organziationComponent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//打印出当前学校的名称以及学校下的学院名称</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//打印学校名称</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"---------------"</span> <span class="token operator">+</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"-----------------"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//打印学院名称</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">OrganziationComponent</span> organziationComponent <span class="token operator">:</span> organziationComponents<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            organziationComponent<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * College是学院，这是管理者,可以管理专业major
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">College</span> <span class="token keyword">extends</span> <span class="token class-name">OrganziationComponent</span><span class="token punctuation">{</span>
+    <span class="token comment">//组合模式核心：聚合OrganziationComponent</span>
+    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">OrganziationComponent</span><span class="token punctuation">&gt;</span></span> organziationComponents <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">College</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">String</span> description<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span>description<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//重写add方法</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">OrganziationComponent</span> organziationComponent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//将来业务中，College 和 University的add方法不一定完全一样。</span>
+        organziationComponents<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>organziationComponent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//重写remove方法</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">remove</span><span class="token punctuation">(</span><span class="token class-name">OrganziationComponent</span> organziationComponent<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        organziationComponents<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>organziationComponent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//打印出当前学校的名称以及学校下的学院名称</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//打印学校名称</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"---------------"</span> <span class="token operator">+</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"-----------------"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//打印学院名称</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">OrganziationComponent</span> organziationComponent <span class="token operator">:</span> organziationComponents<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            organziationComponent<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * Major是专业，这是叶子结点，下面不再有分支。
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Major</span> <span class="token keyword">extends</span> <span class="token class-name">OrganziationComponent</span><span class="token punctuation">{</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Major</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">,</span> <span class="token class-name">String</span> description<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">super</span><span class="token punctuation">(</span>name<span class="token punctuation">,</span> description<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//不再重写add和remove方法，因为它是叶子结点。</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">getDescription</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"=========="</span> <span class="token operator">+</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"=========="</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>测试</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 测试类
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Client</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//从大到小创建对象  学校</span>
+        <span class="token class-name">OrganziationComponent</span> university <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">University</span><span class="token punctuation">(</span><span class="token string">"清华大学"</span><span class="token punctuation">,</span> <span class="token string">"中国顶级大学"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//学院</span>
+        <span class="token class-name">OrganziationComponent</span> computerCollege <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">College</span><span class="token punctuation">(</span><span class="token string">"信息工程学院"</span><span class="token punctuation">,</span> <span class="token string">"信息工程学院"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">OrganziationComponent</span> maCollege <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">College</span><span class="token punctuation">(</span><span class="token string">"马克思主义学院"</span><span class="token punctuation">,</span> <span class="token string">"马克思主义学院"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//专业</span>
+        computerCollege<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Major</span><span class="token punctuation">(</span><span class="token string">"计算机科学与技术"</span><span class="token punctuation">,</span><span class="token string">"很不错"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        computerCollege<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Major</span><span class="token punctuation">(</span><span class="token string">"软件工程"</span><span class="token punctuation">,</span><span class="token string">"明年就不招咯"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        computerCollege<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Major</span><span class="token punctuation">(</span><span class="token string">"信管"</span><span class="token punctuation">,</span><span class="token string">"可以"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        maCollege<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Major</span><span class="token punctuation">(</span><span class="token string">"马克思主义"</span><span class="token punctuation">,</span><span class="token string">"难学"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        maCollege<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Major</span><span class="token punctuation">(</span><span class="token string">"毛概"</span><span class="token punctuation">,</span><span class="token string">"不错"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//将学院加入到学校中去</span>
+        university<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>computerCollege<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        university<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>maCollege<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//打印学校、学院、专业</span>
+        university<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//输出结果</span>
+        <span class="token comment">// ---------------清华大学-----------------</span>
+        <span class="token comment">//---------------信息工程学院-----------------</span>
+        <span class="token comment">//==========计算机科学与技术==========</span>
+        <span class="token comment">//==========软件工程==========</span>
+        <span class="token comment">//==========信管==========</span>
+        <span class="token comment">//---------------马克思主义学院-----------------</span>
+        <span class="token comment">//==========马克思主义==========</span>
+        <span class="token comment">//==========毛概==========</span>
+        computerCollege<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//输出结果</span>
+        <span class="token comment">// ---------------信息工程学院-----------------</span>
+        <span class="token comment">//==========计算机科学与技术==========</span>
+        <span class="token comment">//==========软件工程==========</span>
+        <span class="token comment">//==========信管==========</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -3123,7 +3530,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">72.4k</span>&nbsp;字
+                class="white-color">76.7k</span>&nbsp;字
             
             
             

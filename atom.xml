@@ -6,7 +6,7 @@
   <link href="http://swx08.github.io/atom.xml" rel="self"/>
   
   <link href="http://swx08.github.io/"/>
-  <updated>2023-05-06T12:57:46.708Z</updated>
+  <updated>2023-05-06T15:41:28.897Z</updated>
   <id>http://swx08.github.io/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/05/06/mybatis/"/>
+    <id>http://swx08.github.io/2023/05/06/mybatis/</id>
+    <published>2023-05-06T15:11:06.798Z</published>
+    <updated>2023-05-06T15:41:28.897Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;MyBatis&quot;&gt;&lt;a href=&quot;#MyBatis&quot; class=&quot;headerlink&quot; title=&quot;MyBatis&quot;&gt;&lt;/a&gt;MyBatis&lt;/h2&gt;&lt;h3 id=&quot;1、MyBatis简介&quot;&gt;&lt;a href=&quot;#1、MyBatis简介&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数据库" scheme="http://swx08.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="后端 Mybatis" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF-Mybatis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/05/06/mybatisplus/"/>
+    <id>http://swx08.github.io/2023/05/06/mybatisplus/</id>
+    <published>2023-05-06T13:24:16.288Z</published>
+    <updated>2023-05-06T13:30:17.285Z</updated>
+    
+    
+    
+    
+    <category term="数据库" scheme="http://swx08.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="后端 MybatisPlus" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF-MybatisPlus/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -67,7 +109,7 @@
     <link href="http://swx08.github.io/2023/04/28/ge-ren-bo-ke/"/>
     <id>http://swx08.github.io/2023/04/28/ge-ren-bo-ke/</id>
     <published>2023-04-28T03:10:19.120Z</published>
-    <updated>2023-05-03T09:09:40.370Z</updated>
+    <updated>2023-05-06T14:26:27.295Z</updated>
     
     
       
@@ -155,7 +197,7 @@
     <link href="http://swx08.github.io/2023/04/10/23-chong-she-ji-mo-shi/"/>
     <id>http://swx08.github.io/2023/04/10/23-chong-she-ji-mo-shi/</id>
     <published>2023-04-10T06:13:20.069Z</published>
-    <updated>2023-04-28T15:32:07.659Z</updated>
+    <updated>2023-05-12T16:02:26.471Z</updated>
     
     
       
@@ -476,57 +518,6 @@
     
     
     <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/04/06/rui-ji-wai-mai-xiang-mu-xue-xi-xin-de/"/>
-    <id>http://swx08.github.io/2023/04/06/rui-ji-wai-mai-xiang-mu-xue-xi-xin-de/</id>
-    <published>2023-04-06T15:50:13.351Z</published>
-    <updated>2023-04-10T05:37:23.615Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;瑞吉外卖项目学习心得&quot;&gt;&lt;a href=&quot;#瑞吉外卖项目学习心得&quot; class=&quot;headerlink&quot; title=&quot;瑞吉外卖项目学习心得&quot;&gt;&lt;/a&gt;瑞吉外卖项目学习心得&lt;/h1&gt;&lt;h2 id=&quot;一、登录功能&quot;&gt;&lt;a href=&quot;#一、登录功能&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="项目" scheme="http://swx08.github.io/categories/%E9%A1%B9%E7%9B%AE/"/>
-    
-    
-    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/04/06/vue-xiang-mu-huan-jing-da-jian-shuo-ming/"/>
-    <id>http://swx08.github.io/2023/04/06/vue-xiang-mu-huan-jing-da-jian-shuo-ming/</id>
-    <published>2023-04-06T15:50:13.336Z</published>
-    <updated>2023-04-09T06:23:22.240Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;准备工作&quot;&gt;&lt;a href=&quot;#准备工作&quot; class=&quot;headerlink&quot; title=&quot;准备工作&quot;&gt;&lt;/a&gt;准备工作&lt;/h2&gt;&lt;p&gt;安装node.js，配置环境变量&lt;/p&gt;
-&lt;h2 id=&quot;起步&quot;&gt;&lt;a href=&quot;#起步&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="工具" scheme="http://swx08.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="Vue 前端" scheme="http://swx08.github.io/tags/Vue-%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
