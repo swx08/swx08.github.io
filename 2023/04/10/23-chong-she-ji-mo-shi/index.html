@@ -494,14 +494,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    16.1k
+                    19.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    63 分
+                    74 分
                 </div>
                 
 
@@ -2758,6 +2758,405 @@
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
+
+<h3 id="外观模式"><a href="#外观模式" class="headerlink" title="外观模式"></a>外观模式</h3><p>外观模式（Facade Pattern）隐藏系统的复杂性，并向客户端提供了一个客户端可以访问系统的接口。这种类型的设计模式属于结构型模式，它向现有的系统添加一个接口，来隐藏系统的复杂性。</p>
+<p>这种模式涉及到一个单一的类，该类提供了客户端请求的简化方法和对现有系统类方法的委托调用。</p>
+<h4 id="1、介绍-10"><a href="#1、介绍-10" class="headerlink" title="1、介绍"></a>1、介绍</h4><p><strong>意图：</strong>为子系统中的一组接口提供一个一致的界面，外观模式定义了一个高层接口，这个接口使得这一子系统更加容易使用。</p>
+<p><strong>主要解决：</strong>降低访问复杂系统的内部子系统时的复杂度，简化客户端之间的接口。</p>
+<p><strong>何时使用：</strong> 1、客户端不需要知道系统内部的复杂联系，整个系统只需提供一个”接待员”即可。 2、定义系统的入口。</p>
+<p><strong>如何解决：</strong>客户端不与系统耦合，外观类与系统耦合。</p>
+<p><strong>关键代码：</strong>在客户端和复杂系统之间再加一层，这一层将调用顺序、依赖关系等处理好。</p>
+<p><strong>应用实例：</strong> 1、去医院看病，可能要去挂号、门诊、划价、取药，让患者或患者家属觉得很复杂，如果有提供接待人员，只让接待人员来处理，就很方便。 2、JAVA 的三层开发模式。</p>
+<p><strong>优点：</strong> 1、减少系统相互依赖。 2、提高灵活性。 3、提高了安全性。</p>
+<p><strong>缺点：</strong>不符合开闭原则，如果要改东西很麻烦，继承重写都不合适。</p>
+<p><strong>使用场景：</strong> 1、为复杂的模块或子系统提供外界访问的模块。 2、子系统相对独立。 3、预防低水平人员带来的风险。</p>
+<p><strong>注意事项：</strong>在层次化结构中，可以使用外观模式定义系统中每一层的入口。</p>
+<blockquote>
+<p>引出问题</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p96VC7V"><img src="https://s1.ax1x.com/2023/05/13/p96VC7V.md.jpg" alt="p96VC7V.md.jpg"></a></p>
+<blockquote>
+<p>分析问题</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p96VFtU"><img src="https://s1.ax1x.com/2023/05/13/p96VFtU.md.jpg" alt="p96VFtU.md.jpg"></a></p>
+<blockquote>
+<p>外观模式原理图</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p96VikT"><img src="https://s1.ax1x.com/2023/05/13/p96VikT.md.jpg" alt="p96VikT.md.jpg"></a></p>
+<blockquote>
+<p>UML图</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p96V900"><img src="https://s1.ax1x.com/2023/05/13/p96V900.md.jpg" alt="p96V900.md.jpg"></a></p>
+<p><strong>核心代码</strong>：主要是定义一个高层接口，让客户端直接调用高层接口即可。</p>
+<p>高层接口：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 外观模式
+ * 家庭影院：高层接口，被client直接调用
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HomeMoveFacade</span> <span class="token punctuation">{</span>
+    <span class="token comment">//核心：聚合各个子系统</span>
+    <span class="token keyword">private</span> <span class="token class-name">DVDPlayer</span> dvdPlayer<span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token class-name">Popcorn</span> popcorn<span class="token punctuation">;</span>
+    <span class="token keyword">private</span>  <span class="token class-name">Projector</span> projector<span class="token punctuation">;</span>
+
+    <span class="token comment">//初始化子系统</span>
+    <span class="token keyword">public</span> <span class="token class-name">HomeMoveFacade</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>dvdPlayer <span class="token operator">=</span> <span class="token class-name">DVDPlayer</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>popcorn <span class="token operator">=</span> <span class="token class-name">Popcorn</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>projector <span class="token operator">=</span> <span class="token class-name">Projector</span><span class="token punctuation">.</span><span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//做准备工作</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">ready</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//dvd开机</span>
+        dvdPlayer<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//爆米花机开机</span>
+        popcorn<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//投影仪开机</span>
+        projector<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//开始进行工作</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">play</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//dvd播放</span>
+        dvdPlayer<span class="token punctuation">.</span><span class="token function">play</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//爆米花机工作</span>
+        popcorn<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//投影仪开始聚焦</span>
+        projector<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//暂停</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">pause</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        dvdPlayer<span class="token punctuation">.</span><span class="token function">pause</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        popcorn<span class="token punctuation">.</span><span class="token function">pause</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        projector<span class="token punctuation">.</span><span class="token function">pause</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//关机</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//dvd播放关机</span>
+        dvdPlayer<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//爆米花机关机</span>
+        popcorn<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//投影仪关机</span>
+        projector<span class="token punctuation">.</span><span class="token function">off</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>子系统：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * DVD子系统
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DVDPlayer</span> <span class="token punctuation">{</span>
+    <span class="token comment">//采用饿汉式单例模式</span>
+    <span class="token keyword">private</span> <span class="token class-name">DVDPlayer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">DVDPlayer</span> instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DVDPlayer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">DVDPlayer</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//开机方法</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">on</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"DVD 开机"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//关机方法</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">off</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"DVD 关机"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//播放方法</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">play</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"DVD 播放..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//结束方法</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">pause</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"DVD 暂停..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 爆米花机子系统
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Popcorn</span> <span class="token punctuation">{</span>
+    <span class="token comment">//采用饿汉式单例模式</span>
+    <span class="token keyword">private</span> <span class="token class-name">Popcorn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">Popcorn</span> instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Popcorn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">Popcorn</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//开机方法</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">on</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"爆米花机 开机"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//关机方法</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">off</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"爆米花机 关机"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"爆米花机 工作..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//赞停</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">pause</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"爆米花机 暂停"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 投影仪子系统
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Projector</span> <span class="token punctuation">{</span>
+    <span class="token comment">//采用饿汉式单例模式</span>
+    <span class="token keyword">private</span> <span class="token class-name">Projector</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">Projector</span> instance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Projector</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">Projector</span> <span class="token function">getInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> instance<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//开机方法</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">on</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"投影仪 开机"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//关机方法</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">off</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"投影仪 关机"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//聚焦方法</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"投影仪 聚焦...."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//结束</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">pause</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"投影仪 聚焦暂停"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>测试：</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 测试
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Client</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">HomeMoveFacade</span> homeMoveFacade <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HomeMoveFacade</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//子系统开机工作</span>
+        homeMoveFacade<span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"--------------------------"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//子系统开始工作</span>
+        homeMoveFacade<span class="token punctuation">.</span><span class="token function">play</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"--------------------------"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//子系统暂停工作</span>
+        homeMoveFacade<span class="token punctuation">.</span><span class="token function">pause</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"--------------------------"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//子系统关机</span>
+        homeMoveFacade<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        
+        <span class="token comment">//输出结果</span>
+        <span class="token comment">//DVD 开机</span>
+        <span class="token comment">//爆米花机 开机</span>
+        <span class="token comment">//投影仪 开机</span>
+        <span class="token comment">//--------------------------</span>
+        <span class="token comment">//DVD 播放...</span>
+        <span class="token comment">//爆米花机 工作...</span>
+        <span class="token comment">//投影仪 聚焦....</span>
+        <span class="token comment">//--------------------------</span>
+        <span class="token comment">//DVD 暂停...</span>
+        <span class="token comment">//爆米花机 暂停</span>
+        <span class="token comment">//投影仪 聚焦暂停</span>
+        <span class="token comment">//--------------------------</span>
+        <span class="token comment">//DVD 关机</span>
+        <span class="token comment">//爆米花机 关机</span>
+        <span class="token comment">//投影仪 关机</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="2、外观模式细节"><a href="#2、外观模式细节" class="headerlink" title="2、外观模式细节"></a>2、外观模式细节</h4><p>外观模式的注意事项和细节</p>
+<ul>
+<li><p>外观模式外屏蔽了子系统的细节，因此外观模式降低了客户端对子系统使用的复杂性</p>
+</li>
+<li><p>外观模式对客户端与子系统的耦合关系，让子系统内部的模块更易维护和扩展</p>
+</li>
+<li><p>通过合理的使用外观模式，可以帮我们更好的划分访问的层次</p>
+</li>
+<li><p>当系统需要进行分层设计时，可以考虑使用Facade模式</p>
+</li>
+<li><p>在维护一个遗留的大型系统时，可能这个系统已经变得非常难以维护和扩展，此时可以考虑为新系统开发一个Facade类，来提供遗留系统的比较清晰简单的接口，让新系统与Facade类交互，提高复用性</p>
+</li>
+<li><p>不能过多的或者不合理的使用外观模式，使用外观模式好，还是直接调用模块好。要以让系统有层次，利于维护为目的。</p>
+</li>
+</ul>
+<h3 id="享元模式"><a href="#享元模式" class="headerlink" title="享元模式"></a>享元模式</h3><p>享元模式（Flyweight Pattern）主要用于减少创建对象的数量，以减少内存占用和提高性能。这种类型的设计模式属于结构型模式，它提供了减少对象数量从而改善应用所需的对象结构的方式。</p>
+<p>享元模式尝试重用现有的同类对象，如果未找到匹配的对象，则创建新对象。我们将通过创建 5 个对象来画出 20 个分布于不同位置的圆来演示这种模式。由于只有 5 种可用的颜色，所以 color 属性被用来检查现有的 <em>Circle</em> 对象。</p>
+<h4 id="1、介绍-11"><a href="#1、介绍-11" class="headerlink" title="1、介绍"></a>1、介绍</h4><p><strong>意图：</strong>运用共享技术有效地支持大量细粒度的对象。</p>
+<p><strong>主要解决：</strong>在有大量对象时，有可能会造成内存溢出，我们把其中共同的部分抽象出来，如果有相同的业务请求，直接返回在内存中已有的对象，避免重新创建。</p>
+<p><strong>何时使用：</strong> 1、系统中有大量对象。 2、这些对象消耗大量内存。 3、这些对象的状态大部分可以外部化。 4、这些对象可以按照内蕴状态分为很多组，当把外蕴对象从对象中剔除出来时，每一组对象都可以用一个对象来代替。 5、系统不依赖于这些对象身份，这些对象是不可分辨的。</p>
+<p><strong>如何解决：</strong>用唯一标识码判断，如果在内存中有，则返回这个唯一标识码所标识的对象。</p>
+<p><strong>关键代码：</strong>用 HashMap 存储这些对象。</p>
+<p><strong>应用实例：</strong> 1、JAVA 中的 String，如果有则返回，如果没有则创建一个字符串保存在字符串缓存池里面。 2、数据库的连接池。</p>
+<p><strong>优点：</strong>大大减少对象的创建，降低系统的内存，使效率提高。</p>
+<p><strong>缺点：</strong>提高了系统的复杂度，需要分离出外部状态和内部状态，而且外部状态具有固有化的性质，不应该随着内部状态的变化而变化，否则会造成系统的混乱。</p>
+<p><strong>使用场景：</strong> 1、系统有大量相似对象。 2、需要缓冲池的场景。</p>
+<p><strong>注意事项：</strong> 1、注意划分外部状态和内部状态，否则可能会引起线程安全问题。 2、这些类必须有一个工厂对象加以控制。</p>
+<blockquote>
+<p>问题引出</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p96Mfsg"><img src="https://s1.ax1x.com/2023/05/13/p96Mfsg.md.jpg" alt="p96Mfsg.md.jpg"></a></p>
+<blockquote>
+<p>享元模式原理图</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p96MhLQ"><img src="https://s1.ax1x.com/2023/05/13/p96MhLQ.md.jpg" alt="p96MhLQ.md.jpg"></a></p>
+<h4 id="2、内部状态和外部状态"><a href="#2、内部状态和外部状态" class="headerlink" title="2、内部状态和外部状态"></a>2、内部状态和外部状态</h4><p>比如围棋、五子棋、跳棋，它们都有大量的棋子对象，围棋和五子棋只有黑白两色，跳棋颜色多一点，所以棋子颜色就是棋子的内部状态；而各个棋子之间的差别就是位置的不同，当我们落子后，落子颜色是定的，但位置是变化的，所以棋子坐标就是棋子的外部状态</p>
+<ul>
+<li><p>享元模式提出了两个要求：细粒度和共享对象。这里就涉及到内部状态和外部状态了，即将对象的信息分为两个部分：内部状态和外部状态</p>
+</li>
+<li><p>内部状态指对象共享出来的信息，存储在享元对象内部且不会随环境的改变而改变</p>
+</li>
+<li><p>外部状态指对象得以依赖的一个标记，是随环境改变而改变的、不可共享的状态。</p>
+</li>
+<li><p>举个例子：围棋理论上有361个空位可以放棋子，每盘棋都有可能有两三百个棋子对象产生，因为内存空间有限，一台服务器很难支持更多的玩家玩围棋游戏，如果用享元模式来处理棋子，那么棋子对象就可以减少到只有两个实例，这样就很好的解决了对象的开销问题</p>
+</li>
+</ul>
+<blockquote>
+<p>UML图</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://imgse.com/i/p96M5Zj"><img src="https://s1.ax1x.com/2023/05/13/p96M5Zj.md.jpg" alt="p96M5Zj.md.jpg"></a></p>
+<p><strong>核心代码</strong></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 网站的抽象类
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">WebSite</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">abstract</span> <span class="token keyword">void</span> <span class="token function">use</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 具体的网站
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ConcrrentWebSite</span> <span class="token keyword">extends</span> <span class="token class-name">WebSite</span><span class="token punctuation">{</span>
+
+    <span class="token comment">//网站类型</span>
+    <span class="token comment">//共享部分，这是内部状态</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> type <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">ConcrrentWebSite</span><span class="token punctuation">(</span><span class="token class-name">String</span> type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>type <span class="token operator">=</span> type<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">use</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"网站的发布类型为："</span> <span class="token operator">+</span> type <span class="token operator">+</span> <span class="token string">"。"</span><span class="token operator">+</span> user<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"在使用中..."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 享元模式
+ * 生成网站的工厂，充当一个池的作用，根据需求返回具体的网站
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">WebSiteFactory</span> <span class="token punctuation">{</span>
+    <span class="token comment">//集合，充当池的作用</span>
+    <span class="token class-name">Map</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span><span class="token class-name">ConcrrentWebSite</span><span class="token punctuation">&gt;</span></span> pools <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//根据网站的类型，返回一个网站，如果没有就创建一个网站，并放到池中，并返回。</span>
+    <span class="token keyword">public</span> <span class="token class-name">WebSite</span> <span class="token function">getWebSite</span><span class="token punctuation">(</span><span class="token class-name">String</span> type<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//如果没有就创建一个网站，并放到池中</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>pools<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            pools<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>type<span class="token punctuation">,</span><span class="token keyword">new</span> <span class="token class-name">ConcrrentWebSite</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token class-name">WebSite</span><span class="token punctuation">)</span> pools<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token comment">//获取网站分类的总数(池中有几个)</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token class-name">WebSiteCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">return</span> pools<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 网站使用者，这是外部状态
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span> <span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">String</span> name<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setName</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>测试</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+ * 测试
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Client</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//创建网站工厂</span>
+        <span class="token class-name">WebSiteFactory</span> factory <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">WebSiteFactory</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//以新闻类型发布网站</span>
+        <span class="token class-name">WebSite</span> webSite <span class="token operator">=</span> factory<span class="token punctuation">.</span><span class="token function">getWebSite</span><span class="token punctuation">(</span><span class="token string">"新闻"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        webSite<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token string">"tom"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//以博客类型发布网站</span>
+        <span class="token class-name">WebSite</span> webSite1 <span class="token operator">=</span> factory<span class="token punctuation">.</span><span class="token function">getWebSite</span><span class="token punctuation">(</span><span class="token string">"博客"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        webSite1<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token string">"smith"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//以博客类型发布网站</span>
+        <span class="token class-name">WebSite</span> webSite2 <span class="token operator">=</span> factory<span class="token punctuation">.</span><span class="token function">getWebSite</span><span class="token punctuation">(</span><span class="token string">"博客"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        webSite2<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token string">"jack"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//以博客类型发布网站</span>
+        <span class="token class-name">WebSite</span> webSite3 <span class="token operator">=</span> factory<span class="token punctuation">.</span><span class="token function">getWebSite</span><span class="token punctuation">(</span><span class="token string">"博客"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        webSite3<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token string">"king"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//以博客类型发布网站</span>
+        <span class="token class-name">WebSite</span> webSite4 <span class="token operator">=</span> factory<span class="token punctuation">.</span><span class="token function">getWebSite</span><span class="token punctuation">(</span><span class="token string">"博客"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        webSite4<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">User</span><span class="token punctuation">(</span><span class="token string">"swx"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//返回网站分类个数</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"网站的分类共："</span> <span class="token operator">+</span> <span class="token class-name"><span class="token namespace">factory<span class="token punctuation">.</span></span>WebSiteCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"种"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//输出结果网站的发布类型为：新闻。tom在使用中...</span>
+        <span class="token comment">//网站的发布类型为：博客。smith在使用中...</span>
+        <span class="token comment">//网站的发布类型为：博客。jack在使用中...</span>
+        <span class="token comment">//网站的发布类型为：博客。king在使用中...</span>
+        <span class="token comment">//网站的发布类型为：博客。swx在使用中...</span>
+        <span class="token comment">//网站的分类共：2种</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="3、享元模式的注意事项和细节"><a href="#3、享元模式的注意事项和细节" class="headerlink" title="3、享元模式的注意事项和细节"></a>3、享元模式的注意事项和细节</h4><ul>
+<li><p>在享元模式这样理解，“享”就表示共享，“元”表示对象</p>
+</li>
+<li><p>系统中有大量对象，这些对象消耗大量内存，并且对象的状态大部分可以外部化时，我们就可以考虑选用享元模式</p>
+</li>
+<li><p>用唯一标识码判断，如果在内存中有，则返回这个唯一标识码所标识的对象，用HashMap/HashTable存储</p>
+</li>
+<li><p>享元模式大大减少了对象的创建，降低了程序内存的占用，提高效率</p>
+</li>
+<li><p>享元模式提高了系统的复杂度。需要分离出内部状态和外部状态，而外部状态具有固化特性，不应该随着内部状态的改变而改变，这是我们使用享元模式需要注意的地方.</p>
+</li>
+<li><p>使用享元模式时，注意划分内部状态和外部状态，并且需要有一个工厂类加以控制。</p>
+</li>
+<li><p>享元模式经典的应用场景是需要缓冲池的场景，比如 String常量池、数据库连接池</p>
+</li>
+</ul>
+
                 
             </div>
             <hr/>
@@ -3530,7 +3929,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">76.7k</span>&nbsp;字
+                class="white-color">79.9k</span>&nbsp;字
             
             
             
