@@ -6,7 +6,7 @@
   <link href="http://swx08.github.io/atom.xml" rel="self"/>
   
   <link href="http://swx08.github.io/"/>
-  <updated>2023-05-06T15:41:28.897Z</updated>
+  <updated>2023-05-20T18:08:13.314Z</updated>
   <id>http://swx08.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/05/19/springboot-ge-chong-ji-cheng/"/>
+    <id>http://swx08.github.io/2023/05/19/springboot-ge-chong-ji-cheng/</id>
+    <published>2023-05-19T14:42:18.523Z</published>
+    <updated>2023-05-20T18:08:13.314Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;SixKey项目&quot;&gt;&lt;a href=&quot;#SixKey项目&quot; class=&quot;headerlink&quot; title=&quot;SixKey项目&quot;&gt;&lt;/a&gt;SixKey项目&lt;/h2&gt;&lt;h3 id=&quot;1、搭建SpringBoot项目&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="SpringBoot" scheme="http://swx08.github.io/categories/SpringBoot/"/>
+    
+    
+    <category term="后端 SpringBoot" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF-SpringBoot/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -491,31 +516,6 @@
     
     
     <category term="工具" scheme="http://swx08.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/04/06/lun-wen-guan-li-xi-tong/"/>
-    <id>http://swx08.github.io/2023/04/06/lun-wen-guan-li-xi-tong/</id>
-    <published>2023-04-06T15:50:13.351Z</published>
-    <updated>2023-04-09T06:07:22.543Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;论文管理系统&quot;&gt;&lt;a href=&quot;#论文管理系统&quot; class=&quot;headerlink&quot; title=&quot;论文管理系统&quot;&gt;&lt;/a&gt;论文管理系统&lt;/h1&gt;&lt;h2 id=&quot;一、开发功能&quot;&gt;&lt;a href=&quot;#一、开发功能&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="项目" scheme="http://swx08.github.io/categories/%E9%A1%B9%E7%9B%AE/"/>
     
     
     <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
