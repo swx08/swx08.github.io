@@ -334,7 +334,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/33.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -453,25 +453,12 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E5%90%8E%E7%AB%AF-%E9%83%A8%E7%BD%B2-Linux/">
-                                <span class="chip bg-color">后端 部署 Linux</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Linux/" class="post-category">
-                                Linux
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -480,21 +467,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-04-06
+                    2023-05-21
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-05-05
+                    2023-05-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    1.1k
                 </div>
                 
 
@@ -524,193 +511,204 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="一、linux部署springboot单体项目"><a href="#一、linux部署springboot单体项目" class="headerlink" title="一、linux部署springboot单体项目"></a>一、linux部署springboot单体项目</h1><h2 id="1-购买服务器"><a href="#1-购买服务器" class="headerlink" title="1.购买服务器"></a>1.购买服务器</h2><p>修改实例密码 ——&gt; 配置安全组</p>
-<h2 id="2-下载宝塔"><a href="#2-下载宝塔" class="headerlink" title="2.下载宝塔"></a>2.下载宝塔</h2><p>打开终端下载宝塔 ———&gt; 保存面板访问地址、账号和密码</p>
-<h2 id="3-下载软件"><a href="#3-下载软件" class="headerlink" title="3.下载软件"></a>3.下载软件</h2><p>java —&gt; mysql —&gt;tomcat —-&gt; nginx —-&gt; redis</p>
-<h2 id="redis配置"><a href="#redis配置" class="headerlink" title="redis配置"></a>redis配置</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">①<span class="token punctuation">.</span>下载redis<span class="token punctuation">.</span>tar<span class="token punctuation">.</span>gz
-②<span class="token punctuation">.</span>下载yum install gcc<span class="token operator">-</span>c<span class="token operator">++</span>编译redis<span class="token operator">/</span>src文件
-③<span class="token punctuation">.</span>进入到redis目录执行make
-④<span class="token punctuation">.</span>编译完成后进入到src下执行make install
-设置配置文件
-    记得每次修改redis<span class="token punctuation">.</span>conf后杀死进程重新启动服务<span class="token punctuation">.</span>
-    开启远程访问编辑vim redis<span class="token punctuation">.</span>conf<span class="token punctuation">,</span><span class="token operator">/</span>bind搜索<span class="token punctuation">,</span>注释掉；服务器注意开放端口号
-    ①<span class="token punctuation">.</span>编辑vim redis<span class="token punctuation">.</span>conf<span class="token punctuation">,</span>搜索<span class="token operator">/</span>dae 改为yes挂在后台运行
-    ②<span class="token punctuation">.</span>设置密码requirepass
-    <span class="token operator">:</span>wq保存退出即可
-    ③<span class="token punctuation">.</span>启动服务src<span class="token operator">/</span>redis<span class="token operator">-</span>server <span class="token punctuation">.</span>/redis<span class="token punctuation">.</span>conf即可。
-    ④<span class="token punctuation">.</span>客户端访问src<span class="token operator">/</span>redis<span class="token operator">-</span>cli <span class="token operator">-</span>h localhost <span class="token operator">-</span>p <span class="token number">6379</span> <span class="token operator">-</span>a 密码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><a target="_blank" rel="noopener" href="https://imgse.com/i/ppH3YQA"><img src="https://s1.ax1x.com/2023/04/08/ppH3YQA.md.png" alt="ppH3YQA.md.png"></a></p>
-<h1 id="二、宝塔部署vue项目"><a href="#二、宝塔部署vue项目" class="headerlink" title="二、宝塔部署vue项目"></a>二、宝塔部署vue项目</h1><p>前提：下载node.js</p>
-<p>1、将vue项目放到linux目录中，然后在项目目录中进入终端执行npm install 下载依赖</p>
-<p>2、然后执行nohup  npm run dev / serve &gt;&gt; ./vue.log &amp;  exit挂载到后台运行。</p>
-<h1 id="三、宝塔部署前后端分离项目"><a href="#三、宝塔部署前后端分离项目" class="headerlink" title="三、宝塔部署前后端分离项目"></a>三、宝塔部署前后端分离项目</h1><h2 id="一-、前端部署"><a href="#一-、前端部署" class="headerlink" title="(一)、前端部署"></a>(一)、前端部署</h2><p>前提：下载node.js</p>
-<p>1、将原本vue项目中的dist和nod_modules目录删除，然后将vue项目放到linux目录中，然后在项目目录中进入终端执行npm install 下载依赖 然后run build一下啊</p>
-<p>2、然后执行nohup  npm run dev &gt;&gt; ./admin.log &amp;  exit 或者 nohup  npm run serve &gt;&gt; ./web.log &amp;  exit或者nohup npm run dev &gt; my.log 2&gt;my.log &amp; exit 挂载到后台运行，部署完毕。</p>
-<h2 id="二-、后端部署"><a href="#二-、后端部署" class="headerlink" title="(二)、后端部署"></a>(二)、后端部署</h2><p>使用maven将项目打成jar包，然后将jar包放到linux目录中,然后在项目目录中进入终端执行nohup java -jar 项目名.jar &amp;&gt; 项目名.log &amp; 。</p>
-<p>项目名.log为项目日志输出.</p>
-<h1 id="四、springboot聚合项目打包"><a href="#四、springboot聚合项目打包" class="headerlink" title="四、springboot聚合项目打包"></a>四、springboot聚合项目打包</h1><img src="C:\Users\石文学\OneDrive\桌面\2020092909385820.png" alt="2020092909385820" style="zoom:50%;">
-
-<p>替换默认的Spring Boot 打包插件</p>
-<p>在父pom.xml中替换默认的 Spring Boot 打包插件：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token generics"><span class="token punctuation">&lt;</span>build<span class="token punctuation">&gt;</span></span>
-      <span class="token generics"><span class="token punctuation">&lt;</span>plugins<span class="token punctuation">&gt;</span></span>
-          <span class="token generics"><span class="token punctuation">&lt;</span>plugin<span class="token punctuation">&gt;</span></span>
-              <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>boot<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
-              <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>spring<span class="token operator">-</span>boot<span class="token operator">-</span>maven<span class="token operator">-</span>plugin<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
-          <span class="token operator">&lt;</span><span class="token operator">/</span>plugin<span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>plugins<span class="token operator">&gt;</span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>build<span class="token operator">&gt;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>替换成</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token generics"><span class="token punctuation">&lt;</span>build<span class="token punctuation">&gt;</span></span>
-     <span class="token generics"><span class="token punctuation">&lt;</span>plugins<span class="token punctuation">&gt;</span></span>
-         <span class="token generics"><span class="token punctuation">&lt;</span>plugin<span class="token punctuation">&gt;</span></span>
-             <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>maven<span class="token punctuation">.</span>plugins<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
-             <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>maven<span class="token operator">-</span>compiler<span class="token operator">-</span>plugin<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
-             <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span><span class="token number">3.1</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
-             <span class="token generics"><span class="token punctuation">&lt;</span>configuration<span class="token punctuation">&gt;</span></span>
-                 <span class="token generics"><span class="token punctuation">&lt;</span>source<span class="token punctuation">&gt;</span></span>$<span class="token punctuation">{</span>java<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>source<span class="token operator">&gt;</span>
-                 <span class="token generics"><span class="token punctuation">&lt;</span>target<span class="token punctuation">&gt;</span></span>$<span class="token punctuation">{</span>java<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>target<span class="token operator">&gt;</span>
-             <span class="token operator">&lt;</span><span class="token operator">/</span>configuration<span class="token operator">&gt;</span>
-         <span class="token operator">&lt;</span><span class="token operator">/</span>plugin<span class="token operator">&gt;</span>
-         <span class="token generics"><span class="token punctuation">&lt;</span>plugin<span class="token punctuation">&gt;</span></span>
-             <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>maven<span class="token punctuation">.</span>plugins<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
-             <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>maven<span class="token operator">-</span>surefire<span class="token operator">-</span>plugin<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
-             <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span><span class="token number">2.19</span><span class="token number">.1</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
-             <span class="token generics"><span class="token punctuation">&lt;</span>configuration<span class="token punctuation">&gt;</span></span>
-                 <span class="token generics"><span class="token punctuation">&lt;</span>skipTests<span class="token punctuation">&gt;</span></span><span class="token boolean">true</span><span class="token operator">&lt;</span><span class="token operator">/</span>skipTests<span class="token operator">&gt;</span>    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>默认关掉单元测试 <span class="token operator">--</span><span class="token operator">&gt;</span>
-             <span class="token operator">&lt;</span><span class="token operator">/</span>configuration<span class="token operator">&gt;</span>
-         <span class="token operator">&lt;</span><span class="token operator">/</span>plugin<span class="token operator">&gt;</span>
-     <span class="token operator">&lt;</span><span class="token operator">/</span>plugins<span class="token operator">&gt;</span>
- <span class="token operator">&lt;</span><span class="token operator">/</span>build<span class="token operator">&gt;</span>
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>在父项目中添加</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token generics"><span class="token punctuation">&lt;</span>packaging<span class="token punctuation">&gt;</span></span>pom<span class="token operator">&lt;</span><span class="token operator">/</span>packaging<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>完整的父类pom.xml</p>
+                <h2 id="easy网盘"><a href="#easy网盘" class="headerlink" title="easy网盘"></a>easy网盘</h2><h3 id="1、环境搭建"><a href="#1、环境搭建" class="headerlink" title="1、环境搭建"></a>1、环境搭建</h3><p><strong>导入依赖</strong></p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token string">"1.0"</span> encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span><span class="token operator">?</span><span class="token operator">&gt;</span>
 
 <span class="token operator">&lt;</span>project xmlns<span class="token operator">=</span><span class="token string">"http://maven.apache.org/POM/4.0.0"</span> xmlns<span class="token operator">:</span>xsi<span class="token operator">=</span><span class="token string">"http://www.w3.org/2001/XMLSchema-instance"</span>
-  xsi<span class="token operator">:</span>schemaLocation<span class="token operator">=</span><span class="token string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span><span class="token operator">&gt;</span>
-  <span class="token generics"><span class="token punctuation">&lt;</span>modelVersion<span class="token punctuation">&gt;</span></span><span class="token number">4.0</span><span class="token number">.0</span><span class="token operator">&lt;</span><span class="token operator">/</span>modelVersion<span class="token operator">&gt;</span>
+         xsi<span class="token operator">:</span>schemaLocation<span class="token operator">=</span><span class="token string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span><span class="token operator">&gt;</span>
 
-  <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>org<span class="token punctuation">.</span>guigu<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
-  <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>guigu<span class="token operator">-</span>oa<span class="token operator">-</span>parent<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
-  <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>打包方式<span class="token operator">--</span><span class="token operator">&gt;</span>
-  <span class="token generics"><span class="token punctuation">&lt;</span>packaging<span class="token punctuation">&gt;</span></span>pom<span class="token operator">&lt;</span><span class="token operator">/</span>packaging<span class="token operator">&gt;</span>
-
-  <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span><span class="token number">1.0</span><span class="token operator">-</span><span class="token constant">SNAPSHOT</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
-  <span class="token generics"><span class="token punctuation">&lt;</span>modules<span class="token punctuation">&gt;</span></span>
-    <span class="token generics"><span class="token punctuation">&lt;</span><span class="token keyword">module</span><span class="token punctuation">&gt;</span></span>common<span class="token operator">&lt;</span><span class="token operator">/</span><span class="token keyword">module</span><span class="token operator">&gt;</span>
-      <span class="token generics"><span class="token punctuation">&lt;</span><span class="token keyword">module</span><span class="token punctuation">&gt;</span></span>model<span class="token operator">&lt;</span><span class="token operator">/</span><span class="token keyword">module</span><span class="token operator">&gt;</span>
-    <span class="token generics"><span class="token punctuation">&lt;</span><span class="token keyword">module</span><span class="token punctuation">&gt;</span></span>service<span class="token operator">-</span>oa<span class="token operator">&lt;</span><span class="token operator">/</span><span class="token keyword">module</span><span class="token operator">&gt;</span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>modules<span class="token operator">&gt;</span>
-  <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>父依赖<span class="token operator">--</span><span class="token operator">&gt;</span>
   <span class="token generics"><span class="token punctuation">&lt;</span>parent<span class="token punctuation">&gt;</span></span>
     <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>boot<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
     <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>spring<span class="token operator">-</span>boot<span class="token operator">-</span>starter<span class="token operator">-</span>parent<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
-    <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span><span class="token number">2.3</span><span class="token number">.6</span><span class="token punctuation">.</span><span class="token constant">RELEASE</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span><span class="token number">2.6</span><span class="token number">.1</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>relativePath<span class="token operator">/</span><span class="token operator">&gt;</span>
   <span class="token operator">&lt;</span><span class="token operator">/</span>parent<span class="token operator">&gt;</span>
-  <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>版本控制<span class="token operator">--</span><span class="token operator">&gt;</span>
+
+  <span class="token generics"><span class="token punctuation">&lt;</span>modelVersion<span class="token punctuation">&gt;</span></span><span class="token number">4.0</span><span class="token number">.0</span><span class="token operator">&lt;</span><span class="token operator">/</span>modelVersion<span class="token operator">&gt;</span>
+
+  <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>com<span class="token punctuation">.</span>sixkey<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
+  <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>easypan<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
+  <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span><span class="token number">1.0</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
+  <span class="token generics"><span class="token punctuation">&lt;</span>packaging<span class="token punctuation">&gt;</span></span>jar<span class="token operator">&lt;</span><span class="token operator">/</span>packaging<span class="token operator">&gt;</span>
+  <span class="token generics"><span class="token punctuation">&lt;</span>name<span class="token punctuation">&gt;</span></span>easypan<span class="token operator">&lt;</span><span class="token operator">/</span>name<span class="token operator">&gt;</span>
+  <span class="token generics"><span class="token punctuation">&lt;</span>description<span class="token punctuation">&gt;</span></span>easypan<span class="token operator">&lt;</span><span class="token operator">/</span>description<span class="token operator">&gt;</span>
+
   <span class="token generics"><span class="token punctuation">&lt;</span>properties<span class="token punctuation">&gt;</span></span>
-    <span class="token generics"><span class="token punctuation">&lt;</span>maven<span class="token punctuation">.</span>compiler<span class="token punctuation">.</span>source<span class="token punctuation">&gt;</span></span><span class="token number">8</span><span class="token operator">&lt;</span><span class="token operator">/</span>maven<span class="token punctuation">.</span>compiler<span class="token punctuation">.</span>source<span class="token operator">&gt;</span>
-    <span class="token generics"><span class="token punctuation">&lt;</span>maven<span class="token punctuation">.</span>compiler<span class="token punctuation">.</span>target<span class="token punctuation">&gt;</span></span><span class="token number">8</span><span class="token operator">&lt;</span><span class="token operator">/</span>maven<span class="token punctuation">.</span>compiler<span class="token punctuation">.</span>target<span class="token operator">&gt;</span>
     <span class="token generics"><span class="token punctuation">&lt;</span>java<span class="token punctuation">.</span>version<span class="token punctuation">&gt;</span></span><span class="token number">1.8</span><span class="token operator">&lt;</span><span class="token operator">/</span>java<span class="token punctuation">.</span>version<span class="token operator">&gt;</span>
-    <span class="token operator">&lt;</span>mybatis<span class="token operator">-</span>plus<span class="token punctuation">.</span>version<span class="token operator">&gt;</span><span class="token number">3.4</span><span class="token number">.1</span><span class="token operator">&lt;</span><span class="token operator">/</span>mybatis<span class="token operator">-</span>plus<span class="token punctuation">.</span>version<span class="token operator">&gt;</span>
-    <span class="token generics"><span class="token punctuation">&lt;</span>mysql<span class="token punctuation">.</span>version<span class="token punctuation">&gt;</span></span><span class="token number">8.0</span><span class="token number">.30</span><span class="token operator">&lt;</span><span class="token operator">/</span>mysql<span class="token punctuation">.</span>version<span class="token operator">&gt;</span>
-    <span class="token generics"><span class="token punctuation">&lt;</span>knife4j<span class="token punctuation">.</span>version<span class="token punctuation">&gt;</span></span><span class="token number">3.0</span><span class="token number">.3</span><span class="token operator">&lt;</span><span class="token operator">/</span>knife4j<span class="token punctuation">.</span>version<span class="token operator">&gt;</span>
-    <span class="token generics"><span class="token punctuation">&lt;</span>jwt<span class="token punctuation">.</span>version<span class="token punctuation">&gt;</span></span><span class="token number">0.9</span><span class="token number">.1</span><span class="token operator">&lt;</span><span class="token operator">/</span>jwt<span class="token punctuation">.</span>version<span class="token operator">&gt;</span>
-    <span class="token generics"><span class="token punctuation">&lt;</span>fastjson<span class="token punctuation">.</span>version<span class="token punctuation">&gt;</span></span><span class="token number">2.0</span><span class="token number">.21</span><span class="token operator">&lt;</span><span class="token operator">/</span>fastjson<span class="token punctuation">.</span>version<span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>project<span class="token punctuation">.</span>build<span class="token punctuation">.</span>sourceEncoding<span class="token punctuation">&gt;</span></span><span class="token constant">UTF</span><span class="token operator">-</span><span class="token number">8</span><span class="token operator">&lt;</span><span class="token operator">/</span>project<span class="token punctuation">.</span>build<span class="token punctuation">.</span>sourceEncoding<span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>maven<span class="token punctuation">.</span>compiler<span class="token punctuation">.</span>source<span class="token punctuation">&gt;</span></span><span class="token number">1.8</span><span class="token operator">&lt;</span><span class="token operator">/</span>maven<span class="token punctuation">.</span>compiler<span class="token punctuation">.</span>source<span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>maven<span class="token punctuation">.</span>compiler<span class="token punctuation">.</span>target<span class="token punctuation">&gt;</span></span><span class="token number">1.8</span><span class="token operator">&lt;</span><span class="token operator">/</span>maven<span class="token punctuation">.</span>compiler<span class="token punctuation">.</span>target<span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>skipTests<span class="token punctuation">&gt;</span></span><span class="token boolean">true</span><span class="token operator">&lt;</span><span class="token operator">/</span>skipTests<span class="token operator">&gt;</span>
+
+    <span class="token generics"><span class="token punctuation">&lt;</span>springboot<span class="token punctuation">.</span>version<span class="token punctuation">&gt;</span></span><span class="token number">2.6</span><span class="token number">.1</span><span class="token operator">&lt;</span><span class="token operator">/</span>springboot<span class="token punctuation">.</span>version<span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>mybatis<span class="token punctuation">.</span>version<span class="token punctuation">&gt;</span></span><span class="token number">1.3</span><span class="token number">.2</span><span class="token operator">&lt;</span><span class="token operator">/</span>mybatis<span class="token punctuation">.</span>version<span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>logback<span class="token punctuation">.</span>version<span class="token punctuation">&gt;</span></span><span class="token number">1.2</span><span class="token number">.10</span><span class="token operator">&lt;</span><span class="token operator">/</span>logback<span class="token punctuation">.</span>version<span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>mysql<span class="token punctuation">.</span>version<span class="token punctuation">&gt;</span></span><span class="token number">8.0</span><span class="token number">.23</span><span class="token operator">&lt;</span><span class="token operator">/</span>mysql<span class="token punctuation">.</span>version<span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>aspectjweaver<span class="token punctuation">.</span>version<span class="token punctuation">&gt;</span></span><span class="token number">1.9</span><span class="token number">.4</span><span class="token operator">&lt;</span><span class="token operator">/</span>aspectjweaver<span class="token punctuation">.</span>version<span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>fastjson<span class="token punctuation">.</span>version<span class="token punctuation">&gt;</span></span><span class="token number">1.2</span><span class="token number">.66</span><span class="token operator">&lt;</span><span class="token operator">/</span>fastjson<span class="token punctuation">.</span>version<span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>commons<span class="token punctuation">.</span>lang3<span class="token punctuation">.</span>version<span class="token punctuation">&gt;</span></span><span class="token number">3.4</span><span class="token operator">&lt;</span><span class="token operator">/</span>commons<span class="token punctuation">.</span>lang3<span class="token punctuation">.</span>version<span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>commons<span class="token punctuation">.</span>codec<span class="token punctuation">.</span>version<span class="token punctuation">&gt;</span></span><span class="token number">1.9</span><span class="token operator">&lt;</span><span class="token operator">/</span>commons<span class="token punctuation">.</span>codec<span class="token punctuation">.</span>version<span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>commons<span class="token punctuation">.</span>io<span class="token punctuation">.</span>version<span class="token punctuation">&gt;</span></span><span class="token number">2.5</span><span class="token operator">&lt;</span><span class="token operator">/</span>commons<span class="token punctuation">.</span>io<span class="token punctuation">.</span>version<span class="token operator">&gt;</span>
   <span class="token operator">&lt;</span><span class="token operator">/</span>properties<span class="token operator">&gt;</span>
 
-  <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>配置dependencyManagement锁定依赖的版本<span class="token operator">--</span><span class="token operator">&gt;</span>
-  <span class="token generics"><span class="token punctuation">&lt;</span>dependencyManagement<span class="token punctuation">&gt;</span></span>
-    <span class="token generics"><span class="token punctuation">&lt;</span>dependencies<span class="token punctuation">&gt;</span></span>
-      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>mybatis<span class="token operator">-</span>plus 持久层<span class="token operator">--</span><span class="token operator">&gt;</span>
-      <span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>com<span class="token punctuation">.</span>baomidou<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>mybatis<span class="token operator">-</span>plus<span class="token operator">-</span>boot<span class="token operator">-</span>starter<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span>$<span class="token punctuation">{</span>mybatis<span class="token operator">-</span>plus<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>mysql<span class="token operator">--</span><span class="token operator">&gt;</span>
-      <span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>mysql<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>mysql<span class="token operator">-</span>connector<span class="token operator">-</span>java<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span>$<span class="token punctuation">{</span>mysql<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>knife4j<span class="token operator">--</span><span class="token operator">&gt;</span>
-      <span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>com<span class="token punctuation">.</span>github<span class="token punctuation">.</span>xiaoymin<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>knife4j<span class="token operator">-</span>spring<span class="token operator">-</span>boot<span class="token operator">-</span>starter<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span>$<span class="token punctuation">{</span>knife4j<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>jjwt<span class="token operator">--</span><span class="token operator">&gt;</span>
-      <span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>io<span class="token punctuation">.</span>jsonwebtoken<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>jjwt<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span>$<span class="token punctuation">{</span>jwt<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>fastjson<span class="token operator">--</span><span class="token operator">&gt;</span>
-      <span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>com<span class="token punctuation">.</span>alibaba<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>fastjson<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span>$<span class="token punctuation">{</span>fastjson<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span>
-    <span class="token operator">&lt;</span><span class="token operator">/</span>dependencies<span class="token operator">&gt;</span>
-  <span class="token operator">&lt;</span><span class="token operator">/</span>dependencyManagement<span class="token operator">&gt;</span>
+  <span class="token generics"><span class="token punctuation">&lt;</span>dependencies<span class="token punctuation">&gt;</span></span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>boot<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>spring<span class="token operator">-</span>boot<span class="token operator">-</span>starter<span class="token operator">-</span>web<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>exclusions<span class="token punctuation">&gt;</span></span>
+       <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>忽略springboot自带的日志<span class="token operator">--</span><span class="token operator">&gt;</span>
+        <span class="token generics"><span class="token punctuation">&lt;</span>exclusion<span class="token punctuation">&gt;</span></span>
+          <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>ch<span class="token punctuation">.</span>qos<span class="token punctuation">.</span>logback<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
+          <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>logback<span class="token operator">-</span>classic<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>exclusion<span class="token operator">&gt;</span>
+        <span class="token generics"><span class="token punctuation">&lt;</span>exclusion<span class="token punctuation">&gt;</span></span>
+          <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>ch<span class="token punctuation">.</span>qos<span class="token punctuation">.</span>logback<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
+          <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>logback<span class="token operator">-</span>core<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>exclusion<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>exclusions<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>邮件发送<span class="token operator">--</span><span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>boot<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>spring<span class="token operator">-</span>boot<span class="token operator">-</span>starter<span class="token operator">-</span>mail<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span>$<span class="token punctuation">{</span>springboot<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>redis <span class="token operator">--</span><span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>boot<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>spring<span class="token operator">-</span>boot<span class="token operator">-</span>starter<span class="token operator">-</span>data<span class="token operator">-</span>redis<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span>$<span class="token punctuation">{</span>springboot<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>mybatis<span class="token operator">--</span><span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>org<span class="token punctuation">.</span>mybatis<span class="token punctuation">.</span>spring<span class="token punctuation">.</span>boot<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>mybatis<span class="token operator">-</span>spring<span class="token operator">-</span>boot<span class="token operator">-</span>starter<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span>$<span class="token punctuation">{</span>mybatis<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span>
+
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 数据库<span class="token operator">--</span><span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>mysql<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>mysql<span class="token operator">-</span>connector<span class="token operator">-</span>java<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span>$<span class="token punctuation">{</span>mysql<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span>
+
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 日志版本 <span class="token operator">--</span><span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>ch<span class="token punctuation">.</span>qos<span class="token punctuation">.</span>logback<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>logback<span class="token operator">-</span>classic<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span>$<span class="token punctuation">{</span>logback<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>ch<span class="token punctuation">.</span>qos<span class="token punctuation">.</span>logback<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>logback<span class="token operator">-</span>core<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span>$<span class="token punctuation">{</span>logback<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>切面<span class="token operator">--</span><span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>org<span class="token punctuation">.</span>aspectj<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>aspectjweaver<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span>$<span class="token punctuation">{</span>aspectjweaver<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>fastjson<span class="token operator">--</span><span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>com<span class="token punctuation">.</span>alibaba<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>fastjson<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span>$<span class="token punctuation">{</span>fastjson<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>apache common<span class="token operator">--</span><span class="token operator">&gt;</span>
+    <span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>commons<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>commons<span class="token operator">-</span>lang3<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span>$<span class="token punctuation">{</span>commons<span class="token punctuation">.</span>lang3<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span>
+
+    <span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>commons<span class="token operator">-</span>codec<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>commons<span class="token operator">-</span>codec<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span>$<span class="token punctuation">{</span>commons<span class="token punctuation">.</span>codec<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span>
+
+    <span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>commons<span class="token operator">-</span>io<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>commons<span class="token operator">-</span>io<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span>$<span class="token punctuation">{</span>commons<span class="token punctuation">.</span>io<span class="token punctuation">.</span>version<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>dependencies<span class="token operator">&gt;</span>
 
   <span class="token generics"><span class="token punctuation">&lt;</span>build<span class="token punctuation">&gt;</span></span>
     <span class="token generics"><span class="token punctuation">&lt;</span>plugins<span class="token punctuation">&gt;</span></span>
       <span class="token generics"><span class="token punctuation">&lt;</span>plugin<span class="token punctuation">&gt;</span></span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>maven<span class="token punctuation">.</span>plugins<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>maven<span class="token operator">-</span>compiler<span class="token operator">-</span>plugin<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span><span class="token number">3.1</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
+        <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>boot<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
+        <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>spring<span class="token operator">-</span>boot<span class="token operator">-</span>maven<span class="token operator">-</span>plugin<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
+        <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span><span class="token number">2.2</span><span class="token number">.6</span><span class="token punctuation">.</span><span class="token constant">RELEASE</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
+        <span class="token generics"><span class="token punctuation">&lt;</span>executions<span class="token punctuation">&gt;</span></span>
+          <span class="token generics"><span class="token punctuation">&lt;</span>execution<span class="token punctuation">&gt;</span></span>
+            <span class="token generics"><span class="token punctuation">&lt;</span>goals<span class="token punctuation">&gt;</span></span>
+              <span class="token generics"><span class="token punctuation">&lt;</span>goal<span class="token punctuation">&gt;</span></span>
+                repackage
+              <span class="token operator">&lt;</span><span class="token operator">/</span>goal<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span>goals<span class="token operator">&gt;</span>
+          <span class="token operator">&lt;</span><span class="token operator">/</span>execution<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>executions<span class="token operator">&gt;</span>
         <span class="token generics"><span class="token punctuation">&lt;</span>configuration<span class="token punctuation">&gt;</span></span>
-          <span class="token generics"><span class="token punctuation">&lt;</span>source<span class="token punctuation">&gt;</span></span><span class="token number">1.8</span><span class="token operator">&lt;</span><span class="token operator">/</span>source<span class="token operator">&gt;</span>
-          <span class="token generics"><span class="token punctuation">&lt;</span>target<span class="token punctuation">&gt;</span></span><span class="token number">1.8</span><span class="token operator">&lt;</span><span class="token operator">/</span>target<span class="token operator">&gt;</span>
-        <span class="token operator">&lt;</span><span class="token operator">/</span>configuration<span class="token operator">&gt;</span>
-      <span class="token operator">&lt;</span><span class="token operator">/</span>plugin<span class="token operator">&gt;</span>
-      <span class="token generics"><span class="token punctuation">&lt;</span>plugin<span class="token punctuation">&gt;</span></span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>maven<span class="token punctuation">.</span>plugins<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>maven<span class="token operator">-</span>surefire<span class="token operator">-</span>plugin<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span><span class="token number">2.19</span><span class="token number">.1</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
-        <span class="token generics"><span class="token punctuation">&lt;</span>configuration<span class="token punctuation">&gt;</span></span>
-          <span class="token generics"><span class="token punctuation">&lt;</span>skipTests<span class="token punctuation">&gt;</span></span><span class="token boolean">true</span><span class="token operator">&lt;</span><span class="token operator">/</span>skipTests<span class="token operator">&gt;</span>    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>默认关掉单元测试 <span class="token operator">--</span><span class="token operator">&gt;</span>
+          <span class="token generics"><span class="token punctuation">&lt;</span>mainClass<span class="token punctuation">&gt;</span></span><span class="token class-name"><span class="token namespace">com<span class="token punctuation">.</span>easypan<span class="token punctuation">.</span></span>EasyPanApplication</span><span class="token operator">&lt;</span><span class="token operator">/</span>mainClass<span class="token operator">&gt;</span>
         <span class="token operator">&lt;</span><span class="token operator">/</span>configuration<span class="token operator">&gt;</span>
       <span class="token operator">&lt;</span><span class="token operator">/</span>plugin<span class="token operator">&gt;</span>
     <span class="token operator">&lt;</span><span class="token operator">/</span>plugins<span class="token operator">&gt;</span>
   <span class="token operator">&lt;</span><span class="token operator">/</span>build<span class="token operator">&gt;</span>
-
 <span class="token operator">&lt;</span><span class="token operator">/</span>project<span class="token operator">&gt;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>设置好了之后其他模块设置 packaging 打包为jar</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token generics"><span class="token punctuation">&lt;</span>packaging<span class="token punctuation">&gt;</span></span>jar<span class="token operator">&lt;</span><span class="token operator">/</span>packaging<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> <strong>日志XML</strong></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token operator">&lt;</span><span class="token operator">?</span>xml version<span class="token operator">=</span><span class="token string">"1.0"</span> encoding<span class="token operator">=</span><span class="token string">"UTF-8"</span> <span class="token operator">?</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>configuration scan<span class="token operator">=</span><span class="token string">"true"</span> scanPeriod<span class="token operator">=</span><span class="token string">"10 minutes"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>appender name<span class="token operator">=</span><span class="token string">"stdot"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ch.qos.logback.core.ConsoleAppender"</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>layout <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ch.qos.logback.classic.PatternLayout"</span><span class="token operator">&gt;</span>
+            <span class="token generics"><span class="token punctuation">&lt;</span>pattern<span class="token punctuation">&gt;</span></span><span class="token operator">%</span>d<span class="token punctuation">{</span>yyyy<span class="token operator">-</span><span class="token constant">MM</span><span class="token operator">-</span>dd <span class="token constant">HH</span><span class="token operator">:</span>mm<span class="token operator">:</span>ss<span class="token punctuation">,</span><span class="token constant">GMT</span><span class="token operator">+</span><span class="token number">8</span><span class="token punctuation">}</span> <span class="token punctuation">[</span><span class="token operator">%</span>p<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">%</span>c<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">%</span><span class="token class-name">M</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">%</span><span class="token class-name">L</span><span class="token punctuation">]</span><span class="token operator">-&gt;</span> <span class="token operator">%</span>m<span class="token operator">%</span>n<span class="token operator">&lt;</span><span class="token operator">/</span>pattern<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>layout<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>appender<span class="token operator">&gt;</span>
 
-<p>启动类模块设置 pom.xml</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token generics"><span class="token punctuation">&lt;</span>plugin<span class="token punctuation">&gt;</span></span>
-                <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>boot<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
-                <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>spring<span class="token operator">-</span>boot<span class="token operator">-</span>maven<span class="token operator">-</span>plugin<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
-                <span class="token generics"><span class="token punctuation">&lt;</span>configuration<span class="token punctuation">&gt;</span></span>
-                    <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span> 指定该<span class="token class-name">Main</span> <span class="token class-name">Class</span>为全局的唯一入口 这里是启动类的地址 <span class="token operator">--</span><span class="token operator">&gt;</span>
-                    <span class="token generics"><span class="token punctuation">&lt;</span>mainClass<span class="token punctuation">&gt;</span></span><span class="token class-name"><span class="token namespace">com<span class="token punctuation">.</span>guigu<span class="token punctuation">.</span></span>ServiceOaApplication</span><span class="token operator">&lt;</span><span class="token operator">/</span>mainClass<span class="token operator">&gt;</span>
-                    <span class="token generics"><span class="token punctuation">&lt;</span>layout<span class="token punctuation">&gt;</span></span><span class="token constant">ZIP</span><span class="token operator">&lt;</span><span class="token operator">/</span>layout<span class="token operator">&gt;</span>
-                <span class="token operator">&lt;</span><span class="token operator">/</span>configuration<span class="token operator">&gt;</span>
-                <span class="token generics"><span class="token punctuation">&lt;</span>executions<span class="token punctuation">&gt;</span></span>
-                    <span class="token generics"><span class="token punctuation">&lt;</span>execution<span class="token punctuation">&gt;</span></span>
-                        <span class="token operator">&lt;</span><span class="token operator">!</span><span class="token operator">--</span>可以把依赖的包都打包到生成的<span class="token class-name">Jar</span>包中<span class="token operator">--</span><span class="token operator">&gt;</span>
-                        <span class="token generics"><span class="token punctuation">&lt;</span>goals<span class="token punctuation">&gt;</span></span>
-                            <span class="token generics"><span class="token punctuation">&lt;</span>goal<span class="token punctuation">&gt;</span></span>repackage<span class="token operator">&lt;</span><span class="token operator">/</span>goal<span class="token operator">&gt;</span>
-                        <span class="token operator">&lt;</span><span class="token operator">/</span>goals<span class="token operator">&gt;</span>
-                    <span class="token operator">&lt;</span><span class="token operator">/</span>execution<span class="token operator">&gt;</span>
-                <span class="token operator">&lt;</span><span class="token operator">/</span>executions<span class="token operator">&gt;</span>
- <span class="token operator">&lt;</span><span class="token operator">/</span>plugin<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token operator">&lt;</span>springProperty scope<span class="token operator">=</span><span class="token string">"context"</span> name<span class="token operator">=</span><span class="token string">"log.path"</span> source<span class="token operator">=</span><span class="token string">"project.folder"</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>springProperty scope<span class="token operator">=</span><span class="token string">"context"</span> name<span class="token operator">=</span><span class="token string">"log.root.level"</span> source<span class="token operator">=</span><span class="token string">"log.root.level"</span><span class="token operator">/</span><span class="token operator">&gt;</span>
 
-<p>设置好了之后进行maven，找到父类的maven，点击package打包了好了<img src="C:\Users\石文学\OneDrive\桌面\20200929095335964.png" alt="20200929095335964" style="zoom: 67%;"></p>
+    <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"LOG_FOLDER"</span> value<span class="token operator">=</span><span class="token string">"logs"</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>property name<span class="token operator">=</span><span class="token string">"LOG_FILE_NAME"</span> value<span class="token operator">=</span><span class="token string">"easypan.log"</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>appender name<span class="token operator">=</span><span class="token string">"file"</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ch.qos.logback.core.rolling.RollingFileAppender"</span><span class="token operator">&gt;</span>
+        <span class="token generics"><span class="token punctuation">&lt;</span>file<span class="token punctuation">&gt;</span></span>$<span class="token punctuation">{</span>log<span class="token punctuation">.</span>path<span class="token punctuation">}</span><span class="token operator">/</span>$<span class="token punctuation">{</span><span class="token constant">LOG_FOLDER</span><span class="token punctuation">}</span><span class="token operator">/</span>$<span class="token punctuation">{</span><span class="token constant">LOG_FILE_NAME</span><span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>file<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>rollingPolicy <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ch.qos.logback.core.rolling.TimeBasedRollingPolicy"</span><span class="token operator">&gt;</span>
+            <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">FileNamePattern</span><span class="token punctuation">&gt;</span></span>$<span class="token punctuation">{</span>log<span class="token punctuation">.</span>path<span class="token punctuation">}</span><span class="token operator">/</span>$<span class="token punctuation">{</span><span class="token constant">LOG_FOLDER</span><span class="token punctuation">}</span><span class="token operator">/</span>$<span class="token punctuation">{</span><span class="token constant">LOG_FILE_NAME</span><span class="token punctuation">}</span><span class="token punctuation">.</span>%d<span class="token punctuation">{</span>yyyyMMdd<span class="token punctuation">}</span><span class="token punctuation">.</span>%i<span class="token operator">&lt;</span><span class="token operator">/</span><span class="token class-name">FileNamePattern</span><span class="token operator">&gt;</span>
+            <span class="token generics"><span class="token punctuation">&lt;</span>cleanHistoryOnStart<span class="token punctuation">&gt;</span></span><span class="token boolean">true</span><span class="token operator">&lt;</span><span class="token operator">/</span>cleanHistoryOnStart<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token class-name">TimeBasedFileNamingAndTriggeringPolicy</span> <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP"</span><span class="token operator">&gt;</span>
+                <span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">MaxFileSize</span><span class="token punctuation">&gt;</span></span><span class="token number">20</span><span class="token constant">MB</span><span class="token operator">&lt;</span><span class="token operator">/</span><span class="token class-name">MaxFileSize</span><span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span><span class="token operator">/</span><span class="token class-name">TimeBasedFileNamingAndTriggeringPolicy</span><span class="token operator">&gt;</span>
+            <span class="token generics"><span class="token punctuation">&lt;</span>maxHistory<span class="token punctuation">&gt;</span></span><span class="token number">30</span><span class="token operator">&lt;</span><span class="token operator">/</span>maxHistory<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>rollingPolicy<span class="token operator">&gt;</span>
+        <span class="token generics"><span class="token punctuation">&lt;</span>encoder<span class="token punctuation">&gt;</span></span>
+            <span class="token generics"><span class="token punctuation">&lt;</span>charset<span class="token punctuation">&gt;</span></span>utf<span class="token operator">-</span><span class="token number">8</span><span class="token operator">&lt;</span><span class="token operator">/</span>charset<span class="token operator">&gt;</span>
+            <span class="token generics"><span class="token punctuation">&lt;</span>pattern<span class="token punctuation">&gt;</span></span><span class="token operator">%</span>d<span class="token punctuation">{</span>yyyy<span class="token operator">-</span><span class="token constant">MM</span><span class="token operator">-</span>dd <span class="token constant">HH</span><span class="token operator">:</span>mm<span class="token operator">:</span>ss<span class="token punctuation">,</span><span class="token constant">GMT</span><span class="token operator">+</span><span class="token number">8</span><span class="token punctuation">}</span> <span class="token punctuation">[</span><span class="token operator">%</span>p<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">%</span>c<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">%</span><span class="token class-name">M</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token operator">%</span><span class="token class-name">L</span><span class="token punctuation">]</span><span class="token operator">-&gt;</span> <span class="token operator">%</span>m<span class="token operator">%</span>n<span class="token operator">&lt;</span><span class="token operator">/</span>pattern<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>encoder<span class="token operator">&gt;</span>
+        <span class="token generics"><span class="token punctuation">&lt;</span>append<span class="token punctuation">&gt;</span></span><span class="token boolean">false</span><span class="token operator">&lt;</span><span class="token operator">/</span>append<span class="token operator">&gt;</span>
+        <span class="token generics"><span class="token punctuation">&lt;</span>prudent<span class="token punctuation">&gt;</span></span><span class="token boolean">false</span><span class="token operator">&lt;</span><span class="token operator">/</span>prudent<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>appender<span class="token operator">&gt;</span>
+
+    <span class="token operator">&lt;</span>root level<span class="token operator">=</span><span class="token string">"${log.root.level}"</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>appender<span class="token operator">-</span>ref ref<span class="token operator">=</span><span class="token string">"stdot"</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>appender<span class="token operator">-</span>ref ref<span class="token operator">=</span><span class="token string">"file"</span><span class="token operator">/</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>root<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>configuration<span class="token operator">&gt;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
 
                 
             </div>
@@ -737,7 +735,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://swx08.github.io/2023/04/06/linux-xiang-mu-bu-shu/">http://swx08.github.io/2023/04/06/linux-xiang-mu-bu-shu/</a>
+                    <a href="http://swx08.github.io/2023/05/21/easy-wang-pan/">http://swx08.github.io/2023/05/21/easy-wang-pan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -774,11 +772,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E5%90%8E%E7%AB%AF-%E9%83%A8%E7%BD%B2-Linux/">
-                                    <span class="chip bg-color">后端 部署 Linux</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -1212,14 +1206,16 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/04/06/mybatisplus-fen-ye-cha-jian-shi-yong/">
+                <a href="/2023/05/21/easy-wang-pan/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="">
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
                         <span class="card-title"></span>
                     </div>
@@ -1227,33 +1223,22 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            MybatisPlus分页插件
+                            
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-06
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-21
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
-                                </a>
-                            
+                            <i class="fas fa-user fa-fw"></i>
+                            文学
                             
                         </span>
                     </div>
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E5%90%8E%E7%AB%AF-MybatisPlus/">
-                        <span class="chip bg-color">后端 MybatisPlus</span>
-                    </a>
-                    
-                </div>
+
                 
             </div>
         </div>
@@ -1264,10 +1249,10 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/04/06/knife4j-shi-yong/">
+                <a href="/2023/05/19/springboot-ji-cheng-gong-neng-he-ji/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/36.png" class="responsive-img" alt="">
                         
                         <span class="card-title"></span>
                     </div>
@@ -1275,19 +1260,19 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Knife4j测试接口文档生成
+                            SpringBoot集成功能合集
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-06
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-19
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
-                                    工具
+                            <a href="/categories/SpringBoot/" class="post-category">
+                                    SpringBoot
                                 </a>
                             
                             
@@ -1297,8 +1282,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%90%8E%E7%AB%AF/">
-                        <span class="chip bg-color">后端</span>
+                    <a href="/tags/%E5%90%8E%E7%AB%AF-SpringBoot/">
+                        <span class="chip bg-color">后端 SpringBoot</span>
                     </a>
                     
                 </div>
