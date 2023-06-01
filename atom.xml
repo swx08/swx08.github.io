@@ -6,7 +6,7 @@
   <link href="http://swx08.github.io/atom.xml" rel="self"/>
   
   <link href="http://swx08.github.io/"/>
-  <updated>2023-06-01T12:33:45.525Z</updated>
+  <updated>2023-06-01T16:55:55.237Z</updated>
   <id>http://swx08.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/06/02/ssm-zheng-he/"/>
+    <id>http://swx08.github.io/2023/06/02/ssm-zheng-he/</id>
+    <published>2023-06-01T16:33:38.908Z</published>
+    <updated>2023-06-01T16:55:55.237Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;SSM整合&quot;&gt;&lt;a href=&quot;#SSM整合&quot; class=&quot;headerlink&quot; title=&quot;SSM整合&quot;&gt;&lt;/a&gt;SSM整合&lt;/h2&gt;&lt;h3 id=&quot;4-1、ContextLoaderListener&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="SSM" scheme="http://swx08.github.io/categories/SSM/"/>
+    
+    
+    <category term="SSM 后端框架" scheme="http://swx08.github.io/tags/SSM-%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -92,7 +117,7 @@
     <link href="http://swx08.github.io/2023/05/06/mybatis/"/>
     <id>http://swx08.github.io/2023/05/06/mybatis/</id>
     <published>2023-05-06T15:11:06.798Z</published>
-    <updated>2023-06-01T16:24:30.242Z</updated>
+    <updated>2023-06-01T16:56:29.762Z</updated>
     
     
       
@@ -105,7 +130,7 @@
     
     
     
-    <category term="数据库" scheme="http://swx08.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <category term="Mybatis" scheme="http://swx08.github.io/categories/Mybatis/"/>
     
     
     <category term="后端 Mybatis" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF-Mybatis/"/>
@@ -489,31 +514,6 @@
     
     
     <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/04/06/wei-xin-xiao-cheng-xu/"/>
-    <id>http://swx08.github.io/2023/04/06/wei-xin-xiao-cheng-xu/</id>
-    <published>2023-04-06T15:50:13.367Z</published>
-    <updated>2023-04-09T06:08:50.466Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;微信小程序&quot;&gt;&lt;a href=&quot;#微信小程序&quot; class=&quot;headerlink&quot; title=&quot;微信小程序&quot;&gt;&lt;/a&gt;微信小程序&lt;/h1&gt;&lt;p&gt;AppID:</summary>
-        
-      
-    
-    
-    
-    <category term="后端 前端" scheme="http://swx08.github.io/categories/%E5%90%8E%E7%AB%AF-%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="微信小程序" scheme="http://swx08.github.io/tags/%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
   </entry>
   
