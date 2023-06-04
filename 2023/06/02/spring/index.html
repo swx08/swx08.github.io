@@ -487,21 +487,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-06-03
+                    2023-06-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    17.2k
+                    17.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    78 分
+                    77 分
                 </div>
                 
 
@@ -1898,7 +1898,7 @@ userService<span class="token punctuation">.</span><span class="token function">
 <span class="token keyword">int</span> <span class="token function">div</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">,</span> <span class="token keyword">int</span> j<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="3-1-2、创建实现类"><a href="#3-1-2、创建实现类" class="headerlink" title="3.1.2、创建实现类"></a><strong>3.1.2、创建实现类</strong></h5><p>![](C:\Users\石文学\OneDrive\图片\iTop Screenshot\spring9.jpeg)</p>
+<h5 id="3-1-2、创建实现类"><a href="#3-1-2、创建实现类" class="headerlink" title="3.1.2、创建实现类"></a><strong>3.1.2、创建实现类</strong></h5><p><img src="https://pic.imgdb.cn/item/647cb7441ddac507cc903f0b.jpg"></p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CalculatorPureImpl</span> <span class="token keyword">implements</span> <span class="token class-name">Calculator</span> <span class="token punctuation">{</span>
 <span class="token annotation punctuation">@Override</span>
 <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">,</span> <span class="token keyword">int</span> j<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1926,7 +1926,7 @@ userService<span class="token punctuation">.</span><span class="token function">
 <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="3-1-3、创建带日志功能的实现类"><a href="#3-1-3、创建带日志功能的实现类" class="headerlink" title="3.1.3、创建带日志功能的实现类"></a><strong>3.1.3、创建带日志功能的实现类</strong></h5><p>![](C:\Users\石文学\OneDrive\图片\iTop Screenshot\spring10.jpeg)</p>
+<h5 id="3-1-3、创建带日志功能的实现类"><a href="#3-1-3、创建带日志功能的实现类" class="headerlink" title="3.1.3、创建带日志功能的实现类"></a><strong>3.1.3、创建带日志功能的实现类</strong></h5><p><img src="https://pic.imgdb.cn/item/647cb7421ddac507cc90392f.jpg"></p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CalculatorLogImpl</span> <span class="token keyword">implements</span> <span class="token class-name">Calculator</span> <span class="token punctuation">{</span>
 <span class="token annotation punctuation">@Override</span>
 <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token punctuation">,</span> <span class="token keyword">int</span> j<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -1977,9 +1977,9 @@ userService<span class="token punctuation">.</span><span class="token function">
 <p>解决问题的困难：要抽取的代码在方法内部，靠以前把子类中的重复代码抽取到父类的方式没法解决。 所以需要引入新的技术。</p>
 <h4 id="3-2、代理模式"><a href="#3-2、代理模式" class="headerlink" title="3.2、代理模式"></a><strong>3.2、代理模式</strong></h4><h5 id="3-2-1、概念"><a href="#3-2-1、概念" class="headerlink" title="3.2.1、概念"></a><strong>3.2.1、概念</strong></h5><p>**①介绍 **</p>
 <p>二十三种设计模式中的一种，属于结构型模式。它的作用就是通过提供一个代理类，让我们在调用目标 方法的时候，不再是直接对目标方法进行调用，而是通过代理类间接调用。让不属于目标方法核心逻辑 的代码从目标方法中剥离出来——解耦。调用目标方法时先调用代理对象的方法，减少对目标方法的调 用和打扰，同时让附加功能能够集中在一起也有利于统一维护。</p>
-<p>![](C:\Users\石文学\OneDrive\图片\iTop Screenshot\spring11.jpeg)</p>
+<p><img src="https://pic.imgdb.cn/item/647cb7441ddac507cc903e7e.jpg"></p>
 <p><strong>使用代理后：</strong></p>
-<p>![](C:\Users\石文学\OneDrive\图片\iTop Screenshot\spring12.jpeg)</p>
+<p><img src="https://pic.imgdb.cn/item/647cb7441ddac507cc903e9e.jpg"></p>
 <p><strong>②生活中的代理</strong> </p>
 <ul>
 <li><p>广告商找大明星拍广告需要经过经纪人 </p>
@@ -2019,7 +2019,7 @@ userService<span class="token punctuation">.</span><span class="token function">
 <p>静态代理确实实现了解耦，但是由于代码都写死了，完全不具备任何的灵活性。就拿日志功能来 说，将来其他地方也需要附加日志，那还得再声明更多个静态代理类，那就产生了大量重复的代 码，日志功能还是分散的，没有统一管理。 提出进一步的需求：将日志功能集中到一个代理类中，将来有任何日志需求，都通过这一个代理 类来实现。这就需要使用动态代理技术了。</p>
 </blockquote>
 <p><strong>3.2.3、动态代理</strong></p>
-<p>![](C:\Users\石文学\OneDrive\图片\iTop Screenshot\spring13.jpeg)</p>
+<p><img src="https://pic.imgdb.cn/item/647cb7441ddac507cc903ec4.jpg"></p>
 <p><strong>生产代理对象的工厂类：</strong></p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ProxyFactory</span> <span class="token punctuation">{</span>
 <span class="token keyword">private</span> <span class="token class-name">Object</span> target<span class="token punctuation">;</span>
@@ -2082,7 +2082,7 @@ proxy<span class="token punctuation">.</span><span class="token function">div</s
 <h4 id="3-3、AOP概念及相关术语"><a href="#3-3、AOP概念及相关术语" class="headerlink" title="**3.3、AOP概念及相关术语 **"></a>**3.3、AOP概念及相关术语 **</h4><h5 id="3-3-1、概述"><a href="#3-3-1、概述" class="headerlink" title="**3.3.1、概述 **"></a>**3.3.1、概述 **</h5><p>AOP（Aspect Oriented Programming）是一种设计思想，是软件设计领域中的面向切面编程，它是面 向对象编程的一种补充和完善，它以通过预编译方式和运行期动态代理方式实现在不修改源代码的情况 下给程序动态统一添加额外功能的一种技术。 </p>
 <h5 id="3-3-2、相关术语"><a href="#3-3-2、相关术语" class="headerlink" title="**3.3.2、相关术语 **"></a>**3.3.2、相关术语 **</h5><p>**①横切关注点 **</p>
 <p>从每个方法中抽取出来的同一类非核心业务。在同一个项目中，我们可以使用多个横切关注点对相关方 法进行多个不同方面的增强。 这个概念不是语法层面天然存在的，而是根据附加功能的逻辑上的需要：有十个附加功能，就有十个横 切关注点。</p>
-<p>![](C:\Users\石文学\OneDrive\图片\iTop Screenshot\Spring14.jpeg)</p>
+<p><img src="https://pic.imgdb.cn/item/647cb7b01ddac507cc9164de.jpg"></p>
 <p>**②通知 **</p>
 <p>每一个横切关注点上要做的事情都需要写一个方法来实现，这样的方法就叫通知方法。 </p>
 <ul>
@@ -2097,17 +2097,17 @@ proxy<span class="token punctuation">.</span><span class="token function">div</s
 <li><p>环绕通知：使用try…catch…finally结构围绕整个被代理的目标方法，包括上面四种通知对应的所 有位置</p>
 </li>
 </ul>
-<p>![](C:\Users\石文学\OneDrive\图片\iTop Screenshot\spring15.jpeg)</p>
+<p><img src="https://pic.imgdb.cn/item/647cb7b01ddac507cc9165dd.jpg"></p>
 <p>**③切面 **</p>
 <p>封装通知方法的类。</p>
-<p>![](C:\Users\石文学\OneDrive\图片\iTop Screenshot\spring16.jpeg)</p>
+<p><img src="https://pic.imgdb.cn/item/647cb7b01ddac507cc91661d.jpg"></p>
 <p>**④目标 **</p>
 <p>被代理的目标对象。 </p>
 <p>**⑤代理 **</p>
 <p>向目标对象应用通知之后创建的代理对象。 </p>
 <p>**⑥连接点 **</p>
 <p>这也是一个纯逻辑概念，不是语法定义的。 把方法排成一排，每一个横切位置看成x轴方向，把方法从上到下执行的顺序看成y轴，x轴和y轴的交叉 点就是连接点。</p>
-<p>![](C:\Users\石文学\OneDrive\图片\iTop Screenshot\spring17.jpeg)</p>
+<p><img src="https://pic.imgdb.cn/item/647cb7b01ddac507cc916468.jpg"></p>
 <p>**⑦切入点 **</p>
 <p>定位连接点的方式。 </p>
 <p>每个类的方法中都包含多个连接点，所以连接点是类中客观存在的事物（从逻辑上来说）。 </p>
@@ -2120,7 +2120,7 @@ proxy<span class="token punctuation">.</span><span class="token function">div</s
 <li><p>代码增强：把特定的功能封装到切面类中，看哪里有需要，就往上套，被套用了切面逻辑的方法就 被切面给增强了。</p>
 </li>
 </ul>
-<h4 id="3-4、基于注解的AOP"><a href="#3-4、基于注解的AOP" class="headerlink" title="**3.4、基于注解的AOP **"></a>**3.4、基于注解的AOP **</h4><h5 id="3-4-1、技术说明"><a href="#3-4-1、技术说明" class="headerlink" title="3.4.1、技术说明"></a><strong>3.4.1、技术说明</strong></h5><p>![](C:\Users\石文学\OneDrive\图片\iTop Screenshot\spring18.jpeg)</p>
+<h4 id="3-4、基于注解的AOP"><a href="#3-4、基于注解的AOP" class="headerlink" title="**3.4、基于注解的AOP **"></a>**3.4、基于注解的AOP **</h4><h5 id="3-4-1、技术说明"><a href="#3-4-1、技术说明" class="headerlink" title="3.4.1、技术说明"></a><strong>3.4.1、技术说明</strong></h5><p><img src="https://pic.imgdb.cn/item/647cb7b01ddac507cc91649f.jpg"></p>
 <ul>
 <li><p>动态代理（InvocationHandler）：JDK原生的实现方式，需要被代理的目标类必须实现接口。因 为这个技术要求代理对象和目标对象实现同样的接口（兄弟两个拜把子模式）。 </p>
 </li>
@@ -2279,7 +2279,7 @@ throwable<span class="token punctuation">.</span><span class="token function">pr
 </ul>
 </blockquote>
 <h5 id="3-4-5、切入点表达式语法"><a href="#3-4-5、切入点表达式语法" class="headerlink" title="3.4.5、切入点表达式语法"></a><strong>3.4.5、切入点表达式语法</strong></h5><p><strong>①作用</strong></p>
-<p>![](C:\Users\石文学\OneDrive\图片\iTop Screenshot\spirng18.jpeg)</p>
+<p><img src="https://pic.imgdb.cn/item/647cb8e51ddac507cc94f627.jpg"></p>
 <h5 id="3-4-6、重用切入点表达式"><a href="#3-4-6、重用切入点表达式" class="headerlink" title="3.4.6、重用切入点表达式"></a><strong>3.4.6、重用切入点表达式</strong></h5><p><strong>①声明</strong></p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Pointcut</span><span class="token punctuation">(</span><span class="token string">"execution(* com.atguigu.aop.annotation.*.*(..))"</span><span class="token punctuation">)</span>
 <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">pointCut</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
@@ -2702,7 +2702,7 @@ bookController<span class="token punctuation">.</span><span class="token functio
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token namespace">tx:</span>annotation-driven</span> <span class="token attr-name">transaction-manager</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>transactionManager<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>注意：导入的名称空间需要 tx 结尾的那个。</strong></p>
-<p>![](C:\Users\石文学\OneDrive\图片\iTop Screenshot\spring19.jpeg)</p>
+<p><img src="https://pic.imgdb.cn/item/647cb7f41ddac507cc923420.jpg"></p>
 <p>**②添加事务注解 **</p>
 <p>因为service层表示业务逻辑层，一个方法表示一个完成的功能，因此处理事务一般在service层处理 </p>
 <p>在BookServiceImpl的buybook()添加注解@Transactional </p>
@@ -3638,7 +3638,7 @@ checkoutService<span class="token punctuation">.</span><span class="token functi
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">145.1k</span>&nbsp;字
+                class="white-color">165.7k</span>&nbsp;字
             
             
             
