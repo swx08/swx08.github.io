@@ -42,7 +42,7 @@
     <link href="http://swx08.github.io/2023/06/02/rabbitmq-xiao-xi-dui-lie/"/>
     <id>http://swx08.github.io/2023/06/02/rabbitmq-xiao-xi-dui-lie/</id>
     <published>2023-06-02T06:47:19.990Z</published>
-    <updated>2023-06-04T16:05:16.113Z</updated>
+    <updated>2023-06-05T09:43:11.102Z</updated>
     
     
       
@@ -55,6 +55,10 @@
     
     
     
+    <category term="RabbitMQ" scheme="http://swx08.github.io/categories/RabbitMQ/"/>
+    
+    
+    <category term="RabbitMQ 中间件" scheme="http://swx08.github.io/tags/RabbitMQ-%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
     
   </entry>
   
