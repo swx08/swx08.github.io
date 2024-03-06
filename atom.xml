@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>文学</title>
+  <title>文学博客</title>
   
   <subtitle>技术就是要多复盘！</subtitle>
   <link href="http://swx08.github.io/atom.xml" rel="self"/>
   
   <link href="http://swx08.github.io/"/>
-  <updated>2023-07-28T07:38:47.653Z</updated>
+  <updated>2024-03-06T17:34:18.467Z</updated>
   <id>http://swx08.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://swx08.github.io/2023/07/28/jackson-shi-yong-xiang-jie/"/>
     <id>http://swx08.github.io/2023/07/28/jackson-shi-yong-xiang-jie/</id>
     <published>2023-07-28T05:48:32.068Z</published>
-    <updated>2023-07-28T07:38:47.653Z</updated>
+    <updated>2024-03-06T17:34:18.467Z</updated>
     
     
       
@@ -34,6 +34,10 @@
     
     
     
+    <category term="Json" scheme="http://swx08.github.io/categories/Json/"/>
+    
+    
+    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
@@ -42,7 +46,7 @@
     <link href="http://swx08.github.io/2023/07/26/springboot-zi-ding-yi-starter/"/>
     <id>http://swx08.github.io/2023/07/26/springboot-zi-ding-yi-starter/</id>
     <published>2023-07-26T10:42:06.079Z</published>
-    <updated>2023-07-26T12:23:28.704Z</updated>
+    <updated>2024-03-06T16:48:27.610Z</updated>
     
     
       
@@ -55,6 +59,10 @@
     
     
     
+    <category term="SpringBoot" scheme="http://swx08.github.io/categories/SpringBoot/"/>
+    
+    
+    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
@@ -63,7 +71,7 @@
     <link href="http://swx08.github.io/2023/07/22/springboot-ji-cheng-websocket/"/>
     <id>http://swx08.github.io/2023/07/22/springboot-ji-cheng-websocket/</id>
     <published>2023-07-22T12:50:09.686Z</published>
-    <updated>2023-07-23T08:01:07.296Z</updated>
+    <updated>2024-03-06T16:58:58.042Z</updated>
     
     
       
@@ -76,6 +84,10 @@
     
     
     
+    <category term="集成" scheme="http://swx08.github.io/categories/%E9%9B%86%E6%88%90/"/>
+    
+    
+    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
@@ -84,7 +96,7 @@
     <link href="http://swx08.github.io/2023/07/22/java-zhong-ri-qi-yu-shi-jian-gong-ju-feng-zhuang/"/>
     <id>http://swx08.github.io/2023/07/22/java-zhong-ri-qi-yu-shi-jian-gong-ju-feng-zhuang/</id>
     <published>2023-07-22T08:26:26.254Z</published>
-    <updated>2023-07-22T09:19:17.709Z</updated>
+    <updated>2024-03-06T16:14:33.313Z</updated>
     
     
       
@@ -97,27 +109,10 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/07/21/vue-gong-neng-ji-cheng/"/>
-    <id>http://swx08.github.io/2023/07/21/vue-gong-neng-ji-cheng/</id>
-    <published>2023-07-21T15:13:31.735Z</published>
-    <updated>2023-07-21T15:39:45.241Z</updated>
+    <category term="Java" scheme="http://swx08.github.io/categories/Java/"/>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Vue集成各种功能&quot;&gt;&lt;a href=&quot;#Vue集成各种功能&quot; class=&quot;headerlink&quot; title=&quot;Vue集成各种功能&quot;&gt;&lt;/a&gt;Vue集成各种功能&lt;/h1&gt;&lt;h2 id=&quot;1、使用vue互联QQ音乐完成网站音乐播放器。&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
+    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
@@ -126,7 +121,7 @@
     <link href="http://swx08.github.io/2023/07/20/ce-lue-mo-shi-shi-xian-wen-jian-shang-chuan/"/>
     <id>http://swx08.github.io/2023/07/20/ce-lue-mo-shi-shi-xian-wen-jian-shang-chuan/</id>
     <published>2023-07-20T15:10:52.267Z</published>
-    <updated>2023-07-20T16:10:56.602Z</updated>
+    <updated>2024-03-06T16:53:50.594Z</updated>
     
     
       
@@ -139,6 +134,10 @@
     
     
     
+    <category term="工具" scheme="http://swx08.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
@@ -147,7 +146,7 @@
     <link href="http://swx08.github.io/2023/07/09/easyexcel/"/>
     <id>http://swx08.github.io/2023/07/09/easyexcel/</id>
     <published>2023-07-09T06:56:26.506Z</published>
-    <updated>2023-07-10T07:46:21.660Z</updated>
+    <updated>2024-03-06T16:59:08.555Z</updated>
     
     
       
@@ -160,6 +159,10 @@
     
     
     
+    <category term="集成" scheme="http://swx08.github.io/categories/%E9%9B%86%E6%88%90/"/>
+    
+    
+    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
@@ -168,7 +171,7 @@
     <link href="http://swx08.github.io/2023/07/08/hou-duan-jie-shou-qian-duan-shu-ju-8-chong-fang-shi/"/>
     <id>http://swx08.github.io/2023/07/08/hou-duan-jie-shou-qian-duan-shu-ju-8-chong-fang-shi/</id>
     <published>2023-07-08T15:48:35.328Z</published>
-    <updated>2023-07-08T16:34:38.442Z</updated>
+    <updated>2024-03-06T16:55:08.538Z</updated>
     
     
       
@@ -182,6 +185,10 @@
     
     
     
+    <category term="工具" scheme="http://swx08.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
@@ -190,7 +197,7 @@
     <link href="http://swx08.github.io/2023/07/04/springboot-ji-cheng-minio/"/>
     <id>http://swx08.github.io/2023/07/04/springboot-ji-cheng-minio/</id>
     <published>2023-07-03T17:00:40.448Z</published>
-    <updated>2023-07-20T16:22:33.830Z</updated>
+    <updated>2024-03-06T16:42:55.608Z</updated>
     
     
       
@@ -203,6 +210,10 @@
     
     
     
+    <category term="集成" scheme="http://swx08.github.io/categories/%E9%9B%86%E6%88%90/"/>
+    
+    
+    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
@@ -211,7 +222,7 @@
     <link href="http://swx08.github.io/2023/06/18/axios/"/>
     <id>http://swx08.github.io/2023/06/18/axios/</id>
     <published>2023-06-18T13:37:17.153Z</published>
-    <updated>2023-06-19T01:46:44.191Z</updated>
+    <updated>2024-03-06T15:39:55.095Z</updated>
     
     
       
@@ -224,6 +235,10 @@
     
     
     
+    <category term="Axios" scheme="http://swx08.github.io/categories/Axios/"/>
+    
+    
+    <category term="前端" scheme="http://swx08.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -232,7 +247,7 @@
     <link href="http://swx08.github.io/2023/06/18/netty/"/>
     <id>http://swx08.github.io/2023/06/18/netty/</id>
     <published>2023-06-18T04:54:30.332Z</published>
-    <updated>2023-06-18T08:22:12.859Z</updated>
+    <updated>2024-03-06T16:25:33.705Z</updated>
     
     
       
@@ -245,6 +260,10 @@
     
     
     
+    <category term="Netty" scheme="http://swx08.github.io/categories/Netty/"/>
+    
+    
+    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
@@ -253,7 +272,7 @@
     <link href="http://swx08.github.io/2023/06/17/wei-fu-wu-shi-zhan/"/>
     <id>http://swx08.github.io/2023/06/17/wei-fu-wu-shi-zhan/</id>
     <published>2023-06-17T09:14:06.457Z</published>
-    <updated>2023-06-17T15:18:42.101Z</updated>
+    <updated>2024-03-06T16:55:30.873Z</updated>
     
     
       
@@ -269,28 +288,7 @@
     <category term="微服务" scheme="http://swx08.github.io/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
     
     
-    <category term="后端 微服务" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF-%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/06/14/docker-ru-men/"/>
-    <id>http://swx08.github.io/2023/06/14/docker-ru-men/</id>
-    <published>2023-06-14T15:08:54.763Z</published>
-    <updated>2023-06-16T00:30:02.789Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Docker入门&quot;&gt;&lt;a href=&quot;#Docker入门&quot; class=&quot;headerlink&quot; title=&quot;Docker入门&quot;&gt;&lt;/a&gt;Docker入门&lt;/h2&gt;&lt;h3 id=&quot;一、安装Docker&quot;&gt;&lt;a href=&quot;#一、安装Docker&quot;</summary>
-        
-      
-    
-    
-    
+    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
@@ -299,7 +297,7 @@
     <link href="http://swx08.github.io/2023/06/03/css-yang-shi-xue-xi/"/>
     <id>http://swx08.github.io/2023/06/03/css-yang-shi-xue-xi/</id>
     <published>2023-06-02T17:04:06.336Z</published>
-    <updated>2023-07-01T12:16:43.411Z</updated>
+    <updated>2024-03-06T15:42:28.472Z</updated>
     
     
       
@@ -312,6 +310,10 @@
     
     
     
+    <category term="css" scheme="http://swx08.github.io/categories/css/"/>
+    
+    
+    <category term="前端" scheme="http://swx08.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
@@ -320,7 +322,7 @@
     <link href="http://swx08.github.io/2023/06/02/rabbitmq-xiao-xi-dui-lie/"/>
     <id>http://swx08.github.io/2023/06/02/rabbitmq-xiao-xi-dui-lie/</id>
     <published>2023-06-02T06:47:19.990Z</published>
-    <updated>2023-06-26T01:23:49.021Z</updated>
+    <updated>2024-03-06T17:01:23.860Z</updated>
     
     
       
@@ -336,7 +338,7 @@
     <category term="RabbitMQ" scheme="http://swx08.github.io/categories/RabbitMQ/"/>
     
     
-    <category term="RabbitMQ 中间件" scheme="http://swx08.github.io/tags/RabbitMQ-%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    <category term="中间件" scheme="http://swx08.github.io/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
     
   </entry>
   
@@ -345,7 +347,7 @@
     <link href="http://swx08.github.io/2023/06/02/spring/"/>
     <id>http://swx08.github.io/2023/06/02/spring/</id>
     <published>2023-06-02T00:23:45.791Z</published>
-    <updated>2023-06-04T16:18:03.943Z</updated>
+    <updated>2024-03-06T17:35:53.691Z</updated>
     
     
       
@@ -361,7 +363,7 @@
     <category term="Spring" scheme="http://swx08.github.io/categories/Spring/"/>
     
     
-    <category term="Spring 后端框架" scheme="http://swx08.github.io/tags/Spring-%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6/"/>
+    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
@@ -370,7 +372,7 @@
     <link href="http://swx08.github.io/2023/06/02/ssm-zheng-he/"/>
     <id>http://swx08.github.io/2023/06/02/ssm-zheng-he/</id>
     <published>2023-06-01T16:33:38.908Z</published>
-    <updated>2023-06-01T16:55:55.237Z</updated>
+    <updated>2024-03-06T16:50:45.874Z</updated>
     
     
       
@@ -386,7 +388,7 @@
     <category term="SSM" scheme="http://swx08.github.io/categories/SSM/"/>
     
     
-    <category term="SSM 后端框架" scheme="http://swx08.github.io/tags/SSM-%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6/"/>
+    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
     
   </entry>
   
@@ -395,7 +397,7 @@
     <link href="http://swx08.github.io/2023/05/31/redis/"/>
     <id>http://swx08.github.io/2023/05/31/redis/</id>
     <published>2023-05-31T08:24:39.456Z</published>
-    <updated>2023-06-01T12:33:45.525Z</updated>
+    <updated>2024-03-06T17:01:00.163Z</updated>
     
     
       
@@ -411,28 +413,7 @@
     <category term="Redis" scheme="http://swx08.github.io/categories/Redis/"/>
     
     
-    <category term="Redis" scheme="http://swx08.github.io/tags/Redis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/05/21/easy-wang-pan/"/>
-    <id>http://swx08.github.io/2023/05/21/easy-wang-pan/</id>
-    <published>2023-05-21T14:20:45.851Z</published>
-    <updated>2023-05-30T12:18:41.377Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;easy网盘&quot;&gt;&lt;a href=&quot;#easy网盘&quot; class=&quot;headerlink&quot; title=&quot;easy网盘&quot;&gt;&lt;/a&gt;easy网盘&lt;/h2&gt;&lt;h3 id=&quot;1、环境搭建&quot;&gt;&lt;a href=&quot;#1、环境搭建&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
+    <category term="中间件" scheme="http://swx08.github.io/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
     
   </entry>
   
@@ -441,7 +422,7 @@
     <link href="http://swx08.github.io/2023/05/19/springboot-ji-cheng-gong-neng-he-ji/"/>
     <id>http://swx08.github.io/2023/05/19/springboot-ji-cheng-gong-neng-he-ji/</id>
     <published>2023-05-19T14:42:18.523Z</published>
-    <updated>2023-07-12T18:43:24.289Z</updated>
+    <updated>2024-03-06T16:46:40.228Z</updated>
     
     
       
@@ -454,10 +435,85 @@
     
     
     
-    <category term="SpringBoot" scheme="http://swx08.github.io/categories/SpringBoot/"/>
+    <category term="集成" scheme="http://swx08.github.io/categories/%E9%9B%86%E6%88%90/"/>
     
     
-    <category term="后端 SpringBoot" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF-SpringBoot/"/>
+    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/05/06/mybatis/"/>
+    <id>http://swx08.github.io/2023/05/06/mybatis/</id>
+    <published>2023-05-06T15:11:06.798Z</published>
+    <updated>2024-03-06T16:21:54.593Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;MyBatis从入门到精通&quot;&gt;&lt;a href=&quot;#MyBatis从入门到精通&quot; class=&quot;headerlink&quot; title=&quot;MyBatis从入门到精通&quot;&gt;&lt;/a&gt;MyBatis从入门到精通&lt;/h2&gt;&lt;h3 id=&quot;1、MyBatis简介&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Mybatis" scheme="http://swx08.github.io/categories/Mybatis/"/>
+    
+    
+    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/05/05/linux/"/>
+    <id>http://swx08.github.io/2023/05/05/linux/</id>
+    <published>2023-05-05T12:43:30.298Z</published>
+    <updated>2024-03-06T16:19:23.842Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Linux操作系统&quot;&gt;&lt;a href=&quot;#Linux操作系统&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="http://swx08.github.io/categories/Linux/"/>
+    
+    
+    <category term="操作系统" scheme="http://swx08.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2023/05/02/elastaicsearch/"/>
+    <id>http://swx08.github.io/2023/05/02/elastaicsearch/</id>
+    <published>2023-05-02T14:16:30.334Z</published>
+    <updated>2024-03-06T16:06:40.832Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;ElasticSearch&quot;&gt;&lt;a href=&quot;#ElasticSearch&quot; class=&quot;headerlink&quot; title=&quot;ElasticSearch&quot;&gt;&lt;/a&gt;ElasticSearch&lt;/h1&gt;&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="ElasticSearch" scheme="http://swx08.github.io/categories/ElasticSearch/"/>
+    
+    
+    <category term="中间件" scheme="http://swx08.github.io/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
     
   </entry>
   
