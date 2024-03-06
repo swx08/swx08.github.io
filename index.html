@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="文学">
-    <meta name="description" content="">
+    <meta name="description" content="文学">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,49 +13,86 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-
-<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-    gtag('config', '');
-</script>
 
 
     <title>文学</title>
     <link rel="icon" type="image/png" href="/favicon.png">
+    
 
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
-    <link rel="stylesheet" type="text/css" href="/css/matery.css">
-    <link rel="stylesheet" type="text/css" href="/css/my.css">
 
-    <script src="/libs/jquery/jquery.min.js"></script>
+    <!-- index cover -->
+    <!-- <link rel="stylesheet preload" type="text/css" href="/css/indexcover.css"> -->
+    <style>
+        .carousel-control {
+            width: 45px;
+            height: 45px;
+            line-height: 55px;
+            border-radius: 45px;
+            background: transparent;
+            cursor: pointer;
+            z-index: 100;
+        }
+        
+        #prev-cover {
+            position: absolute;
+            top: 48%;
+            left: 8px;
+        }
+        
+        #next-cover {
+            position: absolute;
+            top: 48%;
+            right: 8px;;
+        }
+        
+        #prev-cover i {
+            margin-right: 3px;
+        }
+        
+        #next-cover i {
+            margin-left: 3px;
+        }
+        
+        .carousel-control:hover {
+            background-color: rgba(0, 0, 0, .4);
+        }
+        
+        .carousel-control i {
+            color: #fff;
+            font-size: 2.4rem;
+        }
+    </style>
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
 <meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 <link rel="alternate" href="/atom.xml" title="文学" type="application/atom+xml">
 </head>
-
-
-
-   <style>
-    body{
-       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
-       background-repeat:no-repeat;
-       background-size:cover;
-       background-attachment:fixed;
-    }
-</style>
-
 
 
 <body>
@@ -132,17 +169,6 @@
   
   <li class="hide-on-med-and-down nav-item">
     
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>留言板</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
     <a href="/friends" class="waves-effect waves-light">
       
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
@@ -155,6 +181,11 @@
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
       <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
     </a>
   </li>
 </ul>
@@ -173,8 +204,6 @@
             
         </div>
     </div>
-
-    
 
     <ul class="menu-list mobile-menu-list">
         
@@ -235,17 +264,6 @@
         
         <li class="m-nav-item">
 	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			留言板
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
 		<a href="/friends" class="waves-effect waves-light">
 			
 			    <i class="fa-fw fas fa-address-book"></i>
@@ -258,7 +276,7 @@
         
         <li><div class="divider"></div></li>
         <li>
-            <a href="https://github.com/swx08" class="waves-effect waves-light" target="_blank">
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
                 <i class="fab fa-github-square fa-fw"></i>Fork Me
             </a>
         </li>
@@ -315,7 +333,7 @@
     }
 </style>
 
-<a href="https://github.com/swx08" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
    data-tooltip="Fork Me" data-position="left" data-delay="50">
     <svg viewBox="0 0 250 250" aria-hidden="true">
         <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
@@ -331,47 +349,6 @@
 </header>
 
     
-<style>
-    .carousel-control {
-        width: 45px;
-        height: 45px;
-        line-height: 55px;
-        border-radius: 45px;
-        background: transparent;
-        cursor: pointer;
-        z-index: 100;
-    }
-
-    #prev-cover {
-        position: absolute;
-        top: 48%;
-        left: 8px;
-    }
-
-    #next-cover {
-        position: absolute;
-        top: 48%;
-        right: 8px;;
-    }
-
-    #prev-cover i {
-        margin-right: 3px;
-    }
-
-    #next-cover i {
-        margin-left: 3px;
-    }
-
-    .carousel-control:hover {
-        background-color: rgba(0, 0, 0, .4);
-    }
-
-    .carousel-control i {
-        color: #fff;
-        font-size: 2.4rem;
-    }
-</style>
-
 
 
 <div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
@@ -384,24 +361,30 @@
         </div>
     
 
-    <div class="carousel-item red white-text bg-cover about-cover">
+    <div class="carousel-item  white-text bg-cover about-cover">
         <div class="container">
             <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
                 
-                欢迎来到文学的博客！
+                技术就是要多复盘！
                 
             </div>
 
             <div class="description center-align">
                 
                 <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+                <script src="/libs/typed/typed.js"></script>
                 <script>
                     var typed = new Typed("#subtitle", {
-                        strings: ['怀着积极的态度对待每一件事情！','Approach everything with a positive attitude'],
+                        strings: [ 
+                            
+                                "从来没有真正的绝境, 只有心灵的迷途",
+                            
+                                "Never really desperate, only the lost of the soul",
+                            
+                        ],
                         startDelay: 300,
                         typeSpeed: 100,
                         loop: true,
@@ -421,16 +404,23 @@
     var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
     $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
+<script>
+    
+      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 24) + '.jpg';
+    
+    $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
+
+</script>
 
 
 
             <div class="cover-btns">
-                <a href="#articles" class="waves-effect waves-light btn">
+                <a href="#indexCard" class="waves-effect waves-light btn">
                     <i class="fa fa-angle-double-down"></i>开始阅读
                 </a>
 
                 
-                    <a href="https://github.com/swx08" class="waves-effect waves-light btn" target="_blank">
+                    <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light btn" target="_blank">
                         <i class="fab fa-github-alt"></i>Github
                     </a>
                 
@@ -461,10 +451,6 @@
 
 
 
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
 
 </div>
         </div>
@@ -545,6 +531,29 @@
         
             
             <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/featureimages/17.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align"></div>
+                            <div class="description center-align">
+                                
+                                    SpringCloud快速入门
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/2023/04/06/springcloud-xue-xi-wen-dang/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
                  style="background-image: url('/medias/featureimages/18.jpg');">
                 <div class="container">
                     <div class="row">
@@ -580,29 +589,6 @@
                             </div>
                             <div class="cover-btns">
                                 <a href="/2023/05/19/springboot-ji-cheng-gong-neng-he-ji/" class="waves-effect waves-light btn"
-                                   target="_blank">
-                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            
-            <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('/medias/featureimages/17.jpg');">
-                <div class="container">
-                    <div class="row">
-                        <div class="col s10 offset-s1">
-                            <div class="title center-align"></div>
-                            <div class="description center-align">
-                                
-                                    SpringCloud快速入门
-                                
-                            </div>
-                            <div class="cover-btns">
-                                <a href="/2023/04/06/springcloud-xue-xi-wen-dang/" class="waves-effect waves-light btn"
                                    target="_blank">
                                     <i class="icon fa fa-eye fa-fw"></i>阅读更多
                                 </a>
@@ -756,76 +742,8 @@
             <div class="card">
                 <div class="card-content">
                     
-                        <div class="dream">
-    
-    <div class="title center-align">
-        <i class="far fa-lightbulb"></i>&nbsp;&nbsp;文学博客
-    </div>
-    
-    <div class="row">
-        <div class="col l8 offset-l2 m10 offset-m1 s10 offset-s1 center-align text">
-            成功没有捷径，唯有熬夜敲代码！
-        </div>
-    </div>
-</div>
 
                     
-
-                    
-                        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
-<style>
-    .aplayer .aplayer-lrc p {
-        
-        font-size: 12px;
-        font-weight: 700;
-        line-height: 16px !important;
-    }
-
-    .aplayer .aplayer-lrc p.aplayer-lrc-current {
-        
-        font-size: 15px;
-        color: #42b983;
-    }
-
-    
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
-        left: -66px !important;
-    }
-
-    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
-        left: 0px !important;
-    }
-
-    
-</style>
-<div class="music-player">
-    
-        <div class="title center-align">
-            <i class="fas fa-music"></i>&nbsp;&nbsp;听听音乐
-        </div>
-    
-    <div class="row">
-        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
-                   server="netease"
-                   type="playlist"
-                   id="2951813063"
-                   fixed='false'
-                   autoplay='true'
-                   theme='#42b983'
-                   loop='all'
-                   order='random'
-                   preload='auto'
-                   volume='0.7'
-                   list-folded='false'
-        >
-        </meting-js>
-    </div>
-</div>
-
-<script src="/libs/aplayer/APlayer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-
-                        
 
                     
 
@@ -843,63 +761,7 @@
 
     
     
-    <div class="col s12 m6" >
-        
-             <div class="post-card" style="background-image: url('/medias/featureimages/7.jpg')">
-        
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/Dubbo/" class="category">Dubbo</a>
-                        
-                    
-                </div>
-                <a href="/2023/04/06/dubbo-xue-xi-wen-dang/">
-                    <h3 class="post-title"></h3>
-                </a>
-                <p class="post-description">
-                    
-                        Dubbo从入门到精通
-                    
-                </p>
-                <a href="/2023/04/06/dubbo-xue-xi-wen-dang/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>阅读更多
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="col s12 m6" >
-        
-             <div class="post-card" style="background-image: url('/medias/featureimages/10.jpg')">
-        
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/JWT/" class="category">JWT</a>
-                        
-                    
-                </div>
-                <a href="/2023/04/06/jwt-kuai-su-ru-men/">
-                    <h3 class="post-title"></h3>
-                </a>
-                <p class="post-description">
-                    
-                        JWT从入门到精通
-                    
-                </p>
-                <a href="/2023/04/06/jwt-kuai-su-ru-men/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>阅读更多
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="col s12 m6" data-aos="zoom-in-up">
+    <div class="col s12" >
         
              <div class="post-card" style="background-image: url('/medias/featureimages/24.jpg')">
         
@@ -914,12 +776,32 @@
                 <a href="/2023/04/10/23-chong-she-ji-mo-shi/">
                     <h3 class="post-title"></h3>
                 </a>
-                <p class="post-description">
+                <p class="post-description">23种设计模式</p>
+                <a href="/2023/04/10/23-chong-she-ji-mo-shi/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col s12 m6" data-aos="zoom-in-up">
+        
+             <div class="post-card" style="background-image: url('/medias/featureimages/10.jpg')">
+        
+            <div class="post-body">
+                <div class="post-categories">
                     
-                        23种设计模式
+                        
+                            <a href="/categories/JWT/" class="category">JWT</a>
+                        
                     
-                </p>
-                <a href="/2023/04/10/23-chong-she-ji-mo-shi/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)" target="_blank">
+                </div>
+                <a href="/2023/04/06/jwt-kuai-su-ru-men/">
+                    <h3 class="post-title"></h3>
+                </a>
+                <p class="post-description">JWT从入门到精通</p>
+                <a href="/2023/04/06/jwt-kuai-su-ru-men/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -942,12 +824,8 @@
                 <a href="/2023/05/05/linux/">
                     <h3 class="post-title"></h3>
                 </a>
-                <p class="post-description">
-                    
-                        Linux学习
-                    
-                </p>
-                <a href="/2023/05/05/linux/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FFCC00 0%, #FF9500 100%)" target="_blank">
+                <p class="post-description">Linux学习</p>
+                <a href="/2023/05/05/linux/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -955,35 +833,7 @@
     </div>
     
     
-    <div class="col s12 m6" data-aos="zoom-in-up">
-        
-             <div class="post-card" style="background-image: url('/medias/featureimages/39.jpg')">
-        
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/SSM/" class="category">SSM</a>
-                        
-                    
-                </div>
-                <a href="/2023/06/02/ssm-zheng-he/">
-                    <h3 class="post-title"></h3>
-                </a>
-                <p class="post-description">
-                    
-                        SSM
-                    
-                </p>
-                <a href="/2023/06/02/ssm-zheng-he/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>阅读更多
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="col s12 m6" data-aos="zoom-in-up">
+    <div class="col s12" data-aos="zoom-in-up">
         
              <div class="post-card" style="background-image: url('/medias/featureimages/38.png')">
         
@@ -998,12 +848,8 @@
                 <a href="/2023/05/06/mybatis/">
                     <h3 class="post-title"></h3>
                 </a>
-                <p class="post-description">
-                    
-                        Mybatis
-                    
-                </p>
-                <a href="/2023/05/06/mybatis/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #C644FC 0%, #5856D6 100%)" target="_blank">
+                <p class="post-description">Mybatis</p>
+                <a href="/2023/05/06/mybatis/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FFCC00 0%, #FF9500 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -1026,12 +872,8 @@
                 <a href="/2023/06/02/rabbitmq-xiao-xi-dui-lie/">
                     <h3 class="post-title"></h3>
                 </a>
-                <p class="post-description">
-                    
-                        RabbitMQ
-                    
-                </p>
-                <a href="/2023/06/02/rabbitmq-xiao-xi-dui-lie/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #55EFCB 0%, #5BCAFF 100%)" target="_blank">
+                <p class="post-description">RabbitMQ</p>
+                <a href="/2023/06/02/rabbitmq-xiao-xi-dui-lie/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -1040,6 +882,30 @@
     
     
     <div class="col s12 m6" data-aos="zoom-in-up">
+        
+             <div class="post-card" style="background-image: url('/medias/featureimages/39.jpg')">
+        
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/categories/SSM/" class="category">SSM</a>
+                        
+                    
+                </div>
+                <a href="/2023/06/02/ssm-zheng-he/">
+                    <h3 class="post-title"></h3>
+                </a>
+                <p class="post-description">SSM</p>
+                <a href="/2023/06/02/ssm-zheng-he/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #C644FC 0%, #5856D6 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col s12" data-aos="zoom-in-up">
         
              <div class="post-card" style="background-image: url('/medias/featureimages/41.jpg')">
         
@@ -1054,68 +920,8 @@
                 <a href="/2023/06/02/spring/">
                     <h3 class="post-title"></h3>
                 </a>
-                <p class="post-description">
-                    
-                        Spring
-                    
-                </p>
-                <a href="/2023/06/02/spring/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>阅读更多
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="col s12 m6" data-aos="zoom-in-up">
-        
-             <div class="post-card" style="background-image: url('/medias/featureimages/18.jpg')">
-        
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/Spring-Security/" class="category">Spring Security</a>
-                        
-                    
-                </div>
-                <a href="/2023/04/06/springsecurity-kuai-su-ru-men/">
-                    <h3 class="post-title"></h3>
-                </a>
-                <p class="post-description">
-                    
-                        Spring Security从入门到精通
-                    
-                </p>
-                <a href="/2023/04/06/springsecurity-kuai-su-ru-men/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>阅读更多
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="col s12 m6" data-aos="zoom-in-up">
-        
-             <div class="post-card" style="background-image: url('/medias/featureimages/36.png')">
-        
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/SpringBoot/" class="category">SpringBoot</a>
-                        
-                    
-                </div>
-                <a href="/2023/05/19/springboot-ji-cheng-gong-neng-he-ji/">
-                    <h3 class="post-title"></h3>
-                </a>
-                <p class="post-description">
-                    
-                        SpringBoot集成功能合集
-                    
-                </p>
-                <a href="/2023/05/19/springboot-ji-cheng-gong-neng-he-ji/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)" target="_blank">
+                <p class="post-description">Spring</p>
+                <a href="/2023/06/02/spring/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #55EFCB 0%, #5BCAFF 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -1138,12 +944,8 @@
                 <a href="/2023/04/06/springcloud-xue-xi-wen-dang/">
                     <h3 class="post-title"></h3>
                 </a>
-                <p class="post-description">
-                    
-                        SpringCloud快速入门
-                    
-                </p>
-                <a href="/2023/04/06/springcloud-xue-xi-wen-dang/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FFCC00 0%, #FF9500 100%)" target="_blank">
+                <p class="post-description">SpringCloud快速入门</p>
+                <a href="/2023/04/06/springcloud-xue-xi-wen-dang/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -1152,6 +954,30 @@
     
     
     <div class="col s12 m6" data-aos="zoom-in-up">
+        
+             <div class="post-card" style="background-image: url('/medias/featureimages/18.jpg')">
+        
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/categories/Spring-Security/" class="category">Spring Security</a>
+                        
+                    
+                </div>
+                <a href="/2023/04/06/springsecurity-kuai-su-ru-men/">
+                    <h3 class="post-title"></h3>
+                </a>
+                <p class="post-description">Spring Security从入门到精通</p>
+                <a href="/2023/04/06/springsecurity-kuai-su-ru-men/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col s12" data-aos="zoom-in-up">
         
              <div class="post-card" style="background-image: url('/medias/featureimages/11.jpg')">
         
@@ -1166,12 +992,8 @@
                 <a href="/2023/04/06/knife4j-shi-yong/">
                     <h3 class="post-title"></h3>
                 </a>
-                <p class="post-description">
-                    
-                        Knife4j测试接口文档生成
-                    
-                </p>
-                <a href="/2023/04/06/knife4j-shi-yong/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%)" target="_blank">
+                <p class="post-description">Knife4j测试接口文档生成</p>
+                <a href="/2023/04/06/knife4j-shi-yong/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -1194,12 +1016,8 @@
                 <a href="/2023/04/06/linux-xiang-mu-bu-shu/">
                     <h3 class="post-title"></h3>
                 </a>
-                <p class="post-description">
-                    
-                        Linux项目部署
-                    
-                </p>
-                <a href="/2023/04/06/linux-xiang-mu-bu-shu/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #C644FC 0%, #5856D6 100%)" target="_blank">
+                <p class="post-description">Linux项目部署</p>
+                <a href="/2023/04/06/linux-xiang-mu-bu-shu/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FFCC00 0%, #FF9500 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -1208,6 +1026,30 @@
     
     
     <div class="col s12 m6" data-aos="zoom-in-up">
+        
+             <div class="post-card" style="background-image: url('/medias/featureimages/36.png')">
+        
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/categories/SpringBoot/" class="category">SpringBoot</a>
+                        
+                    
+                </div>
+                <a href="/2023/05/19/springboot-ji-cheng-gong-neng-he-ji/">
+                    <h3 class="post-title"></h3>
+                </a>
+                <p class="post-description">SpringBoot集成功能合集</p>
+                <a href="/2023/05/19/springboot-ji-cheng-gong-neng-he-ji/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col s12" data-aos="zoom-in-up">
         
              <div class="post-card" style="background-image: url('/medias/featureimages/27.jpg')">
         
@@ -1222,40 +1064,8 @@
                 <a href="/2023/04/15/nginx/">
                     <h3 class="post-title"></h3>
                 </a>
-                <p class="post-description">
-                    
-                        Nginx
-                    
-                </p>
-                <a href="/2023/04/15/nginx/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #55EFCB 0%, #5BCAFF 100%)" target="_blank">
-                    <i class="icon far fa-eye fa-fw"></i>阅读更多
-                </a>
-            </div>
-        </div>
-    </div>
-    
-    
-    <div class="col s12 m6" data-aos="zoom-in-up">
-        
-             <div class="post-card" style="background-image: url('/medias/featureimages/22.jpg')">
-        
-            <div class="post-body">
-                <div class="post-categories">
-                    
-                        
-                            <a href="/categories/Vue/" class="category">Vue</a>
-                        
-                    
-                </div>
-                <a href="/2023/04/06/vue-xiang-mu-jie-gou-shuo-ming-bi-ji/">
-                    <h3 class="post-title"></h3>
-                </a>
-                <p class="post-description">
-                    
-                        Vue从入门到精通
-                    
-                </p>
-                <a href="/2023/04/06/vue-xiang-mu-jie-gou-shuo-ming-bi-ji/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
+                <p class="post-description">Nginx</p>
+                <a href="/2023/04/15/nginx/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #C644FC 0%, #5856D6 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -1278,12 +1088,8 @@
                 <a href="/2023/05/31/redis/">
                     <h3 class="post-title"></h3>
                 </a>
-                <p class="post-description">
-                    
-                        Redis
-                    
-                </p>
-                <a href="/2023/05/31/redis/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
+                <p class="post-description">Redis</p>
+                <a href="/2023/05/31/redis/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #55EFCB 0%, #5BCAFF 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -1292,6 +1098,30 @@
     
     
     <div class="col s12 m6" data-aos="zoom-in-up">
+        
+             <div class="post-card" style="background-image: url('/medias/featureimages/22.jpg')">
+        
+            <div class="post-body">
+                <div class="post-categories">
+                    
+                        
+                            <a href="/categories/Vue/" class="category">Vue</a>
+                        
+                    
+                </div>
+                <a href="/2023/04/06/vue-xiang-mu-jie-gou-shuo-ming-bi-ji/">
+                    <h3 class="post-title"></h3>
+                </a>
+                <p class="post-description">Vue从入门到精通</p>
+                <a href="/2023/04/06/vue-xiang-mu-jie-gou-shuo-ming-bi-ji/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
+                    <i class="icon far fa-eye fa-fw"></i>阅读更多
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="col s12" data-aos="zoom-in-up">
         
              <div class="post-card" style="background-image: url('/medias/featureimages/31.jpg')">
         
@@ -1306,12 +1136,8 @@
                 <a href="/2023/04/28/ge-ren-bo-ke/">
                     <h3 class="post-title"></h3>
                 </a>
-                <p class="post-description">
-                    
-                        个人博客基于springboot+vue
-                    
-                </p>
-                <a href="/2023/04/28/ge-ren-bo-ke/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)" target="_blank">
+                <p class="post-description">个人博客基于springboot+vue</p>
+                <a href="/2023/04/28/ge-ren-bo-ke/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -1334,12 +1160,8 @@
                 <a href="/2023/04/06/yun-shang-ban-gong-xi-tong-xue-xi-zong-jie/">
                     <h3 class="post-title"></h3>
                 </a>
-                <p class="post-description">
-                    
-                        云尚办公系统项目总结
-                    
-                </p>
-                <a href="/2023/04/06/yun-shang-ban-gong-xi-tong-xue-xi-zong-jie/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FFCC00 0%, #FF9500 100%)" target="_blank">
+                <p class="post-description">云尚办公系统项目总结</p>
+                <a href="/2023/04/06/yun-shang-ban-gong-xi-tong-xue-xi-zong-jie/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #1AD6FD 0%, #1D62F0 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -1362,12 +1184,8 @@
                 <a href="/2023/06/17/wei-fu-wu-shi-zhan/">
                     <h3 class="post-title"></h3>
                 </a>
-                <p class="post-description">
-                    
-                        微服务实战
-                    
-                </p>
-                <a href="/2023/06/17/wei-fu-wu-shi-zhan/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%)" target="_blank">
+                <p class="post-description">微服务实战</p>
+                <a href="/2023/06/17/wei-fu-wu-shi-zhan/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FFCC00 0%, #FF9500 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -1375,7 +1193,7 @@
     </div>
     
     
-    <div class="col s12 m6" data-aos="zoom-in-up">
+    <div class="col s12" data-aos="zoom-in-up">
         
              <div class="post-card" style="background-image: url('/medias/featureimages/23.jpg')">
         
@@ -1390,12 +1208,8 @@
                 <a href="/2023/04/06/rui-ji-wai-mai-xiang-mu-xue-xi-xin-de/">
                     <h3 class="post-title"></h3>
                 </a>
-                <p class="post-description">
-                    
-                        外卖管理系统
-                    
-                </p>
-                <a href="/2023/04/06/rui-ji-wai-mai-xiang-mu-xue-xi-xin-de/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #C644FC 0%, #5856D6 100%)" target="_blank">
+                <p class="post-description">外卖管理系统</p>
+                <a href="/2023/04/06/rui-ji-wai-mai-xiang-mu-xue-xi-xin-de/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -1420,6 +1234,7 @@
     <article id="articles" class="container articles">
         <div class="row article-row">
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/2023/07/28/jackson-shi-yong-xiang-jie/">
@@ -1455,7 +1270,9 @@ Spring MVC 默认采用Jackson解析Json，尽管还有一些其它同样优秀�
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/2023/07/26/springboot-zi-ding-yi-starter/">
@@ -1500,7 +1317,9 @@ xxx-spring-boot-starter
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/2023/07/22/springboot-ji-cheng-websocket/">
@@ -1540,7 +1359,9 @@ xxx-spring-boot-starter
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/2023/07/22/java-zhong-ri-qi-yu-shi-jian-gong-ju-feng-zhuang/">
@@ -1580,7 +1401,9 @@ xxx-spring-boot-starter
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/2023/07/21/vue-gong-neng-ji-cheng/">
@@ -1619,7 +1442,9 @@ xxx-spring-boot-starter
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/2023/07/20/ce-lue-mo-shi-shi-xian-wen-jian-shang-chuan/">
@@ -1655,7 +1480,9 @@ xxx-spring-boot-starter
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/2023/07/09/easyexcel/">
@@ -1691,7 +1518,9 @@ Java解析、生成Excel比较有名的框架有Apache poi、jxl。但他们都�
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/2023/07/08/hou-duan-jie-shou-qian-duan-shu-ju-8-chong-fang-shi/">
@@ -1731,7 +1560,9 @@ public String add(String username
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/2023/07/04/springboot-ji-cheng-minio/">
@@ -1767,7 +1598,9 @@ MinIO提供高性能、S3兼容的对象存储。Minio 是一个
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/2023/06/18/axios/">
@@ -1806,7 +1639,9 @@ MinIO提供高性能、S3兼容的对象存储。Minio 是一个
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/2023/06/18/netty/">
@@ -1842,7 +1677,9 @@ MinIO提供高性能、S3兼容的对象存储。Minio 是一个
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
+             <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
                     <a href="/2023/06/17/wei-fu-wu-shi-zhan/">
@@ -1888,6 +1725,7 @@ MinIO提供高性能、S3兼容的对象存储。Minio 是一个
                     
                 </div>
             </div>
+              <!-- 隐藏某个文章 -->
             
         </div>
     </article>
@@ -1923,82 +1761,152 @@ MinIO提供高性能、S3兼容的对象存储。Minio 是一个
 
     <footer class="page-footer bg-color">
     
-    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2023# 年份-2024</span>
+                <span id="year">2022-2024</span>
             
-            <span id="year">2023# 年份</span>
             <a href="/about" target="_blank">文学</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
-            <br>
             
-            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">211k</span>&nbsp;字
-            
-            
-            
-            
-            
-            
-            <span id="busuanzi_container_site_pv">
-                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
-                    class="white-color"></span>&nbsp;次
-            </span>
-            
-            
-            <span id="busuanzi_container_site_uv">
-                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
-                    class="white-color"></span>&nbsp;人
-            </span>
+                <span id="translate">|&nbsp;繁/简：</span><a id="translateLink" href="javascript:translatePage();">繁</a>
             
             <br>
             
-            <span id="sitetime">载入运行时间...</span>
-            <script>
-                function siteTime() {
-                    var seconds = 1000;
-                    var minutes = seconds * 60;
-                    var hours = minutes * 60;
-                    var days = hours * 24;
-                    var years = days * 365;
-                    var today = new Date();
-                    var startYear = "2023# 年份";
-                    var startMonth = "04# 月份";
-                    var startDate = "6";
-                    var startHour = "0";
-                    var startMinute = "0";
-                    var startSecond = "0";
-                    var todayYear = today.getFullYear();
-                    var todayMonth = today.getMonth() + 1;
-                    var todayDate = today.getDate();
-                    var todayHour = today.getHours();
-                    var todayMinute = today.getMinutes();
-                    var todaySecond = today.getSeconds();
-                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
-                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-                    var diff = t2 - t1;
-                    var diffYears = Math.floor(diff / years);
-                    var diffDays = Math.floor((diff / days) - diffYears * 365);
-                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
-                        minutes);
-                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
-                        diffMinutes * minutes) / seconds);
-                    if (startYear == todayYear) {
-                        document.getElementById("year").innerHTML = todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
-                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-                    } else {
-                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
-                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">211k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2022";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
                     }
-                }
-                setInterval(siteTime, 1000);
-            </script>
+
+                    calcSiteTime();
+                </script>
             
             <br>
             
@@ -2029,10 +1937,6 @@ MinIO提供高性能、S3兼容的对象存储。Minio 是一个
 
 
 
-
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
-        <i class="fas fa-rss"></i>
-    </a>
 
 </div>
     </div>
@@ -2145,6 +2049,30 @@ $(function () {
 });
 </script>
 
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
     <!-- 回到顶部按钮 -->
 <div id="backTop" class="top-scroll">
     <a class="btn-floating btn-large waves-effect waves-light" href="#!">
@@ -2160,17 +2088,44 @@ $(function () {
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
 
-    <!-- Baidu Analytics -->
+    
 
-<script>
-    var _hmt = _hmt || [];
-    (function () {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+    
+        <script type="text/javascript" src="/js/tw_cn.js"></script>
+        <script type="text/javascript">
+          var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+          var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+          var cookieDomain = "http://swx08.github.io"; //Cookie地址, 一定要设定, 通常为你的网址
+          var msgToTraditionalChinese = "繁"; //此处可以更改为你想要显示的文字
+          var msgToSimplifiedChinese = "简"; //同上，但两处均不建议更改
+          var translateButtonId = "translateLink"; //默认互换id
+          translateInitilization();
+        </script>
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
+            }
+        </script>
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
 
     <!-- Baidu Push -->
 
@@ -2196,42 +2151,11 @@ $(function () {
     
 
     
-        <script src="//code.tidio.co/rjpn2tkcqzazvvfhch8urcjvnwhfzoqk.js"></script>
-        <script>
-            $(document).ready(function () {
-                setInterval(change_Tidio, 50);
-                function change_Tidio() {
-                    var tidio=$("#tidio-chat iframe");
-                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
-                        document.getElementById("tidio-chat-iframe").style.right="-15px";
-                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
-                    }
-                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
-                        document.getElementById("tidio-chat-iframe").style.right="-15px";
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
-                    }
-                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
-                    }
-                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
-                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
-                    }
-                }
-            });
-        </script>
-    
 
     
 
-	
-	    <div style="position:fixed;bottom:125px;right:9px;cursor: pointer;">
-	        <a title="兔小巢" target="_blank" rel="noopener" href="https://support.qq.com/products/544490"><img src="/medias/contact.png"></a>
-	    </div>
-	
+    <!--腾讯兔小巢-->
+    
     
     <script type="text/javascript" color="0,0,255"
         pointColor="0,0,255" opacity='0.7'
