@@ -1,0 +1,1978 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="文学博客">
+    <meta name="description" content="曲师商城项目文档">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>文学博客</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="文学博客" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">文学博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">文学博客</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/swx08" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/swx08" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E9%A1%B9%E7%9B%AE/">
+                                <span class="chip bg-color">项目</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E9%A1%B9%E7%9B%AE/" class="post-category">
+                                项目
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-03-07
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-03-07
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    5.6k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    22 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="曲师商城"><a href="#曲师商城" class="headerlink" title="曲师商城"></a>曲师商城</h1><h2 id="1、项目需求分析"><a href="#1、项目需求分析" class="headerlink" title="1、项目需求分析"></a>1、项目需求分析</h2><h3 id="用户需求分析"><a href="#用户需求分析" class="headerlink" title="用户需求分析"></a>用户需求分析</h3><ul>
+<li>注册和登录功能：<ul>
+<li>用户可以通过填写注册表单完成账号注册。</li>
+<li>用户可以使用注册的账号和密码进行登录。</li>
+<li>提供忘记密码功能，用户可以通过邮箱或手机验证码重置密码。</li>
+</ul>
+</li>
+<li>商品浏览和搜索功能：<ul>
+<li>用户可以浏览商品列表，查看商品的基本信息、价格、图片等。</li>
+<li>用户可以通过关键词搜索商品，系统返回相关商品的结果。</li>
+</ul>
+</li>
+<li>购物车管理功能：<ul>
+<li>用户可以将感兴趣的商品添加到购物车。</li>
+<li>用户可以修改购物车中商品的数量。</li>
+<li>用户可以删除购物车中的商品。</li>
+<li>用户可以清空购物车。</li>
+</ul>
+</li>
+<li>下单和支付功能：<ul>
+<li>用户可以选择购物车中的商品完成下单。</li>
+<li>用户需要填写配送地址和选择支付方式。</li>
+<li>系统生成订单并显示订单详情。</li>
+<li>用户进行支付操作，可以选择在线支付或货到付款。</li>
+</ul>
+</li>
+<li>查看订单状态功能：<ul>
+<li>用户可以查看订单的物流信息和状态，了解订单的进展情况。</li>
+<li>用户可以查看订单的详细信息，如商品清单、收货地址等。</li>
+</ul>
+</li>
+<li>取消订单功能：<ul>
+<li>用户可以在一定条件下取消未发货的订单，如退货期未过等。</li>
+</ul>
+</li>
+<li>评价和回复功能：<ul>
+<li>用户可以对购买的商品进行评价，并选择评分和文字评论。</li>
+<li>商家可以回复用户的评价。</li>
+</ul>
+</li>
+<li>优惠券和积分功能：<ul>
+<li>用户可以领取优惠券和积分，用于抵扣购物金额或兑换商品。</li>
+</ul>
+</li>
+<li>促销活动功能：<ul>
+<li>商家可以发布促销活动，如限时折扣、满减等。</li>
+<li>用户可以参与促销活动，享受相应的优惠。</li>
+</ul>
+</li>
+<li>客服支持功能：<ul>
+<li>提供在线客服功能，解答用户的问题和处理售后问题。</li>
+</ul>
+</li>
+<li>搜索和推荐功能：<ul>
+<li>用户可以通过关键词搜索商品，系统根据用户的浏览和购买记录推荐相关商品。</li>
+</ul>
+</li>
+<li>移动端适配功能：<ul>
+<li>商城需要适配不同的移动设备，提供良好的移动端用户体验。</li>
+</ul>
+</li>
+</ul>
+<p>==商家入驻代办==</p>
+<h3 id="商家需求分析"><a href="#商家需求分析" class="headerlink" title="商家需求分析"></a>商家需求分析</h3><ul>
+<li>商户入驻功能：<ul>
+<li>商家可以申请入驻商城，并在平台上销售自己的商品。</li>
+<li>商家需要提供相关的营业执照、品牌授权等信息进行认证。</li>
+</ul>
+</li>
+<li>商品管理功能：<ul>
+<li>商家可以发布、修改、删除自己的商品。</li>
+<li>商家可以设置商品的基本信息、价格、库存等。</li>
+<li>商家可以管理商品分类和品牌信息。</li>
+</ul>
+</li>
+<li>订单管理功能：<ul>
+<li>商家可以查看自己店铺的订单列表，包括待处理订单和已完成订单。</li>
+<li>商家可以接单、发货、退款等操作。</li>
+</ul>
+</li>
+<li>物流管理功能：<ul>
+<li>商家可以更新自己店铺的物流信息，如发货状态、快递单号等。</li>
+</ul>
+</li>
+</ul>
+<h2 id="2、技术选型"><a href="#2、技术选型" class="headerlink" title="2、技术选型"></a>2、技术选型</h2><p>针对曲师商城项目，考虑以下技术选型：</p>
+<ol>
+<li>前端开发框架：Vue主流的前端框架。</li>
+<li>后端开发语言：Java常用的后端开发语言。</li>
+<li>数据库：MySQL常见的关系型型数据库。</li>
+<li>服务器端框架：Spring Boot、SpringCloud常用的后端框架，简化开发流程和提高开发效率。</li>
+<li>缓存技术：Redis常用的缓存技术，用于提高系统性能和减轻数据库压力。</li>
+<li>消息队列：RabbitMQ常用的消息队列技术，用于处理异步任务和解耦系统模块之间的通信。</li>
+<li>搜索引擎：Elasticsearch用于全文搜索和数据分析的搜索引擎技术。</li>
+<li>版本控制工具：Git作为代码版本控制工具，用于团管理代码的版本。</li>
+<li>容器化技术：Docker用于将应用打包成容器，实现快速部署和可移植性。</li>
+<li>云服务：根据实际需求选择合适的云服务提供商（如AWS、阿里云、腾讯云等），用于部署和托管商城系统。</li>
+</ol>
+<h2 id="3、项目设计"><a href="#3、项目设计" class="headerlink" title="3、项目设计"></a>3、项目设计</h2><h4 id="用户模块"><a href="#用户模块" class="headerlink" title="用户模块"></a>用户模块</h4><h5 id="系统架构设计："><a href="#系统架构设计：" class="headerlink" title="系统架构设计："></a>系统架构设计：</h5><ul>
+<li>前端采用React框架，使用Redux进行状态管理。</li>
+<li>后端采用Node.js和Express框架，使用MongoDB作为数据库。</li>
+<li>使用Nginx作为反向代理服务器，负载均衡和静态资源处理。</li>
+<li>使用Redis作为缓存技术，提高系统性能。</li>
+<li>使用RabbitMQ作为消息队列，处理异步任务和解耦系统模块之间的通信。</li>
+</ul>
+<h5 id="（1）功能模块设计："><a href="#（1）功能模块设计：" class="headerlink" title="（1）功能模块设计："></a>（1）功能模块设计：</h5><ul>
+<li>用户模块：包括用户注册、登录、个人信息管理等功能。</li>
+<li>商品模块：包括商品的添加、修改、删除、查询等功能。</li>
+<li>订单模块：包括下单、支付、查看订单状态等功能。</li>
+<li>物流模块：用于商家更新订单的物流信息。</li>
+<li>评价模块：用户可以对购买的商品进行评价，商家可以回复评价。</li>
+<li>优惠券和积分模块：用户可以领取优惠券和积分，用于抵扣购物金额或兑换商品。</li>
+<li>促销活动模块：商家可以发布促销活动，如限时折扣、满减等。</li>
+<li>客服支持模块：提供在线客服功能，解答用户的问题和处理售后问题。</li>
+<li>搜索和推荐模块：用户可以通过关键词搜索商品，系统会根据用户的浏览和购买记录推荐相关商品。</li>
+<li>数据统计和分析模块：统计商城的访问量、销售额等数据，为商家提供数据分析和决策支持。</li>
+</ul>
+<h5 id="（2）数据库设计："><a href="#（2）数据库设计：" class="headerlink" title="（2）数据库设计："></a>（2）数据库设计：</h5><ul>
+<li>用户表：存储用户的基本信息，如用户名、密码、邮箱等。</li>
+<li>商品表：存储商品的基本信息，如商品名称、价格、库存等。</li>
+<li>分类表：存储商品的分类信息，如服装、电子产品等。</li>
+<li>品牌表：存储商品的品牌信息，如Nike、Apple等。</li>
+<li>订单表：存储订单的基本信息，如订单号、下单时间、支付状态等。</li>
+<li>物流表：存储订单的物流信息，如物流公司、运单号等。</li>
+<li>评价表：存储用户对商品的评价信息，如评分、评论内容等。</li>
+<li>优惠券表：存储优惠券的基本信息，如优惠码、面额等。</li>
+<li>积分表：存储用户的积分信息，如积分余额、获取途径等。</li>
+</ul>
+<h5 id="（3）接口设计："><a href="#（3）接口设计：" class="headerlink" title="（3）接口设计："></a>（3）接口设计：</h5><ul>
+<li>用户接口：包括注册接口、登录接口、个人信息接口等。</li>
+<li>商品接口：包括添加商品接口、修改商品接口、删除商品接口、查询商品接口等。</li>
+<li>订单接口：包括下单接口、支付接口、查看订单接口等。</li>
+<li>物流接口：用于商家更新订单的物流信息接口。</li>
+<li>评价接口：包括添加评价接口、回复评价接口等。</li>
+<li>优惠券和积分接口：包括领取优惠券接口、使用优惠券接口、积分获取接口等。</li>
+<li>促销活动接口：包括发布促销活动接口、参与促销活动接口等。</li>
+<li>客服支持接口：提供在线客服功能的相关接口。</li>
+<li>搜索和推荐接口：包括商品搜索接口、推荐商品接口等。</li>
+</ul>
+<h4 id="商家模块"><a href="#商家模块" class="headerlink" title="商家模块"></a>商家模块</h4><ol>
+<li>商家注册与认证流程：明确商家注册的步骤和要求，如填写公司信息、上传证件等。同时，设计一个认证流程，确保商家的身份和资质真实有效。</li>
+<li>商品管理功能：细化商品管理的界面和操作流程，包括添加商品、编辑商品信息、删除商品等功能。可以考虑提供批量操作和导入导出功能，方便商家进行大量商品的管理。</li>
+<li>订单管理功能：细化订单管理的界面和操作流程，包括查看订单详情、接单、发货、退款等功能。可以考虑提供订单筛选和排序功能，方便商家快速找到需要处理的订单。</li>
+<li>物流管理功能：细化物流管理的界面和操作流程，包括查询物流状态、更新物流信息等功能。可以考虑提供物流公司选择和运单号生成功能，方便商家与物流公司进行交互。</li>
+<li>评价管理功能：细化评价管理的界面和操作流程，包括查看买家的评价、回复评价等功能。可以考虑提供评价分类和搜索功能，方便商家查找和管理评价信息。</li>
+<li>数据统计与分析功能：细化数据统计与分析的界面和报表展示，包括销售额统计、订单量统计、用户评价统计等功能。可以考虑提供图表展示和数据导出功能，方便商家进行数据分析和决策。</li>
+<li>营销活动支持功能：细化营销活动的设置和管理流程，包括优惠券、满减活动等。可以考虑提供活动规则设置、活动发布和推广等功能，方便商家进行营销活动的管理和执行。</li>
+<li>客服支持功能：细化客服支持的界面和沟通方式，包括在线聊天工具、电话支持等。可以考虑提供智能客服机器人和问题解答库，提高客服效率和质量。</li>
+</ol>
+<h1 id="技术积累"><a href="#技术积累" class="headerlink" title="技术积累"></a>技术积累</h1><h2 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h2><h3 id="一、gateway路由路径匹配"><a href="#一、gateway路由路径匹配" class="headerlink" title="一、gateway路由路径匹配"></a>一、gateway路由路径匹配</h3><blockquote>
+<p><strong>匹配多个路径</strong></p>
+</blockquote>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">routes</span><span class="token punctuation">:</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">id</span><span class="token punctuation">:</span> service<span class="token punctuation">-</span>user
+    <span class="token key atrule">uri</span><span class="token punctuation">:</span> lb<span class="token punctuation">:</span>//service<span class="token punctuation">-</span>user
+    <span class="token key atrule">predicates</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> Path= /common/<span class="token important">**</span><span class="token punctuation">,</span>/admin/<span class="token important">**</span>  <span class="token comment">#匹配多个路径</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="二、redis缓存"><a href="#二、redis缓存" class="headerlink" title="二、redis缓存"></a><strong>二、redis缓存</strong></h3><h4 id="1、缓存更新策略"><a href="#1、缓存更新策略" class="headerlink" title="1、缓存更新策略"></a><strong>1、缓存更新策略</strong></h4><table>
+<thead>
+<tr>
+<th></th>
+<th>内存淘汰</th>
+<th>超时剔除</th>
+<th>主动更新</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>说明</td>
+<td>不用自己维护，利用Redis的内存淘汰机制，当内存不足时自动淘汰部分数据。下次查询时更新缓存。</td>
+<td>给缓存数据添加TTL时间，到期后自动删除缓存。下次查询时更新缓存。</td>
+<td>编写业务逻辑，在修改数据库的同时，更新缓存。</td>
+</tr>
+<tr>
+<td>一致性</td>
+<td>差</td>
+<td>一般</td>
+<td>好</td>
+</tr>
+<tr>
+<td>维护成本</td>
+<td>无</td>
+<td>低</td>
+<td>高</td>
+</tr>
+</tbody></table>
+<p> <strong>==业务场景==</strong></p>
+<ul>
+<li>低一致性需求：使用内存淘汰机制。</li>
+<li>高一致性需求：主动更新，并以超时剔除作为兜底方案。</li>
+</ul>
+<p><strong>==三个问题需要考虑：==</strong></p>
+<p>（1）删除缓存还是更新缓存？</p>
+<ul>
+<li>更新缓存：每次更新数据库都更新缓存，无效写操作较多</li>
+<li>删除缓存：更新数据库时让缓存失效，查询时再更新缓存（建议）</li>
+</ul>
+<p>（2）如何保证缓存与数据库的操作的同时成功或失败？</p>
+<ul>
+<li>单体系统：将缓存与数据库操作放在一个事务</li>
+<li>分布式系统：利用TCC等分布式事务方案</li>
+</ul>
+<p>（3）先操作缓存还是先操作数据库？</p>
+<ul>
+<li>先删除缓存，再操作数据库</li>
+<li>先操作数据库，再删除缓存（建议）</li>
+</ul>
+<p><strong>==本项目使用主动更新 + 删除缓存 + 先操作数据库，再删除缓存==</strong></p>
+<h4 id="2、缓存三大问题解决方案"><a href="#2、缓存三大问题解决方案" class="headerlink" title="2、缓存三大问题解决方案"></a><strong>2、缓存三大问题解决方案</strong></h4><blockquote>
+<p><strong>(1)、缓存穿透</strong></p>
+<p><strong>（2）、缓存击穿</strong></p>
+<p><strong>（3）、缓存雪崩</strong></p>
+</blockquote>
+<h5 id="x3D-x3D-缓存穿透-x3D-x3D"><a href="#x3D-x3D-缓存穿透-x3D-x3D" class="headerlink" title="==缓存穿透=="></a><strong>==缓存穿透==</strong></h5><p><strong>简单理解：==缓存穿透==是指客户端请求的数据在缓存中和数据库都不存在，这样缓存永远不会生效，这些请求都会打到数据库。</strong></p>
+<img src="https://ice.frostsky.com/2024/03/05/8f30241f4a924a734157ba22a51bc72f.png" alt="8f30241f4a924a734157ba22a51bc72f.png" style="zoom: 80%;">
+
+<p><strong>==解决方案==</strong></p>
+<p><strong>==（1）缓存空对象==</strong></p>
+<ul>
+<li>优点：实现简单，维护方便</li>
+<li>缺点：<ul>
+<li>额外的内存消耗</li>
+<li>可能造成短期的数据不一致</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://ice.frostsky.com/2024/03/05/2ed2ad626e4cf23bb5de7a205d98b513.png" alt="2ed2ad626e4cf23bb5de7a205d98b513.png"></p>
+<p><strong>==（2）布隆过滤器==</strong></p>
+<ul>
+<li>优点：内存占用较少，没有多余key</li>
+<li>缺点：<ul>
+<li>实现复杂</li>
+<li>存在误判可能</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://ice.frostsky.com/2024/03/05/3765c356f0617e06ec5e94b65e44dca0.png" alt="3765c356f0617e06ec5e94b65e44dca0.png"></p>
+<p><strong>==本项目采用缓存空对象解决==</strong></p>
+<p><strong>代码片段</strong></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//如果数据中不存在则缓存空对象返回,两分钟后过期</span>
+                redisTemplate<span class="token punctuation">.</span><span class="token function">opsForValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token class-name">GoodsConstant</span><span class="token punctuation">.</span><span class="token constant">GOODS</span> <span class="token operator">+</span> userId<span class="token punctuation">,</span><span class="token string">""</span><span class="token punctuation">,</span><span class="token class-name">RedisConstant</span><span class="token punctuation">.</span><span class="token constant">CACHE_NULL_EXPIRE</span><span class="token punctuation">,</span> <span class="token class-name">TimeUnit</span><span class="token punctuation">.</span><span class="token constant">MINUTES</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><strong>其他解决方案：</strong></p>
+<ul>
+<li>增强id的复杂度，避免被猜测id规律</li>
+<li>做好数据的基础格式校验</li>
+<li>加强用户权限校验</li>
+<li>做好热点参数的限流</li>
+</ul>
+<h5 id="x3D-x3D-缓存雪崩-x3D-x3D"><a href="#x3D-x3D-缓存雪崩-x3D-x3D" class="headerlink" title="==缓存雪崩=="></a><strong>==缓存雪崩==</strong></h5><p>**简单理解：==缓存雪崩==**是指同一时段大量的缓存key同时失效或者Redis服务宕机，导致大量请求到达数据库，带来巨大压力。</p>
+<img src="https://ice.frostsky.com/2024/03/05/840e066d60bc1a94ddadea5a3cc1a817.png" alt="840e066d60bc1a94ddadea5a3cc1a817.png" style="zoom:80%;">
+
+<p><strong>==解决方案==</strong></p>
+<ul>
+<li>给不同的key的TTL添加随机值</li>
+<li>利用Redis集群提高服务的可用性</li>
+<li>给缓存业务添加降级限流策略</li>
+<li>给业务添加多级缓存</li>
+</ul>
+<p><strong>==本项目使用给不同的key的TTL添加随机值==</strong></p>
+<h5 id="x3D-x3D-缓存击穿-x3D-x3D"><a href="#x3D-x3D-缓存击穿-x3D-x3D" class="headerlink" title="==缓存击穿=="></a><strong>==缓存击穿==</strong></h5><p><strong>简单理解：==缓存击穿问题==也叫热点key问题，即使也给被==高并发访问==并且==缓存重建页较复杂==的key突然失效了，无数的请求访问会在瞬间给数据库带来巨大的冲击。</strong></p>
+<img src="https://ice.frostsky.com/2024/03/05/31e844250335c6063d24e88449660556.png" alt="31e844250335c6063d24e88449660556.png" style="zoom:67%;">
+
+<p><strong>==解决方案==</strong></p>
+<ul>
+<li><strong>互斥锁</strong></li>
+<li><strong>逻辑过期</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>解决方案</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>互斥锁</td>
+<td>（1）没有额外的内存消耗。（2）保证一致性。（3）实现简单</td>
+<td>（1）线程需要等待，性能受影响。（2）可能有死锁风险</td>
+</tr>
+<tr>
+<td>逻辑过期</td>
+<td>线程不需要等待，性能较好。</td>
+<td>（1）有额外的内存消耗。（2）不保证一致性。（3）实现复杂</td>
+</tr>
+</tbody></table>
+<p><strong>==互斥锁==</strong></p>
+<img src="https://ice.frostsky.com/2024/03/05/61b82942c04d801283e35bb2dee7a490.png" alt="61b82942c04d801283e35bb2dee7a490.png" style="zoom:67%;">
+
+<p><strong>一下是一个简单的使用互斥锁解决的流程</strong></p>
+<img src="https://ice.frostsky.com/2024/03/05/397072438d11e859412b812ed4856a3a.png" alt="397072438d11e859412b812ed4856a3a.png" style="zoom:67%;">
+
+<p><strong>获取互斥锁方法</strong></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+     * 获取锁方法
+     * @param key
+     */</span>
+    <span class="token keyword">private</span> <span class="token keyword">boolean</span> <span class="token function">tryLock</span><span class="token punctuation">(</span><span class="token class-name">String</span> key<span class="token punctuation">,</span><span class="token class-name">Integer</span> userId<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//获取锁，要对锁设置一个过期时间，防止某些异常导致死锁</span>
+        <span class="token class-name">Boolean</span> flag <span class="token operator">=</span> redisTemplate<span class="token punctuation">.</span><span class="token function">opsForValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setIfAbsent</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> userId<span class="token punctuation">,</span> <span class="token class-name">RedisConstant</span><span class="token punctuation">.</span><span class="token constant">CACHE_LOCK_EXPIRE</span><span class="token punctuation">,</span> <span class="token class-name">TimeUnit</span><span class="token punctuation">.</span><span class="token constant">SECONDS</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//如果为true则说明获取到了锁，若返回false则说明前面已经有线程获取到了锁</span>
+        <span class="token keyword">return</span> <span class="token class-name">BooleanUtil</span><span class="token punctuation">.</span><span class="token function">isTrue</span><span class="token punctuation">(</span>flag<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>释放互斥锁方法</strong></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">/**
+     * 释放锁
+     * @param key
+     */</span>
+    <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">unLock</span><span class="token punctuation">(</span><span class="token class-name">String</span> key<span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token comment">//直接删除锁的键即可</span>
+        redisTemplate<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>核心代码</strong></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">GoodsDto</span><span class="token punctuation">&gt;</span></span> <span class="token function">getList</span><span class="token punctuation">(</span><span class="token class-name">Integer</span> userId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//先去redis中查询是否有缓存的数据</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">GoodsDto</span><span class="token punctuation">&gt;</span></span> <span class="token class-name">GoodsDtoList</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">GoodsDto</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">)</span> redisTemplate<span class="token punctuation">.</span><span class="token function">opsForValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token class-name">GoodsConstant</span><span class="token punctuation">.</span><span class="token constant">GOODS</span> <span class="token operator">+</span> userId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token class-name">CollectionUtils</span><span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token class-name">GoodsDtoList</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"命中了redis中的商品缓存数据，成功进入缓存---------------"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token class-name">GoodsDtoList</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+            <span class="token comment">//未命中redis中的缓存数据</span>
+            <span class="token class-name">String</span> lockKey <span class="token operator">=</span> <span class="token class-name">RedisConstant</span><span class="token punctuation">.</span><span class="token constant">GOODS_LOCK</span> <span class="token operator">+</span> userId<span class="token punctuation">;</span>
+            <span class="token comment">//尝试获取锁</span>
+            <span class="token keyword">try</span> <span class="token punctuation">{</span>
+                <span class="token keyword">boolean</span> isLock <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">tryLock</span><span class="token punctuation">(</span>lockKey<span class="token punctuation">,</span> userId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>isLock<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token comment">//未获取到锁,休眠一段时间等待前一个线程重建缓存</span>
+                    <span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token class-name">RedisConstant</span><span class="token punctuation">.</span><span class="token constant">THREAD_SLEEP</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token comment">//重新获取,递归</span>
+                    <span class="token keyword">return</span> <span class="token function">getList</span><span class="token punctuation">(</span>userId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token comment">//获取到了锁</span>
+                <span class="token comment">//再去redis中查询是否有缓存的数据</span>
+                <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">GoodsDto</span><span class="token punctuation">&gt;</span></span> <span class="token class-name">GoodsList</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">GoodsDto</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">)</span> redisTemplate<span class="token punctuation">.</span><span class="token function">opsForValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token class-name">GoodsConstant</span><span class="token punctuation">.</span><span class="token constant">GOODS</span> <span class="token operator">+</span> userId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token class-name">CollectionUtils</span><span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token class-name">GoodsList</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"命中了双重检测redis中的商品缓存数据，成功进入缓存---------------"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">return</span> <span class="token class-name">GoodsList</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+                <span class="token comment">//根据商户id获取商户所属的店铺</span>
+                <span class="token class-name">QueryWrapper</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Store</span><span class="token punctuation">&gt;</span></span> wrapper <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">QueryWrapper</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                wrapper<span class="token punctuation">.</span><span class="token function">eq</span><span class="token punctuation">(</span><span class="token string">"user_id"</span><span class="token punctuation">,</span>userId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Store</span><span class="token punctuation">&gt;</span></span> stores <span class="token operator">=</span> storeMapper<span class="token punctuation">.</span><span class="token function">selectList</span><span class="token punctuation">(</span>wrapper<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name">CollectionUtils</span><span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span>stores<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    <span class="token comment">//如果数据中不存在则缓存空对象返回来解决redis缓存穿透,两分钟后过期</span>
+                    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">UserDto</span><span class="token punctuation">&gt;</span></span> dtoList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    dtoList<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">UserDto</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    redisTemplate<span class="token punctuation">.</span><span class="token function">opsForValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span><span class="token class-name">GoodsConstant</span><span class="token punctuation">.</span><span class="token constant">GOODS</span> <span class="token operator">+</span> userId<span class="token punctuation">,</span>dtoList<span class="token punctuation">,</span><span class="token class-name">RedisConstant</span><span class="token punctuation">.</span><span class="token constant">CACHE_NULL_EXPIRE</span><span class="token punctuation">,</span> <span class="token class-name">TimeUnit</span><span class="token punctuation">.</span><span class="token constant">MINUTES</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                    <span class="token comment">//进行缓存重建</span>
+                    <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">GoodsDto</span><span class="token punctuation">&gt;</span></span> goodsDtoList <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getGoodsDtoList</span><span class="token punctuation">(</span>stores<span class="token punctuation">,</span>userId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                    <span class="token keyword">return</span> goodsDtoList<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">Exception</span> e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ServiceException</span><span class="token punctuation">(</span><span class="token class-name">ResponseEnum</span><span class="token punctuation">.</span><span class="token constant">ERROR</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token keyword">finally</span> <span class="token punctuation">{</span>
+                <span class="token comment">//释放锁</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">unLock</span><span class="token punctuation">(</span>lockKey<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p><strong>==逻辑过期==</strong></p>
+<img src="https://ice.frostsky.com/2024/03/05/4a8016d4ea953c618d68b72cb2a3fa99.png" alt="4a8016d4ea953c618d68b72cb2a3fa99.png" style="zoom:67%;">
+
+
+
+<h3 id="三、防止重复提交"><a href="#三、防止重复提交" class="headerlink" title="三、防止重复提交"></a><strong>三、防止重复提交</strong></h3><p><strong>==使用redis + lua脚本保证原子性操作==</strong></p>
+<blockquote>
+<p><strong>lua脚本</strong></p>
+</blockquote>
+<pre class="line-numbers language-lua" data-language="lua"><code class="language-lua"><span class="token keyword">if</span><span class="token punctuation">(</span>redis<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token string">'get'</span><span class="token punctuation">,</span> KEYS<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">==</span> ARGV<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">then</span>
+<span class="token keyword">return</span> redis<span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token string">'del'</span><span class="token punctuation">,</span> KEYS<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token number">0</span> <span class="token keyword">end</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+
+<blockquote>
+<p><strong>核心代码</strong></p>
+</blockquote>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">DefaultRedisScript</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span> <span class="token constant">REDIS_SCRIPT</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 静态代码块中初始化lua脚本
+     */</span>
+    <span class="token keyword">static</span> <span class="token punctuation">{</span>
+        <span class="token constant">REDIS_SCRIPT</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">DefaultRedisScript</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Boolean</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//读取项目中的lua文件</span>
+        <span class="token constant">REDIS_SCRIPT</span><span class="token punctuation">.</span><span class="token function">setLocation</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">ClassPathResource</span><span class="token punctuation">(</span><span class="token string">"unlock.lua"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token constant">REDIS_SCRIPT</span><span class="token punctuation">.</span><span class="token function">setResultType</span><span class="token punctuation">(</span><span class="token class-name">Boolean</span><span class="token punctuation">.</span><span class="token keyword">class</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">saveOrderInfo</span><span class="token punctuation">(</span><span class="token class-name">OrderDto</span> orderDto<span class="token punctuation">,</span><span class="token class-name">String</span> orderId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//TODO: 需要做防止重复提交和锁定库存操作</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name">StringUtils</span><span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span>orderId<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ServiceException</span><span class="token punctuation">(</span><span class="token class-name">ResponseEnum</span><span class="token punctuation">.</span><span class="token constant">ORDER_ID_EXCEPTION</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">//lua脚本保证原子性操作</span>
+        <span class="token comment">//拿着orderId到redis中查询</span>
+        <span class="token comment">//如果redis中有相同orderId,则说明是正常提交订单，把redis中的orderId删除，</span>
+        <span class="token comment">// 这个过程要保证原子性操作，由lua脚本保证。</span>
+        <span class="token class-name">Boolean</span> flag <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">Boolean</span><span class="token punctuation">)</span> redisTemplate<span class="token punctuation">.</span><span class="token function">execute</span><span class="token punctuation">(</span><span class="token constant">REDIS_SCRIPT</span><span class="token punctuation">,</span> <span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span><span class="token class-name">RedisConstant</span><span class="token punctuation">.</span><span class="token constant">ORDER_ID</span> <span class="token operator">+</span> orderId<span class="token punctuation">)</span><span class="token punctuation">,</span> orderId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//如果redis中没有相同orderId,则说明是重复提交订单，不再往下进行</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>flag<span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token comment">//返回false则说明是重复提交</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ServiceException</span><span class="token punctuation">(</span><span class="token class-name">ResponseEnum</span><span class="token punctuation">.</span><span class="token constant">DO_NOT_REPLACE_SUBMIT</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> 
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h3 id="（四）、分布式锁实现库存锁定，解决商品超卖问题"><a href="#（四）、分布式锁实现库存锁定，解决商品超卖问题" class="headerlink" title="（四）、分布式锁实现库存锁定，解决商品超卖问题"></a><strong>（四）、分布式锁实现库存锁定，解决商品超卖问题</strong></h3><p><strong>==使用redisson实现分布式锁解决==</strong></p>
+<blockquote>
+<p><strong>maven依赖</strong></p>
+</blockquote>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token generics"><span class="token punctuation">&lt;</span>dependency<span class="token punctuation">&gt;</span></span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>groupId<span class="token punctuation">&gt;</span></span>org<span class="token punctuation">.</span>redisson<span class="token operator">&lt;</span><span class="token operator">/</span>groupId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>artifactId<span class="token punctuation">&gt;</span></span>redisson<span class="token operator">&lt;</span><span class="token operator">/</span>artifactId<span class="token operator">&gt;</span>
+      <span class="token generics"><span class="token punctuation">&lt;</span>version<span class="token punctuation">&gt;</span></span><span class="token number">3.11</span><span class="token number">.2</span><span class="token operator">&lt;</span><span class="token operator">/</span>version<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>dependency<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<blockquote>
+<p><strong>redisson配置类</strong></p>
+</blockquote>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@Data</span>
+<span class="token annotation punctuation">@Configuration</span>
+<span class="token annotation punctuation">@ConfigurationProperties</span><span class="token punctuation">(</span><span class="token string">"spring.redis"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">RedissonConfig</span> <span class="token punctuation">{</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">String</span> host<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">String</span> addresses<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">String</span> password<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token class-name">String</span> port<span class="token punctuation">;</span>
+
+    <span class="token keyword">private</span> <span class="token keyword">int</span> timeout <span class="token operator">=</span> <span class="token number">3000</span><span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> connectionPoolSize <span class="token operator">=</span> <span class="token number">64</span><span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> connectionMinimumIdleSize<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> pingConnectionInterval <span class="token operator">=</span> <span class="token number">60000</span><span class="token punctuation">;</span>
+    <span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token class-name">String</span> <span class="token constant">ADDRESS_PREFIX</span> <span class="token operator">=</span> <span class="token string">"redis://"</span><span class="token punctuation">;</span>
+
+    <span class="token comment">/**
+     * 自动装配
+     *
+     */</span>
+    <span class="token annotation punctuation">@Bean</span>
+    <span class="token class-name">RedissonClient</span> <span class="token function">redissonSingle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">Config</span> config <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Config</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//  判断redis 的host是否为空</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token class-name">StringUtils</span><span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span>host<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RuntimeException</span><span class="token punctuation">(</span><span class="token string">"host is  empty"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">//  配置host，port等参数</span>
+        <span class="token class-name">SingleServerConfig</span> serverConfig <span class="token operator">=</span> config<span class="token punctuation">.</span><span class="token function">useSingleServer</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token comment">//redis://127.0.0.1:7181</span>
+                <span class="token punctuation">.</span><span class="token function">setAddress</span><span class="token punctuation">(</span><span class="token constant">ADDRESS_PREFIX</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>host <span class="token operator">+</span> <span class="token string">":"</span> <span class="token operator">+</span> port<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>timeout<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setPingConnectionInterval</span><span class="token punctuation">(</span>pingConnectionInterval<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setConnectionPoolSize</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>connectionPoolSize<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">setConnectionMinimumIdleSize</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>connectionMinimumIdleSize<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//  判断进入redis 是否密码</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span><span class="token class-name">StringUtils</span><span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>password<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            serverConfig<span class="token punctuation">.</span><span class="token function">setPassword</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>password<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// RedissonClient redisson = Redisson.create(config);</span>
+        <span class="token keyword">return</span> <span class="token class-name">Redisson</span><span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>config<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<blockquote>
+<p><strong>核心代码</strong></p>
+</blockquote>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">```
+
+
+
+
+
+
+
+
+
+## 前端
+
+
+
+### 一、后台：由ant design vue开发
+
+
+
+#### （一）、页面过渡效果
+
+
+
+<span class="token operator">*</span><span class="token operator">*</span>在路由文件index<span class="token punctuation">.</span>js中引入具体的动画效果，推荐<span class="token punctuation">[</span><span class="token class-name">Animate</span><span class="token punctuation">.</span>css <span class="token operator">|</span> <span class="token class-name">A</span> cross<span class="token operator">-</span>browser library of <span class="token constant">CSS</span> animations<span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">(</span>https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>animate<span class="token punctuation">.</span>style<span class="token operator">/</span><span class="token punctuation">)</span>  <span class="token class-name">Animate</span><span class="token punctuation">.</span>css动画<span class="token operator">*</span><span class="token operator">*</span>
+
+
+
+<span class="token operator">&gt;</span><span class="token operator">*</span><span class="token operator">*</span>安装<span class="token class-name">Animate</span><span class="token punctuation">.</span>css<span class="token operator">*</span><span class="token operator">*</span>
+<span class="token operator">&gt;</span>
+<span class="token operator">&gt;</span>```shell
+<span class="token operator">&gt;</span> npm install animate<span class="token punctuation">.</span>css <span class="token operator">--</span>save<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<blockquote>
+<p><strong>引入到路由的index.js文件中</strong></p>
+</blockquote>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token function">createRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  history<span class="token punctuation">,</span>
+  <span class="token literal-property property">routes</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token comment">//登录页面</span>
+      <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">"/login"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Login"</span><span class="token punctuation">,</span>
+      <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">"@/views/login/Login.vue"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">meta</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">"登录页"</span><span class="token punctuation">,</span>
+          <span class="token comment">//这里的这个动画直接去Animate.css中复制即可</span>
+        <span class="token literal-property property">transition</span><span class="token operator">:</span> <span class="token string">"animate__bounceInRight"</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token comment">//后台</span>
+      <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">"/"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Layout"</span><span class="token punctuation">,</span>
+      <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">"@/components/layout/Home.vue"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">redirect</span><span class="token operator">:</span> <span class="token string">"/index"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">children</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token comment">//首页</span>
+          <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">"/index"</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Index"</span><span class="token punctuation">,</span>
+          <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">"@/views/index/Index.vue"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">meta</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">"首页"</span><span class="token punctuation">,</span>
+              <span class="token comment">//这里的这个动画直接去Animate.css中复制即可</span>
+            <span class="token literal-property property">transition</span><span class="token operator">:</span> <span class="token string">"animate__fadeInLeftBig"</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+          <span class="token comment">//首页</span>
+          <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">"/user"</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"User"</span><span class="token punctuation">,</span>
+          <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">"@/views/user/User.vue"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">meta</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">"用户"</span><span class="token punctuation">,</span>
+              <span class="token comment">//这里的这个动画直接去Animate.css中复制即可</span>
+            <span class="token literal-property property">transition</span><span class="token operator">:</span> <span class="token string">"animate__backInDown"</span><span class="token punctuation">,</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">"/:pathMatch(.*)*"</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"NotFound"</span><span class="token punctuation">,</span>
+      <span class="token function-variable function">component</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token string">"@/views/404/NotFound.vue"</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<blockquote>
+<p><strong>在App.vue中修改</strong></p>
+</blockquote>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;template&gt;
+  &lt;router-view #default="{route,Component}"&gt;
+      &lt;----&gt;一定要加这个前缀animate__animated&lt;/----&gt;
+    &lt;transition name="fade" :enter-active-class="`animate__animated ${route.meta.transition}`"&gt;
+      &lt;component :is="Component" /&gt;
+    &lt;/transition&gt;
+  &lt;/router-view&gt;
+&lt;/template&gt;
+
+&lt;script setup&gt;
+//要引入Animate.css的样式
+import 'animate.css'
+&lt;/script&gt;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="二-、ant-desgin-vue表格渲染时报错"><a href="#二-、ant-desgin-vue表格渲染时报错" class="headerlink" title="(二)、ant desgin vue表格渲染时报错"></a>(二)、ant desgin vue表格渲染时报错</h4><p>当 <code>data</code> 判断为空，且 <code>horizonScroll</code> 判断为 <code>true</code> 时，<code>ResizeObserver</code> 包裹下的 <code>children</code> 的 <code>width</code> 可能会发生变化，这时候就有可能会触发 <code>ResizeObserver loop completed with undelivered notifications</code> 报错。</p>
+<p>所以，如果我们传入非空的值的话，是不是就消除这个报错了呢？我们来<a href="https://link.juejin.cn/?target=https://codesandbox.io/s/stoic-christian-jmhl6n?file=/src/index.js">实践</a> 一下。</p>
+<p>在 <code>antd</code> 版本大于等于 4.0 的时候</p>
+<ol>
+<li>当初始化 <code>table</code> ，<code>dataSource</code> 赋值空数组时：</li>
+</ol>
+<pre class="line-numbers language-react" data-language="react"><code class="language-react">react
+复制代码&lt;Table columns={[]} dataSource={[]} scroll={{ x: 100 }} /&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>控制台就会报错：<code>ResizeObserver loop limit exceeded </code> 。</p>
+<ol>
+<li>当初始化 <code>table</code> ，<code>dataSource</code> 赋值 <code>[{}]</code> 时：</li>
+</ol>
+<pre class="line-numbers language-react" data-language="react"><code class="language-react">react
+复制代码&lt;Table columns={[]} dataSource={[{}]} scroll={{ x: 100 }} /&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>控制台的报错就没了（如果想要更清楚地观察结果，可以在右侧的界面上刷新一下）。</p>
+<p>那当 <code>antd</code> 版本小于 4.0 的时候，<code>dataSource</code> 的不同赋值会不会触发这个报错呢？</p>
+<p>答案是：不会。</p>
+<p>因为 antd 3.x 或以下的版本，没用上 <code>ResizeObserver</code> 这个功能。</p>
+<h3 id="二、前台：有Ant-design-vue开发"><a href="#二、前台：有Ant-design-vue开发" class="headerlink" title="二、前台：有Ant design vue开发"></a>二、前台：有Ant design vue开发</h3><h4 id="（一）、关于如何展示金额小数点问题解决"><a href="#（一）、关于如何展示金额小数点问题解决" class="headerlink" title="（一）、关于如何展示金额小数点问题解决"></a>（一）、关于如何展示金额小数点问题解决</h4><blockquote>
+<p><strong>1、写一个函数，然后使用插值语法调用函数</strong></p>
+</blockquote>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//展示价格的小数方法</span>
+<span class="token keyword">function</span> <span class="token function">towNumber</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> val<span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p><strong>2、比如这个位置展示金额</strong></p>
+</blockquote>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;span style="font-size: 18px; color: red; font-weight: bold"&gt;{{towNumber(item.price)}}&lt;/span&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+
+
+<h4 id="二-、关于vue3-0-引入-ant-design-vue-报Uncaught-TypeError-Cannot-read-properties-of-undefined-reading-‘value’-的解决办法"><a href="#二-、关于vue3-0-引入-ant-design-vue-报Uncaught-TypeError-Cannot-read-properties-of-undefined-reading-‘value’-的解决办法" class="headerlink" title="(二)、关于vue3.0 引入 ant-design-vue 报Uncaught TypeError: Cannot read properties of undefined (reading ‘value’) 的解决办法"></a>(二)、关于vue3.0 引入 ant-design-vue 报Uncaught TypeError: Cannot read properties of undefined (reading ‘value’) 的解决办法</h4><p><strong>其实很简单 就是因为版本的问题</strong></p>
+<p>根目录执行下面这个命令就行了</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">cnpm i <span class="token operator">--</span>save ant<span class="token operator">-</span>design<span class="token operator">-</span>vue@next <span class="token operator">-</span><span class="token constant">S</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p><strong>cnpm 和 npm 都行</strong></p>
+<h4 id="（三）、验证手机号正则表达式"><a href="#（三）、验证手机号正则表达式" class="headerlink" title="（三）、验证手机号正则表达式"></a>（三）、验证手机号正则表达式</h4><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//数据校验</span>
+<span class="token keyword">var</span> reg_tel <span class="token operator">=</span>
+  <span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$</span><span class="token regex-delimiter">/</span></span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">doPhoneLogin</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  PhoneFormRef<span class="token punctuation">.</span>value
+    <span class="token punctuation">.</span><span class="token function">validate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">//手机号验证</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>reg_tel<span class="token punctuation">.</span><span class="token function">test</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>value<span class="token punctuation">.</span>phone<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">"请输入正确的手机号"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        message<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token string">"表单验证成功"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">error</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"error"</span><span class="token punctuation">,</span> error<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="（四）、验证码倒计时设计"><a href="#（四）、验证码倒计时设计" class="headerlink" title="（四）、验证码倒计时设计"></a>（四）、验证码倒计时设计</h4><pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;a-form-item name="code"&gt;
+                    &lt;a-input-search
+                      v-model:value="certification.code"
+                      placeholder="请输入验证码"
+                      @search="onSearch"
+                      style="width: 100%"
+                      maxlength="6"
+                      minlength="6"
+                      size="large"
+                      addon-before="验证码"
+                    &gt;
+                      &lt;template #enterButton&gt;
+                        &lt;a-button
+                          @click="getCode"
+                          style="color: #f56c6c"
+                          width="20px"
+                          :disabled="disabled"
+                        &gt;
+                        {{ content }}
+                        &lt;/a-button&gt;
+                      &lt;/template&gt;
+                    &lt;/a-input-search&gt;
+                  &lt;/a-form-item&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//获取验证码前确认是否是真实手机号</span>
+<span class="token keyword">const</span> disabled <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> content <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token string">'获取验证码'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">getCode</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  Modal<span class="token punctuation">.</span><span class="token function">confirm</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">"确认此手机号有效?"</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">icon</span><span class="token operator">:</span> <span class="token function">createVNode</span><span class="token punctuation">(</span>ExclamationCircleOutlined<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">content</span><span class="token operator">:</span> <span class="token string">"确保您所输入的手机号真实有效，否则影响后续操作！"</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">okText</span><span class="token operator">:</span> <span class="token string">"确认"</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">cancelText</span><span class="token operator">:</span> <span class="token string">"取消"</span><span class="token punctuation">,</span>
+    <span class="token function">onOk</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> time <span class="token operator">=</span> <span class="token number">120</span><span class="token punctuation">;</span>
+      <span class="token comment">//禁用获取验证码按钮</span>
+      disabled<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+      <span class="token comment">// 开启定时器</span>
+      <span class="token keyword">var</span> timer <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 判断剩余秒数</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>time <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 清除定时器和复原按钮</span>
+          <span class="token function">clearInterval</span><span class="token punctuation">(</span>timer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          disabled<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+          content<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token string">"获取验证码"</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+          content<span class="token punctuation">.</span>value <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>time<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">秒后重新获取</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">;</span>
+          time<span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">onCancel</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      message<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token string">"验证码发送失败"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="五-、悬浮阴影"><a href="#五-、悬浮阴影" class="headerlink" title="(五)、悬浮阴影"></a>(五)、悬浮阴影</h4><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>address_style<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.address_style:hover</span> <span class="token punctuation">{</span>
+  <span class="token property">box-shadow</span><span class="token punctuation">:</span> 10px 10px 5px #a0cfff<span class="token punctuation">,</span> 10px 10px 5px #fab6b6<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.address_style</span> <span class="token punctuation">{</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> #fff<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 230px<span class="token punctuation">;</span>
+  <span class="token property">opacity</span><span class="token punctuation">:</span> 0.8<span class="token punctuation">;</span>
+  <span class="token property">transition</span><span class="token punctuation">:</span> all 0.5s<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="（六）、三种路由传参方式"><a href="#（六）、三种路由传参方式" class="headerlink" title="（六）、三种路由传参方式"></a><strong>（六）、三种路由传参方式</strong></h4><blockquote>
+<p><strong>(1)、传字面量</strong></p>
+</blockquote>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">toDetail</span><span class="token punctuation">(</span><span class="token parameter">id</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"Detail"</span><span class="token punctuation">,</span> <span class="token literal-property property">query</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">id</span><span class="token operator">:</span> id <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p><strong>接收</strong></p>
+</blockquote>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> useRoute <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"vue-router"</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> route <span class="token operator">=</span> <span class="token function">useRoute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> id <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+id <span class="token operator">=</span> route<span class="token punctuation">.</span>query<span class="token punctuation">.</span>id<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<blockquote>
+<p><strong>(2)、传数组</strong></p>
+</blockquote>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> cartIds <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">toSubmitOrder</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">"submitorder"</span><span class="token punctuation">,</span> <span class="token literal-property property">query</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">id</span><span class="token operator">:</span> cartIds<span class="token punctuation">.</span>value <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p><strong>接收</strong></p>
+</blockquote>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> useRoute <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"vue-router"</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> route <span class="token operator">=</span> <span class="token function">useRoute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> cartIds <span class="token operator">=</span> <span class="token function">ref</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+cartIds<span class="token punctuation">.</span>value <span class="token operator">=</span> route<span class="token punctuation">.</span>query<span class="token punctuation">.</span>id<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<blockquote>
+<p><strong>(3)、传对象</strong></p>
+</blockquote>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function">saveOrder</span><span class="token punctuation">(</span>orderDto<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>code <span class="token operator">===</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        orderInfoVo<span class="token punctuation">.</span>value <span class="token operator">=</span> res<span class="token punctuation">.</span>data<span class="token punctuation">;</span>
+        message<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token string">"提交订单成功"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+          <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"PayFor"</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">query</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">item</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>orderInfoVo<span class="token punctuation">.</span>value<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<blockquote>
+<p><strong>接收</strong></p>
+</blockquote>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token punctuation">{</span> useRoute <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"vue-router"</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> route <span class="token operator">=</span> <span class="token function">useRoute</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> orderInfoVo <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>route<span class="token punctuation">.</span>query<span class="token punctuation">.</span>item<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+
+
+
+
+<h3 id="三、小程序端：由uniapp-uview-plus开发"><a href="#三、小程序端：由uniapp-uview-plus开发" class="headerlink" title="三、小程序端：由uniapp + uview-plus开发"></a>三、小程序端：由uniapp + uview-plus开发</h3><h4 id="（一）使用uview-plus模板开发"><a href="#（一）使用uview-plus模板开发" class="headerlink" title="（一）使用uview-plus模板开发"></a><strong>（一）使用uview-plus模板开发</strong></h4><p><strong>1、引入uview-plus</strong></p>
+<p>在uniapp插件市场搜索uview plus，选择插件后点击右边的“下载插件并导入HBuilderX”</p>
+<p>选择创建的项目进行导入即可</p>
+<p><img src="https://img-blog.csdnimg.cn/528ead3156d74967946dea74752ab3e2.png"></p>
+<p><strong>2、在项目根目录中的<code>main.js</code>中，引入并使用uview-plus</strong></p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">// main.js
+import uviewPlus from '@/uni_modules/uview-plus'
+ 
+// #ifdef VUE3
+import { createSSRApp } from 'vue'
+export function createApp() {
+  const app = createSSRApp(App)
+  app.use(uviewPlus)
+  return {
+    app
+  }
+}
+// #endif<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<p><img src="https://img-blog.csdnimg.cn/a392ec45c98b41388c6dbeaccdf5116f.png"></p>
+<p><strong>3、在项目根目录的<code>uni.scss</code>中引入uview-plus的全局SCSS主题文件</strong></p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">/* uni.scss */
+@import '@/uni_modules/uview-plus/theme.scss';<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p><img src="https://img-blog.csdnimg.cn/b591656e4de84edfaeb5882899702789.png"></p>
+<p><strong>4、在App.vue的style中引入uview-plus基础样式</strong></p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;style lang="scss"&gt;
+    /* 需要给style标签加入lang="scss"属性 */
+    @import "@/uni_modules/uview-plus/index.scss";
+&lt;/style&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><img src="https://img-blog.csdnimg.cn/6ab5522dadf44bb8afc9eca6c6f7799f.png"></p>
+<p><strong>5、在使用的页面中使用uview-plus的组件，效果展示</strong></p>
+<pre class="line-numbers language-vue" data-language="vue"><code class="language-vue">&lt;!-- index.vue --&gt;
+&lt;template&gt;
+  &lt;view&gt;
+    &lt;u-button type="primary" :plain="true" :hairline="true" text="细边"&gt;&lt;/u-button&gt;
+  &lt;/view&gt;
+&lt;/template&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p><strong>效果展示</strong></p>
+<p><img src="https://img-blog.csdnimg.cn/f24243176c6a4aaabdbf7b700664509e.png"></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">文学</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://swx08.github.io/2024/03/07/qu-shi-shang-cheng/">http://swx08.github.io/2024/03/07/qu-shi-shang-cheng/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">文学</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E9%A1%B9%E7%9B%AE/">
+                                    <span class="chip bg-color">项目</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2024/03/07/qu-shi-shang-cheng/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            曲师商城项目文档
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%A1%B9%E7%9B%AE/" class="post-category">
+                                    项目
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E9%A1%B9%E7%9B%AE/">
+                        <span class="chip bg-color">项目</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/03/07/uniapp-kai-fa/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/featureimages/62.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Uniapp开发微信小程序
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-07
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Uniapp/" class="post-category">
+                                    Uniapp
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%89%8D%E7%AB%AF/">
+                        <span class="chip bg-color">前端</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 文学博客<br />'
+            + '文章作者: 文学<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2022-2024</span>
+            
+            <a href="/about" target="_blank">文学</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+                <span id="translate">|&nbsp;繁/简：</span><a id="translateLink" href="javascript:translatePage();">繁</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">202.7k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2022";
+                        var startMonth = "6";
+                        var startDate = "28";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/swx08" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:2073958890@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2073958890" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2073958890" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+        <script type="text/javascript" src="/js/tw_cn.js"></script>
+        <script type="text/javascript">
+          var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+          var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+          var cookieDomain = "http://swx08.github.io"; //Cookie地址, 一定要设定, 通常为你的网址
+          var msgToTraditionalChinese = "繁"; //此处可以更改为你想要显示的文字
+          var msgToSimplifiedChinese = "简"; //同上，但两处均不建议更改
+          var translateButtonId = "translateLink"; //默认互换id
+          translateInitilization();
+        </script>
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon-refresh.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

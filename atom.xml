@@ -6,7 +6,7 @@
   <link href="http://swx08.github.io/atom.xml" rel="self"/>
   
   <link href="http://swx08.github.io/"/>
-  <updated>2024-03-06T17:34:18.467Z</updated>
+  <updated>2024-03-07T05:46:41.264Z</updated>
   <id>http://swx08.github.io/</id>
   
   <author>
@@ -15,6 +15,256 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2024/03/07/qu-shi-shang-cheng/"/>
+    <id>http://swx08.github.io/2024/03/07/qu-shi-shang-cheng/</id>
+    <published>2024-03-07T05:45:08.224Z</published>
+    <updated>2024-03-07T05:46:41.264Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;曲师商城&quot;&gt;&lt;a href=&quot;#曲师商城&quot; class=&quot;headerlink&quot; title=&quot;曲师商城&quot;&gt;&lt;/a&gt;曲师商城&lt;/h1&gt;&lt;h2 id=&quot;1、项目需求分析&quot;&gt;&lt;a href=&quot;#1、项目需求分析&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="项目" scheme="http://swx08.github.io/categories/%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+    <category term="项目" scheme="http://swx08.github.io/tags/%E9%A1%B9%E7%9B%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2024/03/07/uniapp-kai-fa/"/>
+    <id>http://swx08.github.io/2024/03/07/uniapp-kai-fa/</id>
+    <published>2024-03-07T05:26:37.373Z</published>
+    <updated>2024-03-07T05:33:04.354Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1、tabbar底部不显示原因&quot;&gt;&lt;a href=&quot;#1、tabbar底部不显示原因&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Uniapp" scheme="http://swx08.github.io/categories/Uniapp/"/>
+    
+    
+    <category term="前端" scheme="http://swx08.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2024/03/07/wei-xin-gong-zhong-hao-guan-jian-ci-zi-dong-hui-fu/"/>
+    <id>http://swx08.github.io/2024/03/07/wei-xin-gong-zhong-hao-guan-jian-ci-zi-dong-hui-fu/</id>
+    <published>2024-03-07T05:23:10.431Z</published>
+    <updated>2024-03-07T05:31:25.761Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;微信公众号关键词自动回复&quot;&gt;&lt;a href=&quot;#微信公众号关键词自动回复&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="微信公众号" scheme="http://swx08.github.io/categories/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+    
+    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2024/03/07/xiao-cheng-xu-fu-wu-qi-yu-ming-pei-zhi/"/>
+    <id>http://swx08.github.io/2024/03/07/xiao-cheng-xu-fu-wu-qi-yu-ming-pei-zhi/</id>
+    <published>2024-03-07T05:23:10.417Z</published>
+    <updated>2024-03-07T05:31:36.658Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;小程序服务器域名配置&quot;&gt;&lt;a href=&quot;#小程序服务器域名配置&quot; class=&quot;headerlink&quot; title=&quot;小程序服务器域名配置&quot;&gt;&lt;/a&gt;小程序服务器域名配置&lt;/h1&gt;&lt;h2 id=&quot;1、为什么要配置服务区域名呢？&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="小程序" scheme="http://swx08.github.io/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2024/03/07/hong-meng-harmonyos4.0-http-shu-ju-qing-qiu-feng-zhuang-xiang-jie/"/>
+    <id>http://swx08.github.io/2024/03/07/hong-meng-harmonyos4.0-http-shu-ju-qing-qiu-feng-zhuang-xiang-jie/</id>
+    <published>2024-03-07T05:21:43.592Z</published>
+    <updated>2024-03-07T05:22:43.163Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;http请求封装&quot;&gt;&lt;a href=&quot;#http请求封装&quot; class=&quot;headerlink&quot; title=&quot;http请求封装&quot;&gt;&lt;/a&gt;http请求封装&lt;/h2&gt;&lt;h3 id=&quot;步骤&quot;&gt;&lt;a href=&quot;#步骤&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="HarmonyOS" scheme="http://swx08.github.io/categories/HarmonyOS/"/>
+    
+    
+    <category term="操作系统" scheme="http://swx08.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2024/03/07/vue3-ji-cheng-echarts-xiang-jie/"/>
+    <id>http://swx08.github.io/2024/03/07/vue3-ji-cheng-echarts-xiang-jie/</id>
+    <published>2024-03-07T05:18:56.720Z</published>
+    <updated>2024-03-07T05:21:26.043Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Vue3集成Echarts&quot;&gt;&lt;a href=&quot;#Vue3集成Echarts&quot; class=&quot;headerlink&quot; title=&quot;Vue3集成Echarts&quot;&gt;&lt;/a&gt;Vue3集成Echarts&lt;/h1&gt;&lt;h2 id=&quot;一、安装&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="集成" scheme="http://swx08.github.io/categories/%E9%9B%86%E6%88%90/"/>
+    
+    
+    <category term="前端" scheme="http://swx08.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2024/03/07/vue3/"/>
+    <id>http://swx08.github.io/2024/03/07/vue3/</id>
+    <published>2024-03-07T05:15:16.688Z</published>
+    <updated>2024-03-07T05:51:43.041Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Vue3从入门到精通&quot;&gt;&lt;a href=&quot;#Vue3从入门到精通&quot; class=&quot;headerlink&quot; title=&quot;Vue3从入门到精通&quot;&gt;&lt;/a&gt;Vue3从入门到精通&lt;/h2&gt;&lt;h3 id=&quot;router学习-基础&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Vue3" scheme="http://swx08.github.io/categories/Vue3/"/>
+    
+    
+    <category term="前端" scheme="http://swx08.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2024/03/07/pinia-ji-ben-shi-yong/"/>
+    <id>http://swx08.github.io/2024/03/07/pinia-ji-ben-shi-yong/</id>
+    <published>2024-03-07T05:12:33.986Z</published>
+    <updated>2024-03-07T05:14:09.779Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Vue3项目使用Pinia存储和管理数据&quot;&gt;&lt;a href=&quot;#Vue3项目使用Pinia存储和管理数据&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Pinia" scheme="http://swx08.github.io/categories/Pinia/"/>
+    
+    
+    <category term="前端" scheme="http://swx08.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2024/03/07/harmonyos4.0/"/>
+    <id>http://swx08.github.io/2024/03/07/harmonyos4.0/</id>
+    <published>2024-03-07T05:08:34.744Z</published>
+    <updated>2024-03-07T05:11:46.515Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;HarmonyOS-4-0-学习&quot;&gt;&lt;a href=&quot;#HarmonyOS-4-0-学习&quot; class=&quot;headerlink&quot; title=&quot;HarmonyOS 4.0 学习&quot;&gt;&lt;/a&gt;HarmonyOS 4.0 学习&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="HarmonyOS" scheme="http://swx08.github.io/categories/HarmonyOS/"/>
+    
+    
+    <category term="操作系统" scheme="http://swx08.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2024/03/07/git/"/>
+    <id>http://swx08.github.io/2024/03/07/git/</id>
+    <published>2024-03-07T05:05:36.755Z</published>
+    <updated>2024-03-07T05:11:21.075Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;推送本地项目到git&quot;&gt;&lt;a href=&quot;#推送本地项目到git&quot; class=&quot;headerlink&quot; title=&quot;推送本地项目到git&quot;&gt;&lt;/a&gt;推送本地项目到git&lt;/h1&gt;&lt;h2 id=&quot;前期准备&quot;&gt;&lt;a href=&quot;#前期准备&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Git" scheme="http://swx08.github.io/categories/Git/"/>
+    
+    
+    <category term="版本控制" scheme="http://swx08.github.io/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -264,256 +514,6 @@
     
     
     <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/06/17/wei-fu-wu-shi-zhan/"/>
-    <id>http://swx08.github.io/2023/06/17/wei-fu-wu-shi-zhan/</id>
-    <published>2023-06-17T09:14:06.457Z</published>
-    <updated>2024-03-06T16:55:30.873Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;微服务项目实战&quot;&gt;&lt;a href=&quot;#微服务项目实战&quot; class=&quot;headerlink&quot; title=&quot;微服务项目实战&quot;&gt;&lt;/a&gt;微服务项目实战&lt;/h2&gt;&lt;h3 id=&quot;Nacos使用&quot;&gt;&lt;a href=&quot;#Nacos使用&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="微服务" scheme="http://swx08.github.io/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
-    
-    
-    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/06/03/css-yang-shi-xue-xi/"/>
-    <id>http://swx08.github.io/2023/06/03/css-yang-shi-xue-xi/</id>
-    <published>2023-06-02T17:04:06.336Z</published>
-    <updated>2024-03-06T15:42:28.472Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;CSS&quot;&gt;&lt;a href=&quot;#CSS&quot; class=&quot;headerlink&quot; title=&quot;CSS&quot;&gt;&lt;/a&gt;CSS&lt;/h2&gt;&lt;h3 id=&quot;2、选择器&quot;&gt;&lt;a href=&quot;#2、选择器&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="css" scheme="http://swx08.github.io/categories/css/"/>
-    
-    
-    <category term="前端" scheme="http://swx08.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/06/02/rabbitmq-xiao-xi-dui-lie/"/>
-    <id>http://swx08.github.io/2023/06/02/rabbitmq-xiao-xi-dui-lie/</id>
-    <published>2023-06-02T06:47:19.990Z</published>
-    <updated>2024-03-06T17:01:23.860Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;RabbitMQ消息队列&quot;&gt;&lt;a href=&quot;#RabbitMQ消息队列&quot; class=&quot;headerlink&quot; title=&quot;RabbitMQ消息队列&quot;&gt;&lt;/a&gt;RabbitMQ消息队列&lt;/h2&gt;&lt;h3 id=&quot;1-1-MQ-的相关概念&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="RabbitMQ" scheme="http://swx08.github.io/categories/RabbitMQ/"/>
-    
-    
-    <category term="中间件" scheme="http://swx08.github.io/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/06/02/spring/"/>
-    <id>http://swx08.github.io/2023/06/02/spring/</id>
-    <published>2023-06-02T00:23:45.791Z</published>
-    <updated>2024-03-06T17:35:53.691Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Spring从入门到精通&quot;&gt;&lt;a href=&quot;#Spring从入门到精通&quot; class=&quot;headerlink&quot; title=&quot;Spring从入门到精通&quot;&gt;&lt;/a&gt;Spring从入门到精通&lt;/h2&gt;&lt;h3 id=&quot;1、Spring简介&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Spring" scheme="http://swx08.github.io/categories/Spring/"/>
-    
-    
-    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/06/02/ssm-zheng-he/"/>
-    <id>http://swx08.github.io/2023/06/02/ssm-zheng-he/</id>
-    <published>2023-06-01T16:33:38.908Z</published>
-    <updated>2024-03-06T16:50:45.874Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;SSM整合&quot;&gt;&lt;a href=&quot;#SSM整合&quot; class=&quot;headerlink&quot; title=&quot;SSM整合&quot;&gt;&lt;/a&gt;SSM整合&lt;/h2&gt;&lt;h3 id=&quot;4-1、ContextLoaderListener&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="SSM" scheme="http://swx08.github.io/categories/SSM/"/>
-    
-    
-    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/05/31/redis/"/>
-    <id>http://swx08.github.io/2023/05/31/redis/</id>
-    <published>2023-05-31T08:24:39.456Z</published>
-    <updated>2024-03-06T17:01:00.163Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Redis&quot;&gt;&lt;a href=&quot;#Redis&quot; class=&quot;headerlink&quot; title=&quot;Redis&quot;&gt;&lt;/a&gt;Redis&lt;/h2&gt;&lt;h3 id=&quot;一、Redis-概述&quot;&gt;&lt;a href=&quot;#一、Redis-概述&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Redis" scheme="http://swx08.github.io/categories/Redis/"/>
-    
-    
-    <category term="中间件" scheme="http://swx08.github.io/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/05/19/springboot-ji-cheng-gong-neng-he-ji/"/>
-    <id>http://swx08.github.io/2023/05/19/springboot-ji-cheng-gong-neng-he-ji/</id>
-    <published>2023-05-19T14:42:18.523Z</published>
-    <updated>2024-03-06T16:46:40.228Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;SixKey项目&quot;&gt;&lt;a href=&quot;#SixKey项目&quot; class=&quot;headerlink&quot; title=&quot;SixKey项目&quot;&gt;&lt;/a&gt;SixKey项目&lt;/h2&gt;&lt;h3 id=&quot;1、搭建SpringBoot项目&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="集成" scheme="http://swx08.github.io/categories/%E9%9B%86%E6%88%90/"/>
-    
-    
-    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/05/06/mybatis/"/>
-    <id>http://swx08.github.io/2023/05/06/mybatis/</id>
-    <published>2023-05-06T15:11:06.798Z</published>
-    <updated>2024-03-06T16:21:54.593Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;MyBatis从入门到精通&quot;&gt;&lt;a href=&quot;#MyBatis从入门到精通&quot; class=&quot;headerlink&quot; title=&quot;MyBatis从入门到精通&quot;&gt;&lt;/a&gt;MyBatis从入门到精通&lt;/h2&gt;&lt;h3 id=&quot;1、MyBatis简介&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Mybatis" scheme="http://swx08.github.io/categories/Mybatis/"/>
-    
-    
-    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/05/05/linux/"/>
-    <id>http://swx08.github.io/2023/05/05/linux/</id>
-    <published>2023-05-05T12:43:30.298Z</published>
-    <updated>2024-03-06T16:19:23.842Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Linux操作系统&quot;&gt;&lt;a href=&quot;#Linux操作系统&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Linux" scheme="http://swx08.github.io/categories/Linux/"/>
-    
-    
-    <category term="操作系统" scheme="http://swx08.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/05/02/elastaicsearch/"/>
-    <id>http://swx08.github.io/2023/05/02/elastaicsearch/</id>
-    <published>2023-05-02T14:16:30.334Z</published>
-    <updated>2024-03-06T16:06:40.832Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;ElasticSearch&quot;&gt;&lt;a href=&quot;#ElasticSearch&quot; class=&quot;headerlink&quot; title=&quot;ElasticSearch&quot;&gt;&lt;/a&gt;ElasticSearch&lt;/h1&gt;&lt;h2 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="ElasticSearch" scheme="http://swx08.github.io/categories/ElasticSearch/"/>
-    
-    
-    <category term="中间件" scheme="http://swx08.github.io/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
     
   </entry>
   
