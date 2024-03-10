@@ -6,7 +6,7 @@
   <link href="http://swx08.github.io/atom.xml" rel="self"/>
   
   <link href="http://swx08.github.io/"/>
-  <updated>2024-03-07T05:46:41.264Z</updated>
+  <updated>2024-03-10T07:18:26.935Z</updated>
   <id>http://swx08.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2024/03/10/springboot-ji-cheng-redis/"/>
+    <id>http://swx08.github.io/2024/03/10/springboot-ji-cheng-redis/</id>
+    <published>2024-03-10T07:14:58.086Z</published>
+    <updated>2024-03-10T07:18:26.935Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="后端" scheme="http://swx08.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="redis 中间件" scheme="http://swx08.github.io/tags/redis-%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2024/03/10/springboot-ji-cheng-es/"/>
+    <id>http://swx08.github.io/2024/03/10/springboot-ji-cheng-es/</id>
+    <published>2024-03-10T07:14:58.084Z</published>
+    <updated>2024-03-10T07:17:24.647Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;ES实战&quot;&gt;&lt;a href=&quot;#ES实战&quot; class=&quot;headerlink&quot; title=&quot;ES实战&quot;&gt;&lt;/a&gt;ES实战&lt;/h1&gt;&lt;h2 id=&quot;效果&quot;&gt;&lt;a href=&quot;#效果&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="后端" scheme="http://swx08.github.io/categories/%E5%90%8E%E7%AB%AF/"/>
+    
+    
+    <category term="ElasticSearch 中间件" scheme="http://swx08.github.io/tags/ElasticSearch-%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -461,56 +511,6 @@
     
     
     <category term="集成" scheme="http://swx08.github.io/categories/%E9%9B%86%E6%88%90/"/>
-    
-    
-    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/06/18/axios/"/>
-    <id>http://swx08.github.io/2023/06/18/axios/</id>
-    <published>2023-06-18T13:37:17.153Z</published>
-    <updated>2024-03-06T15:39:55.095Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Axios&quot;&gt;&lt;a href=&quot;#Axios&quot; class=&quot;headerlink&quot; title=&quot;Axios&quot;&gt;&lt;/a&gt;Axios&lt;/h2&gt;&lt;h3 id=&quot;1、CDN方式引入&quot;&gt;&lt;a href=&quot;#1、CDN方式引入&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Axios" scheme="http://swx08.github.io/categories/Axios/"/>
-    
-    
-    <category term="前端" scheme="http://swx08.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/06/18/netty/"/>
-    <id>http://swx08.github.io/2023/06/18/netty/</id>
-    <published>2023-06-18T04:54:30.332Z</published>
-    <updated>2024-03-06T16:25:33.705Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;Netty&quot;&gt;&lt;a href=&quot;#Netty&quot; class=&quot;headerlink&quot; title=&quot;Netty&quot;&gt;&lt;/a&gt;Netty&lt;/h2&gt;&lt;h3 id=&quot;第一章、Netty的介绍&quot;&gt;&lt;a href=&quot;#第一章、Netty的介绍&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="Netty" scheme="http://swx08.github.io/categories/Netty/"/>
     
     
     <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
