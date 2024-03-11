@@ -372,21 +372,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-07
+                    2024-03-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.1k
+                    3.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    12 分
+                    14 分
                 </div>
                 
 
@@ -1017,6 +1017,64 @@ MySQL-client-5.6.45-1.e17.x86_64.rpm<span aria-hidden="true" class="line-numbers
 <p>⑤、再输入 flush privileges; 进行权限刷新，然后再回去重新启动你的软件就没有问题了</p>
 <pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">flush privileges;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
+<h4 id="4、Mysql忘记密码如何取消验证"><a href="#4、Mysql忘记密码如何取消验证" class="headerlink" title="4、Mysql忘记密码如何取消验证"></a>4、Mysql忘记密码如何取消验证</h4><p><strong>1、进入配置文件 vim /etc/my.cnf 添加代码 skip-grant-tables 即可跳过mysql密码验证进行登录</strong></p>
+<img src="https://ice.frostsky.com/2024/03/12/5519ae73d919bb93bebaa45a28a340dd.png" alt="5519ae73d919bb93bebaa45a28a340dd.png" style="zoom: 67%;">
+
+
+
+<p><strong>2、重启mysql systemctl restart mysqld</strong></p>
+<blockquote>
+<p><strong>mysql systemctl restart mysqld</strong></p>
+</blockquote>
+<p><strong>3、重新登录，密码随便填即可进入(回车即可)</strong></p>
+<p><strong>4、此时输入 ALTER USER ‘root‘@’localhost’ IDENTIFIED WITH mysql_native_password BY ‘你的密码’; 发现修改不了 （注意：密码得复杂点，像123456这样的会提示重新设置复杂的密码）</strong></p>
+<blockquote>
+<p>**ALTER USER ‘root‘@’localhost’ IDENTIFIED WITH mysql_native_password BY ‘你的密码’; **</p>
+</blockquote>
+<p><strong>5、需要先将root密码置空 update user set authentication_string=’’ where user = ‘root’;</strong></p>
+<blockquote>
+<p><strong>update user set authentication_string=’’ where user = ‘root’;</strong></p>
+</blockquote>
+<p><strong>6、再执行步骤4即可修改成功</strong></p>
+<p><strong>7、flush privileges; 刷新mysql相关系统权限表，退出</strong></p>
+<blockquote>
+<p><strong>flush privileges;</strong></p>
+</blockquote>
+<p><strong>8、进入配置文件 vim /etc/my.cnf 将这行注释 skip-grant-tables 前面加#即可注释</strong></p>
+<p><strong>9、重新启动mysql，输入刚才设置的密码进入mysql：</strong></p>
+<blockquote>
+<p><strong>systemctl restart mysqld</strong></p>
+</blockquote>
+<p><strong>==错误==</strong></p>
+<blockquote>
+<p>第一次安装完mysql，修改默认密码的时候，报“<strong>The MySQL server is running with the –<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=skip&amp;spm=1001.2101.3001.7020">skip</a>-grant-tables option so it cannot execute this statement</strong>”。</p>
+</blockquote>
+<p>先刷新mysql然后再重新修改密码即可。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">mysql<span class="token operator">&gt;</span> <span class="token constant">ALTER</span> <span class="token constant">USER</span> <span class="token char">'root'</span>@'localhost' <span class="token constant">IDENTIFIED</span> <span class="token constant">WITH</span> mysql_native_password <span class="token constant">BY</span> <span class="token char">'你的密码'</span><span class="token punctuation">;</span>
+<span class="token class-name">ERROR</span> <span class="token number">1290</span> <span class="token punctuation">(</span><span class="token constant">HY000</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token class-name">The</span> <span class="token class-name">MySQL</span> server is running <span class="token keyword">with</span> <span class="token namespace">the</span> <span class="token operator">--</span>skip<span class="token operator">-</span>grant<span class="token operator">-</span>tables option so it cannot execute <span class="token keyword">this</span> statement
+mysql<span class="token operator">&gt;</span> flush privileges<span class="token punctuation">;</span>
+<span class="token class-name">Query</span> <span class="token constant">OK</span><span class="token punctuation">,</span> <span class="token number">0</span> rows affected <span class="token punctuation">(</span><span class="token number">0.00</span> sec<span class="token punctuation">)</span>
+
+mysql<span class="token operator">&gt;</span> <span class="token constant">ALTER</span> <span class="token constant">USER</span> <span class="token char">'root'</span>@'localhost' <span class="token constant">IDENTIFIED</span> <span class="token constant">WITH</span> mysql_native_password <span class="token constant">BY</span> <span class="token char">'你的密码'</span><span class="token punctuation">;</span>
+<span class="token class-name">Query</span> <span class="token constant">OK</span><span class="token punctuation">,</span> <span class="token number">0</span> rows affected <span class="token punctuation">(</span><span class="token number">0.01</span> sec<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h4 id="5、查看防火墙端口开放情况"><a href="#5、查看防火墙端口开放情况" class="headerlink" title="5、查看防火墙端口开放情况"></a>5、查看防火墙端口开放情况</h4><p><strong>防火墙开启3306端口</strong></p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">systemctl status firewalld<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>2、查看3306端口状态</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">firewall<span class="token operator">-</span>cmd <span class="token operator">--</span>zone<span class="token operator">=</span><span class="token keyword">public</span> <span class="token operator">--</span>query<span class="token operator">-</span>port<span class="token operator">=</span><span class="token number">3306</span><span class="token operator">/</span>tcp<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>3、如果是no，表示关闭，打开3306端口</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">firewall<span class="token operator">-</span>cmd <span class="token operator">--</span>zone<span class="token operator">=</span><span class="token keyword">public</span> <span class="token operator">--</span>add<span class="token operator">-</span>port<span class="token operator">=</span><span class="token number">3306</span><span class="token operator">/</span>tcp <span class="token operator">--</span>permanent <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>4、防火墙重载</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">firewall<span class="token operator">-</span>cmd <span class="token operator">--</span>reload<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>5、再次查看3306状态</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">firewall<span class="token operator">-</span>cmd <span class="token operator">--</span>zone<span class="token operator">=</span><span class="token keyword">public</span> <span class="token operator">--</span>query<span class="token operator">-</span>port<span class="token operator">=</span><span class="token number">3306</span><span class="token operator">/</span>tcp<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 
                 
             </div>
@@ -1403,7 +1461,7 @@ MySQL-client-5.6.45-1.e17.x86_64.rpm<span aria-hidden="true" class="line-numbers
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">206.4k</span>
+                        class="white-color">206.8k</span>
             
             
             
