@@ -379,14 +379,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.5k
+                    3.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    14 分
+                    15 分
                 </div>
                 
 
@@ -1076,6 +1076,29 @@ mysql<span class="token operator">&gt;</span> <span class="token constant">ALTER
 <pre class="line-numbers language-java" data-language="java"><code class="language-java">firewall<span class="token operator">-</span>cmd <span class="token operator">--</span>zone<span class="token operator">=</span><span class="token keyword">public</span> <span class="token operator">--</span>query<span class="token operator">-</span>port<span class="token operator">=</span><span class="token number">3306</span><span class="token operator">/</span>tcp<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
+
+<h3 id="6、redis-7-0安装"><a href="#6、redis-7-0安装" class="headerlink" title="6、redis 7.0安装"></a>6、redis 7.0安装</h3><h4 id="①、安装gcc编译环境"><a href="#①、安装gcc编译环境" class="headerlink" title="①、安装gcc编译环境"></a>①、安装gcc编译环境</h4><blockquote>
+<p><strong>yum -y install gcc- c++</strong></p>
+</blockquote>
+<h4 id="②、安装，进入redis目录"><a href="#②、安装，进入redis目录" class="headerlink" title="②、安装，进入redis目录"></a><strong>②、安装，进入redis目录</strong></h4><blockquote>
+<p><strong>make &amp;&amp; make install</strong></p>
+</blockquote>
+<h4 id="③、redis客户端和服务端src下"><a href="#③、redis客户端和服务端src下" class="headerlink" title="③、redis客户端和服务端src下"></a><strong>③、redis客户端和服务端src下</strong></h4><img src="https://ice.frostsky.com/2024/03/12/6b535553bc588c312a73d8d25ea6b81c.png" alt="6b535553bc588c312a73d8d25ea6b81c.png" style="zoom: 80%;">
+
+
+
+<h4 id="④、修改redis-conf配置文件"><a href="#④、修改redis-conf配置文件" class="headerlink" title="④、修改redis.conf配置文件"></a><strong>④、修改redis.conf配置文件</strong></h4><ul>
+<li><strong>默认daemonize no                       改为    daemonize yes （后台启动）</strong></li>
+<li><strong>默认protected-mode  yes           改为  protected-mode  no（关闭验证模式）</strong></li>
+<li><strong>默认bind   127.0.0.1                     改为     直接注释掉（默认bind   127.0.0.1 只能本机访问）或改成本机IP地址，否则影响远程连接</strong></li>
+<li><strong>添加redis密码                                改为requirepass 你自己设置的密码</strong></li>
+</ul>
+<h5 id="⑤、启动服务"><a href="#⑤、启动服务" class="headerlink" title="⑤、启动服务"></a><strong>⑤、启动服务</strong></h5><blockquote>
+<p><strong>./redis-server    ../redis.conf</strong></p>
+</blockquote>
+<h3 id="7、项目部署"><a href="#7、项目部署" class="headerlink" title="7、项目部署"></a>7、项目部署</h3><p>使用maven将项目打成jar包，然后将jar包放到linux目录中,然后在项目目录中进入终端执行nohup java -jar 项目名.jar &amp;&gt; 项目名.log &amp; 。</p>
+<p>项目名.log为项目日志输出</p>
+
                 
             </div>
             <hr/>
@@ -1461,7 +1484,7 @@ mysql<span class="token operator">&gt;</span> <span class="token constant">ALTER
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">206.8k</span>
+                        class="white-color">207k</span>
             
             
             
