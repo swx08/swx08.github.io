@@ -6,7 +6,7 @@
   <link href="http://swx08.github.io/atom.xml" rel="self"/>
   
   <link href="http://swx08.github.io/"/>
-  <updated>2024-03-10T07:18:26.935Z</updated>
+  <updated>2024-04-09T16:41:28.596Z</updated>
   <id>http://swx08.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2024/04/10/redis7.0/"/>
+    <id>http://swx08.github.io/2024/04/10/redis7.0/</id>
+    <published>2024-04-09T16:40:01.868Z</published>
+    <updated>2024-04-09T16:41:28.596Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;redis7-0版本&quot;&gt;&lt;a href=&quot;#redis7-0版本&quot; class=&quot;headerlink&quot; title=&quot;redis7.0版本&quot;&gt;&lt;/a&gt;redis7.0版本&lt;/h1&gt;&lt;h2 id=&quot;redis主从复制-replica&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Redis" scheme="http://swx08.github.io/categories/Redis/"/>
+    
+    
+    <category term="中间件" scheme="http://swx08.github.io/tags/%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -486,31 +511,6 @@
     
     
     <category term="工具" scheme="http://swx08.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/07/04/springboot-ji-cheng-minio/"/>
-    <id>http://swx08.github.io/2023/07/04/springboot-ji-cheng-minio/</id>
-    <published>2023-07-03T17:00:40.448Z</published>
-    <updated>2024-03-06T16:42:55.608Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;Minio&quot;&gt;&lt;a href=&quot;#Minio&quot; class=&quot;headerlink&quot; title=&quot;Minio&quot;&gt;&lt;/a&gt;Minio&lt;/h1&gt;&lt;h2 id=&quot;1什么是minio？&quot;&gt;&lt;a href=&quot;#1什么是minio？&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="集成" scheme="http://swx08.github.io/categories/%E9%9B%86%E6%88%90/"/>
     
     
     <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
