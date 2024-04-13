@@ -6,7 +6,7 @@
   <link href="http://swx08.github.io/atom.xml" rel="self"/>
   
   <link href="http://swx08.github.io/"/>
-  <updated>2024-04-09T16:41:28.596Z</updated>
+  <updated>2024-04-13T09:16:49.511Z</updated>
   <id>http://swx08.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://swx08.github.io/2024/04/13/springcloud2024/"/>
+    <id>http://swx08.github.io/2024/04/13/springcloud2024/</id>
+    <published>2024-04-13T09:15:03.086Z</published>
+    <updated>2024-04-13T09:16:49.511Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;SpringCloud2024&quot;&gt;&lt;a href=&quot;#SpringCloud2024&quot; class=&quot;headerlink&quot; title=&quot;SpringCloud2024&quot;&gt;&lt;/a&gt;SpringCloud2024&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="微服务" scheme="http://swx08.github.io/categories/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    
+    
+    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -485,32 +510,6 @@
     
     
     <category term="集成" scheme="http://swx08.github.io/categories/%E9%9B%86%E6%88%90/"/>
-    
-    
-    <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://swx08.github.io/2023/07/08/hou-duan-jie-shou-qian-duan-shu-ju-8-chong-fang-shi/"/>
-    <id>http://swx08.github.io/2023/07/08/hou-duan-jie-shou-qian-duan-shu-ju-8-chong-fang-shi/</id>
-    <published>2023-07-08T15:48:35.328Z</published>
-    <updated>2024-03-06T16:55:08.538Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;前后端数据接收联调&quot;&gt;&lt;a href=&quot;#前后端数据接收联调&quot; class=&quot;headerlink&quot; title=&quot;前后端数据接收联调&quot;&gt;&lt;/a&gt;前后端数据接收联调&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;SpringBoot接收数据&lt;/strong&gt;&lt;/p&gt;
-&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="工具" scheme="http://swx08.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
     
     
     <category term="后端" scheme="http://swx08.github.io/tags/%E5%90%8E%E7%AB%AF/"/>
